@@ -1,0 +1,5 @@
+/assessment   /identityscore   301
+/assessment/  /identityscore   301
+
+# Collapse the .html form onto the canonical extensionless path
+/identityscore.html  /identityscore  301!

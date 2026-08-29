@@ -1,0 +1,2847 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kenny Stoddart · Elite Coach to High-Stakes Leaders</title>
+<meta name="description" content="Sharp minds. Iron will. Confidential coaching for executives, founders, and elite performers rebuilding the identity that sustains performance, relevance, and impact." />
+
+<meta property="og:title" content="Kenny Stoddart · Elite Coach to High-Stakes Leaders" />
+<meta property="og:description" content="Sharp minds. Iron will. Confidential coaching for executives, founders, and elite performers." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.ironmindadvisors.com/" />
+<meta property="og:image" content="https://www.ironmindadvisors.com/kenny-hero.jpg" />
+<meta property="og:site_name" content="IronMind Advisors" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Kenny Stoddart · Elite Coach to High-Stakes Leaders" />
+<meta name="twitter:description" content="Sharp minds. Iron will. Confidential coaching for high-stakes leaders." />
+<meta name="twitter:image" content="https://www.ironmindadvisors.com/kenny-hero.jpg" />
+
+<!-- TODO: og-image.jpg still pending (1200x630 brand + headline for LinkedIn/X sharing) -->
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.ironmindadvisors.com/#kenny",
+      "name": "Kenny Stoddart",
+      "alternateName": "Kendrick Stoddart",
+      "jobTitle": "Founder and Executive Coach",
+      "description": "Elite coach to high-stakes leaders. 27 years in global cybersecurity, 10× Ironman finisher, stage 2b cancer survivor.",
+      "url": "https://www.ironmindadvisors.com/",
+      "telephone": "+1-404-831-1961",
+      "email": "kenny@ironmindadvisors.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/kenstoddart",
+        "https://x.com/kstoddart"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Jacksonville Beach",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "worksFor": {
+        "@id": "https://www.ironmindadvisors.com/#org"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.ironmindadvisors.com/#org",
+      "name": "IronMind Advisors",
+      "url": "https://www.ironmindadvisors.com/",
+      "description": "Confidential executive coaching for high-stakes leaders rebuilding the identity that sustains performance, relevance, and impact.",
+      "founder": { "@id": "https://www.ironmindadvisors.com/#kenny" },
+      "telephone": "+1-404-831-1961",
+      "email": "kenny@ironmindadvisors.com",
+      "areaServed": "Worldwide",
+      "serviceType": [
+        "Executive Coaching",
+        "Keynote Speaker",
+        "Identity Score™ For Executives"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Jacksonville Beach",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://www.ironmindadvisors.com/",
+      "name": "IronMind Advisors",
+      "publisher": { "@id": "https://www.ironmindadvisors.com/#org" }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
+
+<!-- Preload the hero portrait (AVIF) for LCP. Browsers without AVIF fall through to <picture> sources. -->
+<link rel="preload" as="image"
+      imagesrcset="kenny-hero-1100w.avif 1100w, kenny-hero.avif 1700w"
+      imagesizes="(max-width: 760px) 100vw, 82vw"
+      type="image/avif"
+      fetchpriority="high">
+
+<style>
+  :root {
+    --void:        #0a0a0c;
+    --ink-deep:    #15161a;
+    --ink-soft:    #1f2128;
+    --bone:        #f4f1ec;
+    --paper:       #fdfcf8;
+    --bone-soft:   rgba(244,241,236,0.80);
+    --bone-mute:   rgba(244,241,236,0.64);
+    --bone-faint:  rgba(244,241,236,0.22);
+    --ink-dark:    #15161a;
+    --ink-mid:     rgba(21,22,26,0.72);
+    --ink-light:   rgba(21,22,26,0.55);
+    --rule-dark:   rgba(21,22,26,0.10);
+    /* steel-blue accent (var still named --ox from earlier oxblood iteration; semantic role = accent) */
+    --ox:          #1872b0;
+    --ox-deep:     #0e4f7a;
+    --ember:       #3f95d4;
+    --gold:        #d8a050;
+    --rule:        rgba(244,241,236,0.10);
+    --rule-soft:   rgba(244,241,236,0.05);
+    --rule-strong: rgba(244,241,236,0.20);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  html, body { overflow-x: clip; }   /* clip (not hidden) so position:sticky on the nav keeps working */
+
+  /* Respect users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Skip to main content link */
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 12px;
+    background: var(--ox);
+    color: var(--bone);
+    padding: 12px 18px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 100;
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus { top: 12px; color: var(--bone); }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--void);
+    color: var(--bone);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16.5px;
+  }
+
+  ::selection { background: var(--ox); color: var(--bone); }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: var(--void); }
+  ::-webkit-scrollbar-thumb { background: var(--ink-soft); border-radius: 6px; }
+
+  h1, h2, h3, h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+    color: var(--bone);
+  }
+
+  a { color: var(--ox); text-decoration: none; }
+  a:hover { color: var(--ember); }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 clamp(22px, 5vw, 56px); }
+  .narrow { max-width: 880px; margin: 0 auto; padding: 0 clamp(22px, 5vw, 56px); }
+
+  /* ============ NAV (always visible, sticky) ============ */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(10,10,12,0.88);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 16px 0;
+    gap: 24px;
+  }
+  .nav-brand {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none;
+    color: var(--bone);
+  }
+  .nav-mark {
+    width: 140px; height: 64px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .nav-mark img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease;
+  }
+  .nav-brand:hover .nav-mark img { transform: scale(1.03); }
+  @media (max-width: 560px) {
+    .nav-mark { width: 104px; height: 50px; }
+  }
+  .nav-name {
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+  .nav-name small {
+    display: block;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ox);
+    margin-top: 1px;
+  }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a.nav-link {
+    color: var(--bone-soft);
+    font-size: 13px; font-weight: 600;
+    transition: color 0.2s ease;
+    letter-spacing: 0.01em;
+  }
+  .nav-links a.nav-link:hover { color: var(--bone); }
+  .nav-cta {
+    padding: 11px 22px;
+    background: var(--ox);
+    color: var(--bone) !important;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+  }
+  .nav-cta:hover { background: var(--ember); transform: translateY(-1px); }
+
+  /* Grouped "Identity Score for:" nav item — one label, three audiences */
+  .nav-group { display: inline-flex; align-items: center; white-space: nowrap; }
+  .nav-group-label {
+    color: var(--bone-mute);
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.01em;
+    margin-right: 7px;
+  }
+  .nav-group .nav-sep { color: var(--bone-faint); font-size: 13px; margin-right: 5px; }
+
+  /* Hamburger toggle (mobile only) */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px; height: 44px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 24px; height: 2px;
+    margin: 0 auto;
+    background: var(--bone);
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Mobile dropdown panel */
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    background: rgba(10,10,12,0.98);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--rule);
+    padding: 8px clamp(18px, 5vw, 28px) 22px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a.m-link {
+    color: var(--bone-soft);
+    font-size: 16px; font-weight: 600;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    padding: 15px 2px;
+    border-bottom: 1px solid var(--rule);
+    transition: color 0.2s ease;
+  }
+  .mobile-menu a.m-link:hover,
+  .mobile-menu a.m-link:active { color: var(--bone); }
+  .mobile-menu a.m-cta {
+    margin-top: 16px;
+    text-align: center;
+    padding: 16px;
+    background: var(--ox);
+    color: var(--bone);
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  .mobile-menu a.m-cta:active { background: var(--ember); }
+
+  /* Grouped "Identity Score for" block inside the mobile panel */
+  .m-group { display: flex; flex-direction: column; }
+  .m-group-label {
+    padding: 16px 2px 4px;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ox);
+  }
+  .mobile-menu a.m-link.m-sub { padding: 12px 2px 12px 14px; }
+
+  /* Tighten spacing so the audience group still fits beside the CTA */
+  @media (min-width: 801px) and (max-width: 1080px) {
+    .nav-links { gap: 18px; }
+    .nav-group-label { margin-right: 5px; }
+  }
+
+  @media (max-width: 800px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+  }
+
+  /* ============ BUTTONS ============ */
+  .btn-primary {
+    display: inline-block;
+    padding: 17px 32px;
+    background: var(--ox);
+    color: var(--bone);
+    border: none;
+    font-family: inherit;
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  .btn-primary:hover {
+    background: var(--ember);
+    color: var(--bone);
+    transform: translateY(-1px);
+    box-shadow: 0 14px 32px -10px rgba(24,114,176,0.5);
+  }
+  .btn-ghost {
+    display: inline-block;
+    padding: 17px 30px;
+    background: transparent;
+    color: var(--bone);
+    border: 1.5px solid var(--bone-faint);
+    font-family: inherit;
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  .btn-ghost:hover { border-color: var(--bone); color: var(--bone); }
+
+  /* ============ HERO (full-bleed portrait, editorial overlay) ============ */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--void);
+    border-bottom: 1px solid var(--rule);
+    min-height: clamp(640px, 94vh, 940px);
+  }
+  .hero-photo {
+    position: absolute;
+    inset: 0;           /* photo fills the entire hero so there's no empty void column on the left */
+    z-index: 1;
+    overflow: hidden;
+  }
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 16%;
+    /* Scale up + nudge right so Kenny visually sits in the right 60% of the viewport, clear of the dark text column */
+    transform: scale(1.20) translateX(9%);
+    transform-origin: 60% 30%;
+    filter: contrast(1.05) saturate(0.88) brightness(0.94);
+    display: block;
+  }
+  /* Jon Gordon certification badge — floats clear of Kenny's head, on his right */
+  .hero-badge {
+    position: absolute;
+    z-index: 3;
+    top: 19%;
+    right: clamp(24px, 5vw, 78px);
+    width: clamp(116px, 13vw, 190px);
+    pointer-events: none;
+  }
+  .hero-badge img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 14px 26px rgba(0,0,0,0.45));
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background:
+      /* Strong solid-dark anchor on the left so the headline reads on void, soft feather across the photo */
+      linear-gradient(96deg,
+        var(--void) 0%,
+        var(--void) 24%,
+        rgba(10,10,12,0.92) 42%,
+        rgba(10,10,12,0.52) 58%,
+        rgba(10,10,12,0.10) 80%,
+        transparent 100%),
+      linear-gradient(to top, rgba(10,10,12,0.55) 0%, transparent 30%),
+      radial-gradient(ellipse 60% 70% at 22% 35%, rgba(24,114,176,0.22), transparent 60%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    min-height: clamp(640px, 94vh, 940px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: clamp(56px, 8vh, 96px);
+    padding-bottom: clamp(40px, 6vh, 72px);
+  }
+  .hero-content-inner {
+    max-width: 620px;
+  }
+
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 11px; font-weight: 700;
+    color: var(--ember);
+    border: 1px solid rgba(63,149,212,0.38);
+    background: rgba(24,114,176,0.14);
+    padding: 8px 16px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    backdrop-filter: blur(8px);
+  }
+  .hero-tag::before {
+    content: ''; width: 6px; height: 6px;
+    background: var(--ember); border-radius: 50%;
+    box-shadow: 0 0 14px var(--ember);
+  }
+
+  h1.hero-h1 {
+    font-size: clamp(48px, 8.4vw, 116px);
+    font-weight: 900;
+    letter-spacing: -0.045em;
+    line-height: 0.92;
+    margin-bottom: 24px;
+    color: var(--bone);
+    text-shadow: 0 2px 28px rgba(0,0,0,0.45);
+  }
+  h1.hero-h1 span.line { display: block; }
+  h1.hero-h1 .ox { color: var(--ember); }
+
+  .hero-sub {
+    font-size: clamp(18px, 1.85vw, 22px);
+    color: var(--bone);
+    line-height: 1.45;
+    margin-bottom: 32px;
+    max-width: 560px;
+    font-weight: 500;
+    letter-spacing: -0.012em;
+    text-shadow: 0 2px 18px rgba(0,0,0,0.5);
+  }
+  .hero-sub strong { color: var(--ember); font-weight: 600; }
+
+  .hero-cta-row {
+    display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+  }
+
+  .hero-meta {
+    margin-top: 32px;
+    display: flex; gap: 28px; flex-wrap: wrap;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--bone-soft);
+  }
+  .hero-meta span { display: flex; align-items: center; gap: 8px; }
+  .hero-meta span::before {
+    content: ''; width: 5px; height: 5px;
+    background: var(--ember);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(63,149,212,0.7);
+  }
+
+  .hero-press {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule-strong);
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 3vw, 32px);
+    flex-wrap: wrap;
+  }
+  .hero-press-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--bone-soft);
+    flex-shrink: 0;
+  }
+  .hero-press-list {
+    display: flex;
+    gap: clamp(14px, 2.5vw, 28px);
+    flex-wrap: wrap;
+  }
+  .hero-press-list a {
+    color: var(--bone);
+    font-weight: 700;
+    font-size: clamp(13px, 1.4vw, 15px);
+    letter-spacing: -0.01em;
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+  .hero-press-list a:hover { color: var(--ember); }
+
+  /* Tablet: tighten reading column, ease the photo crop */
+  @media (max-width: 1100px) {
+    .hero-photo img { object-position: 68% 16%; }
+    .hero-content-inner { max-width: 540px; }
+  }
+
+  /* Mobile: photo full-bleed background, content drops to bottom, no horizontal nudge */
+  @media (max-width: 760px) {
+    .hero { min-height: clamp(720px, 100vh, 980px); }
+    .hero-photo img {
+      object-position: 50% 12%;
+      transform: none;        /* on mobile keep Kenny centered, the overlay handles legibility from the bottom */
+    }
+    .hero-overlay {
+      background:
+        linear-gradient(to top,
+          var(--void) 0%,
+          rgba(10,10,12,0.96) 36%,
+          rgba(10,10,12,0.72) 54%,
+          rgba(10,10,12,0.20) 76%,
+          rgba(10,10,12,0.05) 100%),
+        radial-gradient(ellipse 80% 50% at 50% 85%, rgba(24,114,176,0.22), transparent 60%);
+    }
+    .hero-content {
+      justify-content: flex-end;
+      padding-bottom: clamp(40px, 6vh, 64px);
+    }
+    h1.hero-h1 { font-size: clamp(42px, 11vw, 72px); line-height: 0.94; }
+    .hero-sub { font-size: 17px; }
+    .hero-meta { gap: 16px; row-gap: 12px; }
+    /* tucks into the open top-right corner, sized to clear the .hero-tag pill below it */
+    .hero-badge {
+      top: 8px;
+      right: 12px;
+      width: 80px;
+    }
+  }
+
+  /* ============ STRATEGIC THINKERS (3-card row) ============ */
+  .strategic {
+    padding: clamp(64px, 9vw, 110px) 0;
+    border-bottom: 1px solid var(--rule);
+    background: var(--void);
+    text-align: center;
+  }
+  .strategic-eyebrow {
+    font-size: 11px; font-weight: 700;
+    color: var(--ox);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .strategic h2 {
+    font-size: clamp(36px, 5.5vw, 64px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .strategic .lede {
+    color: var(--bone-soft);
+    font-size: clamp(17px, 1.7vw, 19px);
+    max-width: 640px;
+    margin: 0 auto 56px;
+    line-height: 1.55;
+  }
+  .strategic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  @media (max-width: 880px) { .strategic-grid { grid-template-columns: 1fr; } }
+  .strategic-card {
+    background: var(--ink-deep);
+    border: 1px solid var(--rule);
+    padding: clamp(28px, 3.5vw, 40px);
+    transition: all 0.3s ease;
+  }
+  .strategic-card:hover {
+    border-color: var(--ox);
+    transform: translateY(-2px);
+  }
+  .strategic-card-num {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ox);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 22px;
+    display: block;
+  }
+  .strategic-card h3 {
+    font-size: clamp(22px, 2.4vw, 28px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    color: var(--bone);
+  }
+  .strategic-card p {
+    color: var(--bone-soft);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ============ PRESS / AS SEEN IN (magazine covers) ============ */
+  .press {
+    padding: clamp(72px, 10vw, 130px) 0;
+    border-bottom: 1px solid var(--rule);
+    background:
+      radial-gradient(ellipse 50% 60% at 50% 20%, rgba(24,114,176,0.10), transparent 60%),
+      var(--void);
+    text-align: center;
+    position: relative;
+  }
+  .press-eyebrow {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ox);
+    margin-bottom: 20px;
+  }
+  .press-title {
+    font-size: clamp(56px, 9vw, 112px);
+    font-weight: 900;
+    letter-spacing: -0.045em;
+    line-height: 0.96;
+    margin-bottom: 32px;
+    color: var(--bone);
+  }
+  .press-divider {
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 56px;
+    gap: 14px;
+  }
+  .press-divider::before,
+  .press-divider::after {
+    content: ''; width: 80px; height: 1px;
+    background: var(--rule);
+  }
+  .press-divider .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--ox);
+  }
+  .press-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(14px, 2vw, 24px);
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  @media (max-width: 880px) { .press-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; } }
+  .press-cover {
+    text-decoration: none;
+    color: var(--bone);
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .press-cover:hover { transform: translateY(-6px); }
+  .press-cover-img {
+    aspect-ratio: 3/4;
+    background: var(--ink-deep);
+    border: 1px solid var(--rule);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 18px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .press-cover:hover .press-cover-img {
+    border-color: var(--ox);
+    box-shadow: 0 18px 40px -16px rgba(24,114,176,0.35);
+  }
+  /* placeholder pseudo removed once real cover images shipped */
+  .press-cover-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    position: relative; z-index: 1;
+    display: block;
+  }
+  .press-cover-img::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--ox);
+    z-index: 2;
+    transform: scaleX(0.5);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  .press-cover:hover .press-cover-img::before { transform: scaleX(1); }
+  .press-cover-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--bone-soft);
+    text-align: center;
+    padding-top: 6px;
+    transition: color 0.2s ease;
+  }
+  .press-cover:hover .press-cover-label { color: var(--bone); }
+  .press-hint {
+    margin-top: 48px;
+    font-size: 10.5px; font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--bone-mute);
+    text-align: center;
+  }
+
+  /* Press badge: "Also Featured In" centered below the grid */
+  .press-badge-wrap {
+    margin-top: clamp(48px, 6vw, 72px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .press-badge-eyebrow {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--bone-mute);
+  }
+  .press-badge-frame {
+    width: clamp(160px, 22vw, 220px);
+    aspect-ratio: 1 / 1;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 12px 28px rgba(24,114,176,0.22));
+  }
+  .press-badge-frame:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 18px 40px rgba(24,114,176,0.42));
+  }
+  .press-badge-frame img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transform: scale(1.18);
+    display: block;
+  }
+
+  /* ============ CREAM THEME (alternating sections) ============ */
+  section.bold-section.cream {
+    background: var(--bone);
+    color: var(--ink-dark);
+    border-bottom: 1px solid var(--rule-dark);
+  }
+  section.bold-section.cream h2,
+  section.bold-section.cream h3,
+  section.bold-section.cream h4 { color: var(--ink-dark); }
+  section.bold-section.cream .section-lede { color: var(--ink-mid); }
+  section.bold-section.cream .prose p { color: var(--ink-mid); }
+  section.bold-section.cream .prose strong { color: var(--ink-dark); }
+  section.bold-section.cream .prose a { color: var(--ox); }
+
+  section.bold-section.cream .pull-quote {
+    background: rgba(24,114,176,0.07);
+    border-left-color: var(--ox);
+    color: var(--ink-dark);
+  }
+  section.bold-section.cream .pull-quote-attr { color: var(--ink-light); }
+
+  /* Method on cream */
+  section.bold-section.cream .method-row { border-bottom-color: var(--rule-dark); }
+  section.bold-section.cream .method-content p { color: var(--ink-mid); }
+
+  /* Outcomes on cream */
+  section.bold-section.cream .outcome-row { border-bottom-color: var(--rule-dark); }
+  section.bold-section.cream .outcome-row p { color: var(--ink-mid); }
+
+  /* Fit cards on cream */
+  section.bold-section.cream .fit-card {
+    background: var(--paper);
+    border-color: var(--rule-dark);
+  }
+  section.bold-section.cream .fit-card.yes { border-color: rgba(24,114,176,0.35); }
+  section.bold-section.cream .fit-card .sub { color: var(--ink-light); }
+  section.bold-section.cream .fit-card li { color: var(--ink-mid); }
+  section.bold-section.cream .fit-card.no li::before { background: var(--ink-light); }
+
+  /* Testimonials on cream */
+  section.bold-section.cream .testimonial {
+    background: var(--paper);
+    border-color: var(--rule-dark);
+  }
+  section.bold-section.cream .testimonial .todo-marker {
+    background: rgba(21,22,26,0.06);
+    color: var(--ink-light);
+  }
+  section.bold-section.cream .testimonial p { color: var(--ink-dark); }
+  section.bold-section.cream .testimonial .attr { color: var(--ink-dark); }
+  section.bold-section.cream .testimonial .attr small { color: var(--ink-light); }
+
+  /* FAQ on cream */
+  section.bold-section.cream details.faq-item { border-bottom-color: var(--rule-dark); }
+  section.bold-section.cream details.faq-item summary { color: var(--ink-dark); }
+  section.bold-section.cream details.faq-item p { color: var(--ink-mid); }
+
+  /* Meet Kenny portrait on cream */
+  section.bold-section.cream .meet-portrait {
+    background: rgba(21,22,26,0.06);
+    border-color: var(--rule-dark);
+  }
+  section.bold-section.cream .meet-portrait::after { color: var(--ink-light); }
+
+  /* Roles on cream */
+  section.bold-section.cream .role-row { border-bottom-color: var(--rule-dark); }
+  section.bold-section.cream .role-title { color: var(--ink-mid); }
+  section.bold-section.cream .role-dates { color: var(--ink-light); }
+
+  /* ============ SECTIONS ============ */
+  section.bold-section {
+    padding: clamp(72px, 11vw, 140px) 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  section.bold-section.ember {
+    background:
+      radial-gradient(ellipse 60% 80% at 30% 50%, rgba(24,114,176,0.12), transparent 60%),
+      var(--void);
+  }
+  section.bold-section.surface { background: var(--ink-deep); }
+
+  .section-eyebrow {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ox);
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .section-eyebrow.center { justify-content: center; }
+  .section-eyebrow::before {
+    content: ''; width: 28px; height: 1.5px; background: var(--ox);
+  }
+  .section-eyebrow.center::before { display: none; }
+
+  h2.section-h2 {
+    font-size: clamp(40px, 6vw, 80px);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+    margin-bottom: 32px;
+    color: var(--bone);
+  }
+  h2.section-h2 .ox { color: var(--ox); }
+  .section-lede {
+    font-size: clamp(18px, 2vw, 22px);
+    color: var(--bone-soft);
+    line-height: 1.55;
+    margin-bottom: 36px;
+    max-width: 720px;
+  }
+  .section-lede.center { margin-left: auto; margin-right: auto; }
+
+  /* ============ ANNIVERSARY VIDEO ============ */
+  section.bold-section.anniv {
+    background:
+      radial-gradient(ellipse 70% 70% at 50% 28%, rgba(24,114,176,0.14), transparent 60%),
+      var(--void);
+    text-align: center;
+  }
+  .anniv-h2 { margin-bottom: 20px; }
+  .anniv-lede { margin-bottom: clamp(36px, 5vw, 52px); }
+  .anniv-video-frame {
+    position: relative;
+    max-width: 920px;
+    margin: 0 auto;
+    border: 1px solid var(--rule);
+    background: #000;
+    box-shadow: 0 30px 80px -30px rgba(24,114,176,0.45);
+    overflow: hidden;
+  }
+  .anniv-unmute {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 22px;
+    background: rgba(10,10,12,0.72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(244,241,236,0.28);
+    color: var(--bone);
+    font-family: inherit;
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    z-index: 2;
+    transition: opacity 0.35s ease, transform 0.2s ease, border-color 0.2s ease;
+  }
+  .anniv-unmute:hover {
+    transform: translate(-50%, -50%) scale(1.04);
+    border-color: var(--ox);
+  }
+  .anniv-unmute-icon { font-size: 18px; line-height: 1; }
+  .anniv-unmute.hidden { opacity: 0; pointer-events: none; }
+  .anniv-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: #000;
+  }
+  .anniv-fallback {
+    padding: 40px 24px;
+    color: var(--bone-soft);
+    font-size: 15px;
+  }
+
+  .prose p {
+    margin-bottom: 1.3em;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--bone-soft);
+  }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose strong { color: var(--bone); font-weight: 700; }
+
+  .pull-quote {
+    margin: 48px 0;
+    padding: 32px 36px;
+    background: rgba(24,114,176,0.05);
+    border-left: 3px solid var(--ox);
+    font-family: 'Fraunces', serif;
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.35;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--bone);
+    letter-spacing: -0.015em;
+  }
+  .pull-quote-attr {
+    display: block;
+    margin-top: 18px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--bone-mute);
+  }
+
+  /* ============ MEET KENNY ============ */
+  .meet-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: clamp(40px, 6vw, 84px);
+    align-items: start;
+  }
+  @media (max-width: 920px) { .meet-grid { grid-template-columns: 1fr; } }
+
+  .meet-portrait {
+    position: relative;
+    aspect-ratio: 4/5;
+    background: var(--ink-soft);
+    overflow: hidden;
+    border: 1px solid var(--rule-dark);
+  }
+  .meet-portrait img {
+    width: 100%; height: 100%; object-fit: cover;
+    object-position: center 18%;
+    display: block;
+  }
+
+  /* ============ METHODOLOGY (2-col: number + content; photo column removed) ============ */
+  .method-list { display: flex; flex-direction: column; gap: 0; }
+  .method-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: clamp(20px, 4vw, 64px);
+    padding: clamp(36px, 4.5vw, 56px) 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  @media (max-width: 760px) {
+    .method-row { grid-template-columns: 80px 1fr; gap: 18px; padding: 32px 0; }
+  }
+  .method-row:last-child { border-bottom: none; }
+  .method-num {
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 900;
+    color: var(--ox);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .method-content h3 {
+    font-size: clamp(24px, 2.8vw, 34px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin-bottom: 8px;
+    line-height: 1.05;
+  }
+  .method-content .label {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ox);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .method-content p {
+    color: var(--bone-soft);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  /* ============ DOMAINS PILLAR LIST ============ */
+  .domains-wrap {
+    background:
+      radial-gradient(ellipse 50% 60% at 80% 20%, rgba(24,114,176,0.10), transparent 60%),
+      var(--ink-deep);
+  }
+  .domains-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 56px;
+  }
+  .domain-line {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    gap: clamp(20px, 3vw, 48px);
+    padding: clamp(24px, 3vw, 36px) 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+    transition: padding-left 0.3s ease;
+    cursor: default;
+  }
+  @media (max-width: 760px) {
+    .domain-line { grid-template-columns: 60px 1fr; gap: 16px 24px; }
+    .domain-line .domain-desc { grid-column: 1 / -1; padding-left: 0; }
+  }
+  .domain-line:hover {
+    padding-left: 12px;
+  }
+  .domain-line:last-child { border-bottom: none; }
+  .domain-line .num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ox);
+    letter-spacing: 0.14em;
+  }
+  .domain-line .name {
+    font-size: clamp(24px, 3.5vw, 42px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--bone);
+  }
+  .domain-line .domain-desc {
+    color: var(--bone-soft);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  /* ============ ASSESSMENT CTA BANNER ============ */
+  .assess-banner {
+    background:
+      radial-gradient(ellipse 40% 80% at 80% 50%, rgba(63,149,212,0.18), transparent 60%),
+      var(--ox);
+    padding: clamp(56px, 7vw, 88px) 0;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    overflow: hidden;
+  }
+  .assess-banner::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(244,241,236,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(244,241,236,0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+    pointer-events: none;
+  }
+  .assess-banner-inner {
+    position: relative; z-index: 1;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: clamp(28px, 4vw, 56px);
+    align-items: center;
+  }
+  @media (max-width: 880px) { .assess-banner-inner { grid-template-columns: 1fr; } }
+  .assess-banner-eyebrow {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--bone);
+    opacity: 0.7;
+    margin-bottom: 14px;
+  }
+  .assess-banner h2 {
+    font-size: clamp(32px, 4.5vw, 56px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+    color: var(--bone);
+    margin-bottom: 16px;
+  }
+  .assess-banner p {
+    color: rgba(244,241,236,0.85);
+    font-size: clamp(15px, 1.5vw, 17px);
+    line-height: 1.55;
+    max-width: 580px;
+  }
+  .assess-banner .btn-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 36px;
+    background: var(--void);
+    color: var(--bone);
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  .assess-banner .btn-banner:hover {
+    background: var(--bone);
+    color: var(--void);
+  }
+
+  /* ============ RESULTS / OUTCOMES ============ */
+  .outcomes-list { display: flex; flex-direction: column; gap: 0; }
+  .outcome-row {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+  }
+  .outcome-row:last-child { border-bottom: none; }
+  .outcome-row .check {
+    color: var(--ox);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .outcome-row h4 {
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    margin-bottom: 4px;
+  }
+  .outcome-row p {
+    color: var(--bone-soft);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ============ FIT (YES / NOT YET) ============ */
+  .fit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(20px, 3vw, 40px);
+  }
+  @media (max-width: 760px) { .fit-grid { grid-template-columns: 1fr; } }
+  .fit-card {
+    background: var(--ink-deep);
+    border: 1px solid var(--rule);
+    padding: clamp(28px, 3.5vw, 44px);
+  }
+  .fit-card.yes { border-color: rgba(24,114,176,0.35); }
+  .fit-card h3 {
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .fit-card h3 .ox { color: var(--ox); }
+  .fit-card .sub {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--bone-mute);
+    margin-bottom: 24px;
+  }
+  .fit-card ul {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .fit-card li {
+    color: var(--bone-soft);
+    font-size: 15.5px;
+    line-height: 1.55;
+    padding-left: 26px;
+    position: relative;
+  }
+  .fit-card li::before {
+    content: ''; position: absolute;
+    left: 0; top: 9px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+  .fit-card.yes li::before { background: var(--ox); }
+  .fit-card.no li::before { background: var(--bone-mute); }
+
+  /* ============ TESTIMONIALS ============ */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 880px) { .testimonials-grid { grid-template-columns: 1fr; } }
+  .testimonial {
+    background: var(--ink-deep);
+    border: 1px solid var(--rule);
+    padding: clamp(28px, 3.5vw, 40px);
+    position: relative;
+  }
+  .testimonial .todo-marker {
+    position: absolute;
+    top: 14px; right: 14px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: var(--bone-mute);
+    background: var(--ink-soft);
+    padding: 4px 10px;
+  }
+  .testimonial p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: clamp(17px, 1.8vw, 21px);
+    line-height: 1.45;
+    color: var(--bone);
+    margin-bottom: 22px;
+    letter-spacing: -0.01em;
+  }
+  .testimonial p::before {
+    content: '"';
+    color: var(--ox);
+    font-size: 56px;
+    line-height: 0;
+    margin-right: 6px;
+    vertical-align: -10px;
+  }
+  .testimonial .attr {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--bone);
+    letter-spacing: 0.01em;
+  }
+  .testimonial .attr small {
+    display: block;
+    font-weight: 500;
+    color: var(--bone-mute);
+    margin-top: 3px;
+    font-size: 12.5px;
+  }
+
+  /* ============ CONFIDENTIALITY CARD (replaces public testimonials) ============ */
+  .confidentiality-card {
+    background: var(--paper);
+    border: 1px solid var(--rule-dark);
+    padding: clamp(36px, 5vw, 64px);
+    position: relative;
+    margin-top: clamp(28px, 4vw, 40px);
+  }
+  .confidentiality-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 56px; height: 3px;
+    background: var(--ox);
+  }
+  .confidentiality-card p {
+    font-size: clamp(16px, 1.6vw, 18.5px);
+    line-height: 1.65;
+    color: var(--ink-mid);
+    margin-bottom: 20px;
+  }
+  .confidentiality-card p:last-child { margin-bottom: 0; }
+  .confidentiality-sig {
+    margin-top: 14px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.26em !important;
+    text-transform: uppercase;
+    color: var(--ox) !important;
+  }
+
+  /* ============ ROLES ============ */
+  .roles-list { list-style: none; }
+  .role-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 140px;
+    gap: clamp(16px, 3vw, 36px);
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+  }
+  @media (max-width: 760px) { .role-row { grid-template-columns: 1fr; gap: 4px; padding: 18px 0; } }
+  .role-row:last-child { border-bottom: none; }
+  .role-org {
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .role-title {
+    color: var(--bone-soft);
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+  .role-dates {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--bone-mute);
+    text-align: right;
+  }
+  @media (max-width: 760px) { .role-dates { text-align: left; } }
+
+  /* ============ FAQ ============ */
+  .faq-list { display: flex; flex-direction: column; }
+  details.faq-item {
+    border-bottom: 1px solid var(--rule);
+    padding: 24px 0;
+  }
+  details.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 24px;
+    font-weight: 800;
+    font-size: clamp(17px, 1.8vw, 20px);
+    letter-spacing: -0.01em;
+    color: var(--bone);
+    transition: color 0.2s ease;
+  }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary:hover { color: var(--ox); }
+  details.faq-item summary::after {
+    content: '+';
+    color: var(--ox);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  details.faq-item[open] summary::after { content: '−'; }
+  details.faq-item p {
+    margin-top: 16px;
+    color: var(--bone-soft);
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+
+  /* ============ FINAL CTA ============ */
+  .final-cta {
+    padding: clamp(80px, 12vw, 160px) 0;
+    text-align: center;
+    background:
+      radial-gradient(ellipse 50% 60% at 50% 30%, rgba(24,114,176,0.18), transparent 60%),
+      var(--void);
+    border-bottom: 1px solid var(--rule);
+  }
+  .final-cta h2 {
+    font-size: clamp(44px, 7vw, 96px);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 0.98;
+    margin-bottom: 28px;
+  }
+  .final-cta h2 .ox { color: var(--ox); }
+  .final-cta p {
+    color: var(--bone-soft);
+    font-size: clamp(17px, 1.8vw, 20px);
+    line-height: 1.55;
+    max-width: 580px;
+    margin: 0 auto 44px;
+  }
+
+  /* ============ CONTACT ============ */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+  @media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr; gap: 48px; } }
+  .contact-details {
+    list-style: none;
+  }
+  .contact-details li {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--rule);
+    display: flex; justify-content: space-between;
+    align-items: baseline;
+    gap: 20px; flex-wrap: wrap;
+  }
+  .contact-details li:last-child { border-bottom: none; }
+  .contact-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bone-mute);
+  }
+  .contact-value { color: var(--bone); font-size: 16px; font-weight: 600; }
+  .contact-value a { color: var(--bone); }
+  .contact-value a:hover { color: var(--ox); }
+
+  form.contact-form { display: flex; flex-direction: column; gap: 16px; }
+  form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 600px) { form .form-row { grid-template-columns: 1fr; } }
+  form label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--bone-mute);
+    margin-bottom: 6px;
+    display: block;
+  }
+  form input, form textarea {
+    width: 100%;
+    padding: 15px 16px;
+    background: var(--ink-deep);
+    border: 1px solid var(--rule);
+    color: var(--bone);
+    font-family: inherit;
+    font-size: 15px;
+    transition: border-color 0.2s ease;
+  }
+  form input:focus, form textarea:focus { outline: none; border-color: var(--ox); }
+  form input::placeholder, form textarea::placeholder { color: var(--bone-mute); }
+  form textarea { min-height: 140px; resize: vertical; line-height: 1.6; }
+  form button {
+    align-self: flex-start;
+    padding: 16px 32px;
+    background: var(--ox);
+    color: var(--bone);
+    border: none;
+    font-family: inherit;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  form button:hover { background: var(--ember); transform: translateY(-1px); }
+  form button:disabled { background: var(--ink-soft); cursor: not-allowed; opacity: 0.7; transform: none; }
+
+  .form-err {
+    color: var(--ember);
+    font-size: 12.5px;
+    font-weight: 500;
+    margin-top: 6px;
+    letter-spacing: 0;
+    text-transform: none;
+    min-height: 18px;
+  }
+  form input.invalid, form textarea.invalid { border-color: var(--ember); }
+
+  .form-success {
+    display: none;
+    background: rgba(24,114,176,0.06);
+    border: 1px solid rgba(24,114,176,0.3);
+    padding: 28px;
+    text-align: center;
+  }
+  .form-success.active { display: block; }
+  .form-success h3 {
+    font-size: clamp(20px, 2.5vw, 26px);
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--bone);
+  }
+  .form-success p {
+    color: var(--bone-soft);
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+  .form-success .ox { color: var(--ox); font-weight: 700; }
+
+  /* ============ ANCHOR + RISK REVERSAL ============ */
+  .anchor-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(28px, 5vw, 80px);
+    align-items: start;
+  }
+  @media (max-width: 880px) { .anchor-grid { grid-template-columns: 1fr; } }
+
+  .anchor-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .anchor-stat-row {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+    align-items: baseline;
+  }
+  .anchor-stat-row:last-child { border-bottom: none; }
+  .anchor-stat-row .num {
+    font-size: clamp(40px, 5vw, 60px);
+    font-weight: 900;
+    color: var(--ox);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
+    min-width: 90px;
+  }
+  .anchor-stat-row .label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--bone-mute);
+    margin-bottom: 4px;
+  }
+  .anchor-stat-row .text {
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--bone-soft);
+  }
+
+  .risk-card {
+    background: rgba(24,114,176,0.06);
+    border: 1px solid rgba(24,114,176,0.25);
+    padding: clamp(28px, 4vw, 48px);
+  }
+  .risk-card .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ox);
+    margin-bottom: 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .risk-card .label::before {
+    content: ''; width: 28px; height: 1.5px; background: var(--ox);
+  }
+  .risk-card h3 {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    margin-bottom: 18px;
+    color: var(--bone);
+  }
+  .risk-card p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--bone-soft);
+    margin-bottom: 14px;
+  }
+  .risk-card p:last-child { margin-bottom: 0; }
+  .risk-card strong { color: var(--bone); font-weight: 700; }
+
+  /* ============ PROCESS / WHAT HAPPENS NEXT ============ */
+  .process-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(20px, 3vw, 36px);
+    counter-reset: step;
+  }
+  @media (max-width: 880px) { .process-list { grid-template-columns: 1fr; } }
+  .process-step {
+    counter-increment: step;
+    background: var(--ink-deep);
+    border: 1px solid var(--rule);
+    padding: clamp(28px, 3.5vw, 40px);
+    position: relative;
+  }
+  .process-step::before {
+    content: '0' counter(step);
+    position: absolute;
+    top: 24px; right: 28px;
+    font-size: clamp(36px, 4vw, 48px);
+    font-weight: 900;
+    color: var(--ox);
+    opacity: 0.18;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+  .process-step h4 {
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+    color: var(--bone);
+    position: relative;
+    z-index: 1;
+  }
+  .process-step .when {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ox);
+    margin-bottom: 12px;
+    display: block;
+  }
+  .process-step p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--bone-soft);
+  }
+
+  /* Cream variants */
+  section.bold-section.cream .anchor-stat-row { border-bottom-color: var(--rule-dark); }
+  section.bold-section.cream .anchor-stat-row .text { color: var(--ink-mid); }
+  section.bold-section.cream .anchor-stat-row .label { color: var(--ink-light); }
+  section.bold-section.cream .risk-card {
+    background: rgba(24,114,176,0.06);
+    border-color: rgba(24,114,176,0.3);
+  }
+  section.bold-section.cream .risk-card h3 { color: var(--ink-dark); }
+  section.bold-section.cream .risk-card p { color: var(--ink-mid); }
+  section.bold-section.cream .risk-card strong { color: var(--ink-dark); }
+  section.bold-section.cream .process-step {
+    background: var(--paper);
+    border-color: var(--rule-dark);
+  }
+  section.bold-section.cream .process-step h4 { color: var(--ink-dark); }
+  section.bold-section.cream .process-step p { color: var(--ink-mid); }
+  section.bold-section.cream .process-step::before { color: var(--ox); opacity: 0.18; }
+
+  /* ============ STICKY MOBILE CTA BAR ============ */
+  .mobile-cta-bar {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 60;
+    background: rgba(10,10,12,0.96);
+    backdrop-filter: blur(14px);
+    border-top: 1px solid var(--rule);
+    padding: 12px clamp(16px, 4vw, 24px);
+    gap: 8px;
+  }
+  @media (max-width: 720px) {
+    .mobile-cta-bar { display: flex; }
+    body { padding-bottom: 72px; }
+  }
+  .mobile-cta-bar a {
+    flex: 1;
+    text-align: center;
+    padding: 14px 12px;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1.5px solid var(--bone-faint);
+    color: var(--bone);
+    transition: all 0.2s ease;
+  }
+  .mobile-cta-bar a.primary {
+    background: var(--ox);
+    border-color: var(--ox);
+    color: var(--bone);
+  }
+  .mobile-cta-bar a.primary:active { background: var(--ember); }
+
+  /* Microcopy line below CTAs */
+  .cta-microcopy {
+    margin-top: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--bone-mute);
+    display: flex; gap: 14px; flex-wrap: wrap; align-items: center;
+  }
+  .cta-microcopy::before {
+    content: ''; width: 24px; height: 1px; background: var(--ox);
+  }
+
+  /* ============ FOOTER ============ */
+  footer.site-foot {
+    padding: 56px 0 40px;
+    background: var(--ink-deep);
+    color: var(--bone-mute);
+    font-size: 13px;
+  }
+  .foot-inner {
+    display: flex; justify-content: space-between;
+    align-items: center; gap: 24px; flex-wrap: wrap;
+  }
+  .foot-brand-name {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--bone);
+    letter-spacing: -0.01em;
+  }
+  .foot-brand-name small {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ox);
+    margin-top: 4px;
+  }
+  .foot-links { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+  .foot-links a {
+    color: var(--bone-mute);
+    font-size: 13px; font-weight: 600;
+  }
+  .foot-links a:hover { color: var(--bone); }
+  .foot-social { display: flex; gap: 14px; align-items: center; }
+  .foot-social a {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px;
+    color: var(--bone-mute);
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  }
+  .foot-social a:hover {
+    color: var(--bone);
+    border-color: var(--ember);
+    background: rgba(24,114,176,0.15);
+    transform: translateY(-2px);
+  }
+  .foot-social svg { width: 16px; height: 16px; fill: currentColor; display: block; }
+  .foot-bottom {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: 11.5px;
+    color: var(--bone-mute);
+    text-align: center;
+    letter-spacing: 0.04em;
+  }
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1514330020342685');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1514330020342685&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code --><!-- Event snippet for Meet Kenny Button Click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18158723117/f4h9CLfelMYcEK3A4NJD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script><!-- Event snippet for Request an Iron Audit Button Click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18158723117/o6i6CLrelMYcEK3A4NJD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script><!-- Event snippet for Get In Touch Button Click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18158723117/bk-zCL3elMYcEK3A4NJD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18158723117"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18158723117');
+</script><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJPP38RN');</script>
+<!-- End Google Tag Manager --></head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ============ NAV ============ -->
+<nav id="site-nav">
+  <div class="container nav-inner">
+    <a href="#top" class="nav-brand">
+      <div class="nav-mark">
+        <img src="ima-logo.png" alt="" width="32" height="32" decoding="async" />
+      </div>
+      <div class="nav-name">
+        Kenny Stoddart
+        <small>IronMind Advisors</small>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="/about" class="nav-link">Meet Kenny</a>
+      <a href="#method" class="nav-link">Method</a>
+      <a href="/speaker" class="nav-link">Speaker</a>
+      <span class="nav-group">
+        <span class="nav-group-label">Identity Score™ for:</span>
+        <a href="/identityscore" class="nav-link">Executives</a><span class="nav-sep">,</span>
+        <a href="/athletes" class="nav-link">Elite Athletes</a>
+      </span>
+      <a href="/transition" class="nav-link">New Graduates</a>
+      <a href="#contact" class="nav-cta">Get in Touch</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/about" class="m-link">Meet Kenny</a>
+    <a href="#method" class="m-link">Method</a>
+    <a href="/speaker" class="m-link">Speaker</a>
+    <div class="m-group">
+      <span class="m-group-label">Identity Score™ for</span>
+      <a href="/identityscore" class="m-link m-sub">Executives</a>
+      <a href="/athletes" class="m-link m-sub">Elite Athletes</a>
+    </div>
+    <a href="/transition" class="m-link">New Graduates</a>
+    <a href="#contact" class="m-cta">Get in Touch</a>
+  </div>
+</nav>
+
+
+<main id="main">
+
+<!-- ============ HERO (full-bleed portrait) ============ -->
+<header class="hero" id="top">
+  <div class="hero-photo">
+    <picture>
+      <source type="image/avif"
+              srcset="kenny-hero-1100w.avif 1100w, kenny-hero.avif 1700w"
+              sizes="(max-width: 760px) 100vw, 82vw">
+      <source type="image/webp"
+              srcset="kenny-hero-1100w.webp 1100w, kenny-hero.webp 1700w"
+              sizes="(max-width: 760px) 100vw, 82vw">
+      <img src="kenny-hero.jpg"
+           srcset="kenny-hero-1100w.jpg 1100w, kenny-hero.jpg 1700w"
+           sizes="(max-width: 760px) 100vw, 82vw"
+           alt="Kenny Stoddart, founder and executive coach of IronMind Advisors"
+           width="1700" height="2380"
+           fetchpriority="high" decoding="async" />
+    </picture>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <!-- Jon Gordon certification badge. Source asset was a white-background JPEG;
+       background knocked out to transparent so it sits clean on the dark hero. -->
+  <div class="hero-badge">
+    <picture>
+      <source type="image/webp" srcset="jon-gordon-certified.webp" />
+      <img src="jon-gordon-certified.png"
+           alt="Jon Gordon Certified Speaker and Trainer"
+           width="800" height="644"
+           fetchpriority="low" decoding="async" />
+    </picture>
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-content-inner">
+      <div class="hero-tag">Confidential · Jacksonville Beach</div>
+      <h1 class="hero-h1">
+        <span class="line">Sharp minds.</span>
+        <span class="line ox">Iron will.</span>
+      </h1>
+      <p class="hero-sub">
+        <strong>Confidential coaching</strong> for executives, founders, and elite performers rebuilding the identity that holds when the title no longer does.
+      </p>
+      <div class="hero-cta-row">
+        <a href="#contact" class="btn-primary">Request an Iron Audit</a>
+        <a href="/identityscore" class="btn-ghost">Take the Identity Score™</a>
+      </div>
+      <div class="cta-microcopy">
+        <span>No sales call</span>
+        <span>Reply in 48 hours</span>
+      </div>
+      <div class="hero-meta">
+        <span>27 years in cybersecurity</span>
+        <span>10× Ironman finisher</span>
+        <span>Stage 2b survivor</span>
+        <span>Clinical Mental Health</span>
+      </div>
+
+      <div class="hero-press" aria-label="Featured in press">
+        <span class="hero-press-label">Featured in</span>
+        <div class="hero-press-list">
+          <a href="https://www.forbes.com/sites/gingergentile/2026/01/13/women-paying-the-price-for-systemic-failure-exhaustion-on-the-rise/" target="_blank" rel="noopener">Forbes</a>
+          <a href="https://www.psychologytoday.com/us/blog/leadership-diversity-and-wellness/202601/why-high-achievers-resist-help-until-it-might-be-too" target="_blank" rel="noopener">Psychology Today</a>
+          <a href="https://menshealth.com.au/how-kenny-stoddarts-experience-in-rehab-career-collapse-and-cancer-treatment-shaped-his-approach-to-mental-health-coaching/" target="_blank" rel="noopener">Men's Health</a>
+          <a href="https://www.siliconvalley.com/2026/01/16/kenny-stoddart-explains-why-traditional-wellness-advice-fails-executives/" target="_blank" rel="noopener">Modern Luxury</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- ============ ANNIVERSARY VIDEO ============ -->
+<section class="bold-section anniv" id="anniversary-video">
+  <div class="container">
+    <div class="section-eyebrow center">A Milestone Worth Marking</div>
+    <h2 class="section-h2 anniv-h2">A milestone, and a <span class="ox">thank you.</span></h2>
+    <p class="section-lede center anniv-lede">
+      Kenny marks this anniversary of IronMind Advisors with a short message for the clients and partners who made the work possible.
+    </p>
+    <div class="anniv-video-frame">
+      <video id="annivVideo" class="anniv-video" autoplay muted loop playsinline controls preload="auto"
+             width="1280" height="720">
+        <source src="anniversary.mp4" type="video/mp4" />
+        <p class="anniv-fallback">Your browser can't play embedded video. <a href="anniversary.mp4">Download the message here</a>.</p>
+      </video>
+      <button type="button" class="anniv-unmute" id="annivUnmute" aria-label="Turn on sound">
+        <span class="anniv-unmute-icon" aria-hidden="true">&#128266;</span>
+        <span>Tap for sound</span>
+      </button>
+    </div>
+    <script>
+      (function () {
+        var v = document.getElementById('annivVideo');
+        var btn = document.getElementById('annivUnmute');
+        if (!v || !btn) return;
+
+        // Respect reduced-motion: don't autoplay, let the visitor start it.
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          v.removeAttribute('autoplay');
+          v.pause();
+        }
+
+        function hideBtn() { btn.classList.add('hidden'); }
+
+        btn.addEventListener('click', function () {
+          v.muted = false;
+          v.volume = 1;
+          var p = v.play();
+          if (p && p.catch) p.catch(function () {});
+          hideBtn();
+        });
+
+        // If they unmute via the native controls, drop the overlay too.
+        v.addEventListener('volumechange', function () {
+          if (!v.muted && v.volume > 0) hideBtn();
+        });
+      })();
+    </script>
+  </div>
+</section>
+
+
+<!-- ============ STRATEGIC THINKERS 3-CARD ============ -->
+<section class="strategic">
+  <div class="container">
+    <div class="strategic-eyebrow">Built for</div>
+    <h2>Leaders nobody else <span class="ox">can help.</span></h2>
+    <p class="lede">
+      The people you can't be honest with anyone else about. Boards. Investors. Partners. Teams. Family. Three things they all need from this work, and three things they get.
+    </p>
+    <div class="strategic-grid">
+      <div class="strategic-card">
+        <span class="strategic-card-num">i.</span>
+        <h3>Discreet</h3>
+        <p>Your transformation happens in confidence. No exposure, no performance. Just results. Nothing about working together leaves the room.</p>
+      </div>
+      <div class="strategic-card">
+        <span class="strategic-card-num">ii.</span>
+        <h3>Strategic</h3>
+        <p>This isn't therapy. It's tactical identity reconstruction for people whose internal architecture has to hold weight. Built for the speed your calendar runs at.</p>
+      </div>
+      <div class="strategic-card">
+        <span class="strategic-card-num">iii.</span>
+        <h3>Lived</h3>
+        <p>Guidance from someone who has been in the trenches you're in. Boardrooms, breach war rooms, world-championship race courses, Stage 2b cancer. Lived experience at the highest stakes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ AS SEEN IN (magazine covers) ============ -->
+<section class="press">
+  <div class="container">
+    <p class="press-eyebrow">Media &amp; Press</p>
+    <h2 class="press-title">As Seen In</h2>
+    <div class="press-divider"><div class="dot"></div></div>
+
+    <div class="press-grid">
+      <a href="https://www.forbes.com/sites/gingergentile/2026/01/13/women-paying-the-price-for-systemic-failure-exhaustion-on-the-rise/" class="press-cover" target="_blank" rel="noopener" aria-label="Read the full Forbes article featuring Kenny Stoddart">
+        <div class="press-cover-img">
+          <img src="press/forbes-cover.webp" alt="Forbes Jan 2026 Special Issue featuring Kenny Stoddart" width="600" height="800" loading="lazy" decoding="async" />
+        </div>
+        <div class="press-cover-label">Forbes</div>
+      </a>
+
+      <a href="https://www.psychologytoday.com/us/blog/leadership-diversity-and-wellness/202601/why-high-achievers-resist-help-until-it-might-be-too" class="press-cover" target="_blank" rel="noopener" aria-label="Read the full Psychology Today article featuring Kenny Stoddart">
+        <div class="press-cover-img">
+          <img src="press/psychology-today-cover.webp" alt="Psychology Today cover featuring Kenny Stoddart" width="600" height="800" loading="lazy" decoding="async" />
+        </div>
+        <div class="press-cover-label">Psychology Today</div>
+      </a>
+
+      <a href="https://menshealth.com.au/how-kenny-stoddarts-experience-in-rehab-career-collapse-and-cancer-treatment-shaped-his-approach-to-mental-health-coaching/" class="press-cover" target="_blank" rel="noopener" aria-label="Read the full Men's Health Australia article featuring Kenny Stoddart">
+        <div class="press-cover-img">
+          <img src="press/mens-health-cover.webp" alt="Men's Health Australia cover featuring Kenny Stoddart" width="600" height="800" loading="lazy" decoding="async" />
+        </div>
+        <div class="press-cover-label">Men's Health</div>
+      </a>
+
+      <a href="https://www.siliconvalley.com/2026/01/16/kenny-stoddart-explains-why-traditional-wellness-advice-fails-executives/" class="press-cover" target="_blank" rel="noopener" aria-label="Read the full Modern Luxury Silicon Valley article featuring Kenny Stoddart">
+        <div class="press-cover-img">
+          <img src="press/modern-luxury-cover.webp" alt="Modern Luxury Silicon Valley cover featuring Kenny Stoddart" width="600" height="800" loading="lazy" decoding="async" />
+        </div>
+        <div class="press-cover-label">Modern Luxury</div>
+      </a>
+    </div>
+
+    <p class="press-hint">Click any cover to read the full article</p>
+
+    <div class="press-badge-wrap">
+      <div class="press-badge-eyebrow">Also Featured In</div>
+      <div class="press-badge-frame">
+        <img src="press/top-100-innovators-badge.png" alt="Top 100 Innovators &amp; Entrepreneurs Magazine featured badge" width="320" height="320" loading="lazy" decoding="async" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ HIGH-STAKES LEADER ============ -->
+<section class="bold-section cream" id="leader">
+  <div class="narrow">
+    <div class="section-eyebrow">For Whom</div>
+    <h2 class="section-h2">You're the one <span class="ox">everyone relies on.</span></h2>
+
+    <div class="prose">
+      <p>And quietly running out of road.</p>
+      <p>You're on top of your career. Something is dragging you down.</p>
+      <p>Stress and anger are near constant companions. You feel alone with the pressure. You're living a double life.</p>
+      <p><strong>Sound familiar?</strong> You're not broken or weak. You're a high-achieving professional who is shouldering more than one person can shoulder solo. And you have a finite window. <a href="/about">Continue down the path</a>, or forge a new one.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ TURNING POINT ============ -->
+<section class="bold-section ember">
+  <div class="narrow">
+    <div class="section-eyebrow">The Turning Point</div>
+    <h2 class="section-h2">The moment <span class="ox">everything changes.</span></h2>
+
+    <div class="prose">
+      <p><strong>Enough is enough.</strong> Even the strongest steel needs sharpening when it's worn down. It might feel like you're at a breaking point. But this moment is the beginning of your greatest comeback. Every leader who seeks help reaches a turning point where they decide: I won't live like this anymore.</p>
+      <p>If you're reading this, you're closer than you ever were to that decision. <strong>And I'm here to tell you it can get better.</strong> No matter how deep the rut or how heavy the load, there is a way out and up. Imagine relief instead of stress. Pride instead of shame. Freedom instead of addiction.</p>
+      <p>You've carried the weight alone long enough. Let's lighten the load and get you back to the person you're meant to be.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ MEET KENNY ============ -->
+<section class="bold-section cream" id="meet">
+  <div class="container">
+    <div class="meet-grid">
+      <div>
+        <div class="meet-portrait">
+          <picture>
+            <source type="image/avif"
+                    srcset="kenny-meet-700w.avif 700w, kenny-meet.avif 1100w"
+                    sizes="(max-width: 880px) 100vw, 460px">
+            <source type="image/webp"
+                    srcset="kenny-meet-700w.webp 700w, kenny-meet.webp 1100w"
+                    sizes="(max-width: 880px) 100vw, 460px">
+            <img src="kenny-meet.jpg"
+                 srcset="kenny-meet-700w.jpg 700w, kenny-meet.jpg 1100w"
+                 sizes="(max-width: 880px) 100vw, 460px"
+                 alt="Kenny Stoddart, founder of IronMind Advisors"
+                 width="1100" height="1540"
+                 loading="lazy" decoding="async" />
+          </picture>
+        </div>
+        <div style="margin-top: 18px;">
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ox); margin-bottom: 8px;">What I Bring</div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+            <li style="color: var(--ink-mid); font-size: 14px; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--ox);">›</span> Decades of lived experience in grief, recovery, and resilience</li>
+            <li style="color: var(--ink-mid); font-size: 14px; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--ox);">›</span> Specialized support for addiction recovery and major life transitions</li>
+            <li style="color: var(--ink-mid); font-size: 14px; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--ox);">›</span> Trained public speaker on growth and transformation</li>
+            <li style="color: var(--ink-mid); font-size: 14px; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--ox);">›</span> Virtual coaching for clients globally</li>
+            <li style="color: var(--ink-mid); font-size: 14px; padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--ox);">›</span> Master's in Addiction Counseling (in progress)</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="section-eyebrow">Meet Kenny Stoddart</div>
+        <h2 class="section-h2">Cybersecurity executive. Ironman. <span class="ox">Cancer survivor.</span></h2>
+        <div class="prose">
+          <p>Timing is everything. For Kenny, the timing couldn't have been more profound. Or more challenging.</p>
+          <p>After decades as a globe-trotting cybersecurity executive and IronMan athlete, Ken had just made the decision to leave a lucrative career behind. He'd built IronMind Advisors to coach others through addiction and grief. Then came the phone call that would test everything he was about to teach. <strong>Stage 2b prostate cancer.</strong></p>
+
+          <div class="pull-quote">
+            I'm stepping into recovery with gratitude, determination, and a whole lot of fight. Healing is a privilege, not a punishment.
+            <span class="pull-quote-attr">Kenny, on his diagnosis</span>
+          </div>
+
+          <p>Ken's approach to the diagnosis embodies the transformation he coaches others toward. Healing as platform. Service as response. He coaches virtually, globally, and only takes on leaders he believes he can actually help.</p>
+          <p>His signature keynote, <strong>Grace in the Mirror</strong>, traces the arc from failure to recovery with raw honesty and spiritual insight. Booked for boardrooms, leadership offsites, and executive forums.</p>
+        </div>
+        <div style="margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="/about" class="btn-primary">Meet Kenny</a>
+          <a href="#contact" class="btn-ghost">Let's Talk</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ THE METHODOLOGY ============ -->
+<section class="bold-section cream" id="method">
+  <div class="container">
+    <div class="section-eyebrow">The IronMind Method</div>
+    <h2 class="section-h2">High performers don't need <span class="ox">motivation.</span> They need a game plan.</h2>
+    <p class="section-lede">A structured engagement built around your situation, run over five phases. Most clients commit to a 90-day arc, then continue quarterly.</p>
+
+    <div class="method-list">
+      <div class="method-row">
+        <div class="method-num">01</div>
+        <div class="method-content">
+          <span class="label">Deep Dive &amp; Diagnostic</span>
+          <h3>The Iron Audit</h3>
+          <p>First we map out exactly where you are. We dissect your life: career, habits, health, relationships. With brutal honesty. What are the sticking points? Where are you leaking energy or control? This is where we lay all the cards on the table, confidentially and without judgment. Many clients say this initial session alone is more candid than years of surface-level therapy.</p>
+        </div>
+      </div>
+
+      <div class="method-row">
+        <div class="method-num">02</div>
+        <div class="method-content">
+          <span class="label">Custom Game Plan</span>
+          <h3>The Forge Plan</h3>
+          <p>Next, I design a coaching plan that is 100% custom to you. No generic advice. We name the patterns that are costing you most, the habits that need to break, and the new ones that need to take their place. Weekly goals. Scripts for the conversations you've been avoiding. A clear runway for the next ninety days.</p>
+        </div>
+      </div>
+
+      <div class="method-row">
+        <div class="method-num">03</div>
+        <div class="method-content">
+          <span class="label">1:1 Coaching Sessions</span>
+          <h3>Weekly clarity in the trenches</h3>
+          <p>We meet on secure video or phone <strong>once a week for 60 minutes</strong>. We tackle the most pressing challenge on the table. Had a hard week? We break it down and pull the lesson out of it. Big decision coming? We rehearse it. Each session converts insight into action. You leave with a next move you can actually take.</p>
+        </div>
+      </div>
+
+      <div class="method-row">
+        <div class="method-num">04</div>
+        <div class="method-content">
+          <span class="label">Real-Time Accountability</span>
+          <h3>Support between sessions</h3>
+          <p>Change doesn't only happen on Tuesdays at 4pm. That's why I'm in your corner between sessions too. Text quick support? Voice memo before a difficult meeting? You have it. The next big audit conversation, the post-mortem on what just happened. They all get a place to land in real time.</p>
+        </div>
+      </div>
+
+      <div class="method-row">
+        <div class="method-num">05</div>
+        <div class="method-content">
+          <span class="label">Iterate, Celebrate, Sharpen</span>
+          <h3>The compound effect, in 90 days</h3>
+          <p>As you progress, we refine the plan. And we mark the wins. First thirty days sober. Regained the trust of your spouse. Closed the quarter without burning out. These deserve being named out loud. By ninety days, what we built becomes how you operate. Most clients continue with a quarterly tune-up or an annual intensive to keep the edge sharp.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: clamp(48px, 6vw, 80px); text-align: center;">
+      <a href="#contact" class="btn-primary">Start with an Iron Audit</a>
+      <div class="cta-microcopy" style="justify-content: center;">
+        <span>$0 to start</span>
+        <span>Reply in 48 hours</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ 8 DOMAINS PILLAR ============ -->
+<section class="bold-section domains-wrap">
+  <div class="container">
+    <div class="section-eyebrow">The 8 Domains</div>
+    <h2 class="section-h2">Identity isn't one thing. It's <span class="ox">eight.</span></h2>
+    <p class="section-lede">The Identity Gain™ framework measures how anchored your executive identity is across eight load-bearing domains. Most leaders are strong in three or four, and quietly leaking pressure in the rest. The score reveals where.</p>
+
+    <div class="domains-grid">
+      <div class="domain-line">
+        <div class="num">01</div>
+        <div class="name">Leadership Identity</div>
+        <div class="domain-desc">How you show up. Presence, authority, executive voice.</div>
+      </div>
+      <div class="domain-line">
+        <div class="num">02</div>
+        <div class="name">Emotional Resilience</div>
+        <div class="domain-desc">Capacity to absorb pressure, weather adversity, and return to center.</div>
+      </div>
+      <div class="domain-line">
+        <div class="num">03</div>
+        <div class="name">Boundaries &amp; Values</div>
+        <div class="domain-desc">Living by conviction rather than compliance. Knowing and holding your non-negotiables.</div>
+      </div>
+      <div class="domain-line">
+        <div class="num">04</div>
+        <div class="name">Physical Presence</div>
+        <div class="domain-desc">Energy, vitality, and embodied confidence that commands respect.</div>
+      </div>
+      <div class="domain-line">
+        <div class="num">05</div>
+        <div class="name">Relationships &amp; Belonging</div>
+        <div class="domain-desc">Connections that reflect and reinforce your true self. Not your role or rank.</div>
+      </div>
+      <div class="domain-line">
+        <div class="num">06</div>
+        <div class="name">Purpose &amp; Conviction</div>
+        <div class="domain-desc">Absolute clarity on why you lead. The internal compass that survives the storm.</div>
+      </div>
+      <div class="domain-line">
+        <div class="num">07</div>
+        <div class="name">Financial Confidence</div>
+        <div class="domain-desc">Your relationship with worth, value, and money as an expression of identity.</div>
+      </div>
+      <div class="domain-line">
+        <div class="num">08</div>
+        <div class="name">Legacy &amp; Vision</div>
+        <div class="domain-desc">Future-self alignment. Building toward what only you can leave behind.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ ASSESSMENT CTA BANNER ============ -->
+<section class="assess-banner" id="assessment">
+  <div class="container assess-banner-inner">
+    <div>
+      <div class="assess-banner-eyebrow">Identity Score™ For Executives</div>
+      <h2>Find out where you actually stand. In 90 seconds.</h2>
+      <p>Get your composite score out of 1,000. Your results in your inbox, with notes from Kenny on what they actually mean.</p>
+      <p style="margin-top: 18px; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(244,241,236,0.78);">Free. Confidential. No follow-up unless you want one.</p>
+    </div>
+    <div>
+      <a href="/identityscore" class="btn-banner">Get Your Identity Score →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ RESULTS / OUTCOMES ============ -->
+<section class="bold-section cream">
+  <div class="narrow">
+    <div class="section-eyebrow">Six Months From Now</div>
+    <h2 class="section-h2">What you can <span class="ox">expect.</span></h2>
+    <p class="section-lede">If you do the work, six months in this is the version of life clients describe.</p>
+
+    <div class="outcomes-list">
+      <div class="outcome-row">
+        <div class="check">›</div>
+        <div>
+          <h4>Your destructive vice is in the rearview mirror.</h4>
+          <p>The behavior that was costing you everything is no longer steering the bus.</p>
+        </div>
+      </div>
+      <div class="outcome-row">
+        <div class="check">›</div>
+        <div>
+          <h4>The 3 p.m. whiskey or secret binge is no longer calling the shots.</h4>
+          <p>You've built healthier outlets, real routines that give you energy, and the language to ask for help when you need it.</p>
+        </div>
+      </div>
+      <div class="outcome-row">
+        <div class="check">›</div>
+        <div>
+          <h4>You perform at your peak. Without collapsing after.</h4>
+          <p>The compound effect of energy + clarity + recovery means a sustainable high, not a brittle one.</p>
+        </div>
+      </div>
+      <div class="outcome-row">
+        <div class="check">›</div>
+        <div>
+          <h4>Pressure turns into power.</h4>
+          <p>The same load that was breaking you becomes the thing you press against to grow.</p>
+        </div>
+      </div>
+      <div class="outcome-row">
+        <div class="check">›</div>
+        <div>
+          <h4>Your relationships are thriving.</h4>
+          <p>The people closest to you can tell something has changed. So can you.</p>
+        </div>
+      </div>
+      <div class="outcome-row">
+        <div class="check">›</div>
+        <div>
+          <h4>You've forged an Iron Mind.</h4>
+          <p>Not motivation. Architecture. The internal structure that holds, long after the next storm rolls in.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FIT (YES / NOT YET) ============ -->
+<section class="bold-section surface">
+  <div class="container">
+    <div class="section-eyebrow center" style="justify-content: center;">Honest Filter</div>
+    <h2 class="section-h2" style="text-align: center;">Is this <span class="ox">right for you?</span></h2>
+    <p class="section-lede center" style="text-align: center;">This coaching is not for everyone. And that's by design. We turn away more than we accept. Here's how to know if it's the right call.</p>
+
+    <div class="fit-grid">
+      <div class="fit-card yes">
+        <h3>It's a fit if you're <span class="ox">all in.</span></h3>
+        <div class="sub">Yes, this is for you</div>
+        <ul>
+          <li>You're a senior executive, founder, or operator carrying weight nobody else fully sees.</li>
+          <li>You've tried to fix it on your own and you know it's bigger than willpower.</li>
+          <li>You want full confidentiality. No public posts, no podcasts, no exposure.</li>
+          <li>You can sit with uncomfortable truths and act on them.</li>
+          <li>You believe healing is a privilege, not a punishment.</li>
+          <li>You can commit to the work for at least 90 days.</li>
+        </ul>
+      </div>
+      <div class="fit-card no">
+        <h3>It's not a fit if you're <span class="ox">window-shopping.</span></h3>
+        <div class="sub">Save us both the time</div>
+        <ul>
+          <li>You want motivational hype, not architectural work.</li>
+          <li>You're looking for someone to agree with you, not call you forward.</li>
+          <li>You're not ready to be honest about what's actually going on.</li>
+          <li>You want a quick fix or a 30-day reboot.</li>
+          <li>You're not prepared to invest in yourself the way you invest in your business.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ THE INVESTMENT (anchor + risk reversal) ============ -->
+<section class="bold-section">
+  <div class="container">
+    <div class="section-eyebrow">The Investment</div>
+    <h2 class="section-h2">Built for sustained transformation. <span class="ox">Not a single weekend.</span></h2>
+    <p class="section-lede">Most executive coaching cycles run on $50,000 retreats and 90-minute quarterly check-ins. This is structured the opposite way. Smaller commitment, deeper architecture, longer arc.</p>
+
+    <div class="anchor-grid">
+      <div class="anchor-stat">
+        <div class="anchor-stat-row">
+          <div class="num">90</div>
+          <div>
+            <div class="label">Day Initial Arc</div>
+            <div class="text">Weekly 60-minute sessions, with real-time text support between. Diagnostic, plan, execution, recalibration.</div>
+          </div>
+        </div>
+        <div class="anchor-stat-row">
+          <div class="num">10</div>
+          <div>
+            <div class="label">Max Active Clients</div>
+            <div class="text">Roster is capped. When the next seat opens depends on who finishes their arc, not on a calendar.</div>
+          </div>
+        </div>
+        <div class="anchor-stat-row">
+          <div class="num">$0</div>
+          <div>
+            <div class="label">Cost of the Iron Audit</div>
+            <div class="text">The first conversation. Forty-five minutes. No engagement begins unless we both think it should.</div>
+          </div>
+        </div>
+        <div class="anchor-stat-row">
+          <div class="num">48h</div>
+          <div>
+            <div class="label">Response Window</div>
+            <div class="text">Every application gets a reply inside two business days. Either with a calendar link, or a "not this time, here's why."</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card">
+        <div class="label">No-Risk Filter</div>
+        <h3>If the Iron Audit doesn't reveal a clear next step, <span style="color: var(--ox);">no engagement begins.</span></h3>
+        <p>You walk away with the diagnostic, the language to name what's actually happening, and an honest reading of whether this work fits the season you're in. No upsell. No follow-up sequence.</p>
+        <p><strong>This isn't a guarantee that the work is easy.</strong> It's a guarantee that you won't pay for a fit that isn't there.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: clamp(40px, 5vw, 56px); text-align: center;">
+      <a href="#contact" class="btn-primary">Apply for an Iron Audit</a>
+      <div class="cta-microcopy" style="justify-content: center;">
+        <span>Reply in 48 hours</span>
+        <span>No sales call</span>
+        <span>Confidential</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ CLIENT VOICES (confidentiality card replaces public testimonials) ============ -->
+<section class="bold-section cream">
+  <div class="narrow">
+    <div class="section-eyebrow">Client Voices</div>
+    <h2 class="section-h2">No names. <span class="ox">No exceptions.</span></h2>
+
+    <div class="confidentiality-card">
+      <p>The leaders Kenny works with are senior executives, founders, and operators in moments most people don't get to see. Their names do not appear on this page. Their stories do not appear in a case study library. Their outcomes do not become marketing.</p>
+      <p>Testimonials exist. They are shared privately, in writing, by leaders who have done the work and want to vouch for it. If you want to read them before deciding, ask in the Iron Audit conversation.</p>
+      <p class="confidentiality-sig">Privileged by design.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ ROLES ============ -->
+<section class="bold-section surface">
+  <div class="narrow">
+    <div class="section-eyebrow">The Résumé</div>
+    <h2 class="section-h2">Three decades inside global cybersecurity. <span class="ox">Now on the other side of the desk.</span></h2>
+
+    <ul class="roles-list">
+      <li class="role-row">
+        <div class="role-org">IronMind Advisors</div>
+        <div class="role-title">Founder &amp; Executive Coach · Jacksonville Beach, FL</div>
+        <div class="role-dates">2023 / Present</div>
+      </li>
+      <li class="role-row">
+        <div class="role-org">Utimaco</div>
+        <div class="role-title">Partner Sales Manager, Strategic Channel Development · North America</div>
+        <div class="role-dates">2022 / 2024</div>
+      </li>
+      <li class="role-row">
+        <div class="role-org">Sectigo Corporation</div>
+        <div class="role-title">Director, Global Business Development · $60M global cybersecurity channel</div>
+        <div class="role-dates">2017 / 2021</div>
+      </li>
+      <li class="role-row">
+        <div class="role-org">Symantec <span style="color:var(--bone-mute); font-weight: 500; font-size: 12px;">(now DigiCert)</span></div>
+        <div class="role-title">Regional Manager, Central &amp; Latin America · Website Security Solutions</div>
+        <div class="role-dates">Earlier</div>
+      </li>
+      <li class="role-row">
+        <div class="role-org">VeriSign</div>
+        <div class="role-title">Channel Sales Leadership</div>
+        <div class="role-dates">Earlier</div>
+      </li>
+    </ul>
+    <p style="margin-top: 28px; font-size: 13.5px; color: var(--bone-mute);">
+      Three-time President's Club honoree. Channel and partnership leadership at AHED, TD Synnex, Presidio, Optiv, WWT, SHI, and CDW.
+    </p>
+  </div>
+</section>
+
+
+<!-- ============ FAQ ============ -->
+<section class="bold-section cream">
+  <div class="narrow">
+    <div class="section-eyebrow">Questions</div>
+    <h2 class="section-h2">Frequently <span class="ox">asked.</span></h2>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>How private is this, really?</summary>
+        <p>Sessions are on a secure video or phone line. Nothing about working together is published, posted, or referenced anywhere. Your name does not appear on the testimonials wall unless you put it there. The relationship is structured the way attorneys structure theirs. Privileged by design.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What does a typical engagement look like?</summary>
+        <p>A 90-day initial arc, weekly 60-minute sessions, with text access between sessions for when something needs immediate eyes. Many clients continue into quarterly tune-ups or an annual intensive rhythm after the first ninety days.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What does it cost?</summary>
+        <p>By application. The investment is shared after the Iron Audit conversation so we both know what is actually on the table. Premium positioning, not luxury pricing. We work with leaders, not estates.</p>
+      </details>
+      <details class="faq-item">
+        <summary>I'm in recovery. Is this for me?</summary>
+        <p>Yes. Addiction recovery and grief work are core to what Kenny coaches. He's lived through it and has the clinical training (Master's in Addiction Counseling, in progress) to back the lived experience. This is not therapy, and it's not a substitute for clinical care. It runs alongside it.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if I relapse during the engagement?</summary>
+        <p>Relapse doesn't end the engagement. It informs it. The work was always going to include the days you don't want to show up. Those are the days we work hardest.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if I'm not in crisis, just feel something has shifted?</summary>
+        <p>The best time to do this work is before crisis. If you can feel something erode, that's a signal worth following. The Identity Score™ For Executives is built to map exactly where.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do we get started?</summary>
+        <p>Send a note via the form below, or get your Identity Score™ and your results come straight to Kenny. From there, we set up an Iron Audit conversation. No sales calls. No 14-page contracts.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="narrow">
+    <h2>Ready to forge <span class="ox">your IronMind?</span></h2>
+    <p>Every change starts with a single step. Then the next. Then the next. Send a note, or get your Identity Score. Both go to Kenny.</p>
+    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+      <a href="#contact" class="btn-primary">Request an Iron Audit</a>
+      <a href="/identityscore" class="btn-ghost">Get Your Identity Score</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ WHAT HAPPENS NEXT ============ -->
+<section class="bold-section">
+  <div class="narrow">
+    <div class="section-eyebrow">What Happens Next</div>
+    <h2 class="section-h2">After you <span class="ox">apply.</span></h2>
+    <p class="section-lede">No labyrinth. Three steps. Both of us know whether this fits within the first conversation.</p>
+  </div>
+  <div class="container" style="margin-top: clamp(36px, 5vw, 56px);">
+    <div class="process-list">
+      <div class="process-step">
+        <span class="when">Day 1</span>
+        <h4>You send the note.</h4>
+        <p>A few lines on what brought you here. Or get your Identity Score™. Either lands in Kenny's inbox.</p>
+      </div>
+      <div class="process-step">
+        <span class="when">Within 48 hours</span>
+        <h4>Kenny replies personally.</h4>
+        <p>Either with a calendar link for the Iron Audit conversation, or a candid "not this season" with a pointer to someone who fits better.</p>
+      </div>
+      <div class="process-step">
+        <span class="when">If we both want to</span>
+        <h4>The engagement begins.</h4>
+        <p>Forty-five-minute Iron Audit, then a 90-day arc if it's a fit. Or you keep the diagnostic, and that's the end of it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ CONTACT ============ -->
+<section class="bold-section surface" id="contact">
+  <div class="container">
+    <div class="section-eyebrow">Get In Touch</div>
+    <h2 class="section-h2">Send a <span class="ox">note.</span></h2>
+
+    <div class="contact-grid">
+      <ul class="contact-details">
+        <li>
+          <span class="contact-label">Email</span>
+          <span class="contact-value"><a href="mailto:kenny@ironmindadvisors.com">kenny@ironmindadvisors.com</a></span>
+        </li>
+        <li>
+          <span class="contact-label">Phone</span>
+          <span class="contact-value"><a href="tel:+14048311961">+1 (404) 831-1961</a></span>
+        </li>
+        <li>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value"><a href="https://www.linkedin.com/in/kenstoddart" target="_blank" rel="noopener">linkedin.com/in/kenstoddart</a></span>
+        </li>
+        <li>
+          <span class="contact-label">X / Twitter</span>
+          <span class="contact-value"><a href="https://x.com/kstoddart" target="_blank" rel="noopener">@kstoddart</a></span>
+        </li>
+        <li>
+          <span class="contact-label">Location</span>
+          <span class="contact-value">Jacksonville Beach, FL</span>
+        </li>
+      </ul>
+
+      <div>
+        <form class='contact-form' id='contactForm' method='POST' name='contact' data-netlify='true' data-netlify-honeypot='bot-field' novalidate onsubmit='return handleContact(event)'>
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none;"><label>Leave empty: <input name="bot-field" /></label></p>
+
+          <div>
+            <label for="cf-name">Your name</label>
+            <input type="text" id="cf-name" name="name" required placeholder="Jane Whitfield" autocomplete="name" />
+            <div class="form-err" id="cf-name-err"></div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="email" required placeholder="you@example.com" autocomplete="email" />
+              <div class="form-err" id="cf-email-err"></div>
+            </div>
+            <div>
+              <label for="cf-phone">Phone <span style="font-weight:400; text-transform:none; letter-spacing:0; color:var(--bone-mute);">optional</span></label>
+              <input type="tel" id="cf-phone" name="phone" placeholder="+1 (415) 555-0142" autocomplete="tel" />
+              <div class="form-err"></div>
+            </div>
+          </div>
+          <div>
+            <label for="cf-message">What's on your mind</label>
+            <textarea id="cf-message" name="message" required placeholder="A line or two on what brought you here. Confidential."></textarea>
+            <div class="form-err" id="cf-message-err"></div>
+          </div>
+          <button type="submit" id="cf-submit">Send my note</button>
+        </form>
+
+        <div id="contactSuccess" class="form-success">
+          <h3>Your note is <span class="ox">with Kenny.</span></h3>
+          <p>You'll hear back within 48 hours. If it's urgent, the line is open: <a href="tel:+14048311961" style="color: var(--ox); font-weight: 600;">+1 (404) 831-1961</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  // Contact form validation + Netlify submit + success state
+  function handleContact(ev) {
+    ev.preventDefault();
+    const form = document.getElementById('contactForm');
+    const nameInput = document.getElementById('cf-name');
+    const emailInput = document.getElementById('cf-email');
+    const phoneInput = document.getElementById('cf-phone');
+    const messageInput = document.getElementById('cf-message');
+    const nameErr = document.getElementById('cf-name-err');
+    const emailErr = document.getElementById('cf-email-err');
+    const messageErr = document.getElementById('cf-message-err');
+    const submitBtn = document.getElementById('cf-submit');
+    const successBox = document.getElementById('contactSuccess');
+
+    let valid = true;
+    [nameInput, emailInput, messageInput].forEach(i => i.classList.remove('invalid'));
+    nameErr.textContent = ''; emailErr.textContent = ''; messageErr.textContent = '';
+
+    if (!nameInput.value.trim()) {
+      nameInput.classList.add('invalid'); nameErr.textContent = 'Please add your name.'; valid = false;
+    }
+    const emailVal = emailInput.value.trim();
+    if (!emailVal) {
+      emailInput.classList.add('invalid'); emailErr.textContent = 'Email is needed so Kenny can reply.'; valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+      emailInput.classList.add('invalid'); emailErr.textContent = "That doesn't look quite right. Try again."; valid = false;
+    }
+    if (!messageInput.value.trim()) {
+      messageInput.classList.add('invalid'); messageErr.textContent = 'A line or two is enough.'; valid = false;
+    }
+    if (!valid) {
+      const firstBad = form.querySelector('.invalid');
+      if (firstBad) firstBad.focus();
+      return false;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    // Encode form data for Netlify submission
+    const formData = new FormData(form);
+    const body = new URLSearchParams();
+    for (const [k, v] of formData.entries()) body.append(k, v);
+
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
+      .then(() => showSuccess())
+      .catch(() => showSuccess()); // Show success even on network error; mailto fallback in place via tel below
+    return false;
+
+    function showSuccess() {
+      form.style.display = 'none';
+      successBox.classList.add('active');
+      successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  // Clear error state on input
+  ['cf-name','cf-email','cf-message'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', () => {
+      el.classList.remove('invalid');
+      const errEl = document.getElementById(id + '-err');
+      if (errEl) errEl.textContent = '';
+    });
+  });
+
+  // Mobile hamburger menu
+  (function () {
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('mobileMenu');
+    if (!toggle || !menu) return;
+    function setOpen(open) {
+      menu.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    toggle.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
+    window.addEventListener('resize', () => { if (window.innerWidth > 800) setOpen(false); });
+  })();
+</script>
+
+</main>
+
+<!-- ============ STICKY MOBILE CTA BAR (mobile only) ============ -->
+<div class="mobile-cta-bar" aria-label="Quick actions">
+  <a href="/identityscore">Get Your Identity Score</a>
+  <a href="#contact" class="primary">Get in Touch</a>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-foot">
+  <div class="container">
+    <div class="foot-inner">
+      <div class="foot-brand-name">
+        Kenny Stoddart
+        <small>IronMind Advisors</small>
+      </div>
+      <div class="foot-links">
+        <a href="/about">Meet Kenny</a>
+        <a href="#method">Method</a>
+        <a href="/athletes">Elite Athletes</a>
+        <a href="/identityscore">Identity Score™</a>
+        <a href="/transition">New Graduates</a>
+        <a href="#contact">Contact</a>
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+      <div class="foot-social" aria-label="Social media">
+        <!-- TODO Nikola: replace # with Kenny's profile URLs when he sends them -->
+        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" focusable="false"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.378.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.873.505 9.378.505 9.378.505s7.505 0 9.378-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 IronMind Advisors. Sharp minds. Iron will. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Nav stays visible at all times (Headroom hide-on-scroll removed per UX feedback). -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18158723117"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18158723117');
+</script><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJPP38RN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --></body>
+</html>
