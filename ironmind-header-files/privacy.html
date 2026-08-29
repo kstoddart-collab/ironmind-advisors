@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy · IronMind Advisors</title>
+<meta name="description" content="Privacy Policy for IronMind Advisors. What we collect, how we use it, and your rights. Effective May 1, 2026." />
+<meta name="robots" content="index, follow" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --void:        #0a0a0c;
+    --ink-deep:    #15161a;
+    --bone:        #f4f1ec;
+    --paper:       #fdfcf8;
+    --bone-soft:   rgba(244,241,236,0.80);
+    --bone-mute:   rgba(244,241,236,0.64);
+    --ink-dark:    #15161a;
+    --ink-mid:     rgba(21,22,26,0.78);
+    --ink-light:   rgba(21,22,26,0.55);
+    --rule-dark:   rgba(21,22,26,0.10);
+    --ox:          #1872b0;
+    --ember:       #3f95d4;
+    --rule:        rgba(244,241,236,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  html, body { overflow-x: clip; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bone);
+    color: var(--ink-dark);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16.5px;
+  }
+  ::selection { background: var(--ox); color: var(--bone); }
+  h1, h2, h3, h4 { font-family: 'Inter', sans-serif; color: var(--ink-dark); letter-spacing: -0.025em; }
+  a { color: var(--ox); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: var(--ember); }
+
+  .skip-link {
+    position: absolute; top: -100px; left: 12px;
+    background: var(--ox); color: var(--bone);
+    padding: 12px 18px; font-weight: 700; font-size: 13px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    text-decoration: none; z-index: 100; transition: top 0.2s ease;
+  }
+  .skip-link:focus { top: 12px; }
+
+  /* ============ NAV — light header (shared across every page) ============ */
+  #site-nav {
+    --nv-bg:          rgba(253,252,248,0.97);
+    --nv-solid:       #fdfcf8;
+    --nv-ink:         #15161a;
+    --nv-ink-mid:     rgba(21,22,26,0.72);
+    --nv-rule:        rgba(21,22,26,0.10);
+    --nv-accent:      #1872b0;
+    --nv-accent-deep: #0e4f7a;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--nv-bg);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--nv-rule);
+  }
+  #site-nav a { text-decoration: none; }
+  #site-nav .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px clamp(22px, 5vw, 56px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  /* --- brand lockup: mark + rule + wordmark, read as one object --- */
+  #site-nav .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--nv-ink);
+  }
+  #site-nav .nav-mark {
+    width: 104px; height: 44px;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  #site-nav .nav-mark img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease;
+  }
+  #site-nav .nav-brand:hover .nav-mark img { transform: scale(1.04); }
+  #site-nav .nav-rule {
+    width: 1px; height: 34px;
+    background: rgba(21,22,26,0.16);
+    flex-shrink: 0;
+  }
+  #site-nav .nav-word {
+    line-height: 1.05;
+    font-family: 'Inter', 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  #site-nav .nav-word .w1 {
+    display: block;
+    font-weight: 900; font-size: 17px;
+    letter-spacing: 0.14em;
+    color: var(--nv-ink);
+  }
+  #site-nav .nav-word .w2 {
+    display: block;
+    font-weight: 700; font-size: 10.5px;
+    letter-spacing: 0.34em;
+    color: var(--nv-accent);
+    margin-top: 3px;
+  }
+
+  /* --- links --- */
+  #site-nav .nav-links { display: flex; gap: 30px; align-items: center; }
+  #site-nav .nav-link {
+    position: relative;
+    color: var(--nv-ink-mid);
+    font-size: 13.5px; font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 6px 0;
+    transition: color 0.2s ease;
+  }
+  #site-nav .nav-link::after {
+    content: '';
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 2px;
+    background: var(--nv-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.22s ease;
+  }
+  #site-nav .nav-link:hover { color: var(--nv-ink); }
+  #site-nav .nav-link:hover::after,
+  #site-nav .nav-link.active::after { transform: scaleX(1); }
+  #site-nav .nav-link.active { color: var(--nv-ink); }
+
+  /* --- Identity Score pill: one button, three audiences behind it --- */
+  #site-nav .nav-score {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 9px 18px;
+    border: 1.5px solid var(--nv-accent);
+    border-radius: 999px;
+    color: var(--nv-accent);
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  }
+  #site-nav .nav-score svg { width: 11px; height: 11px; transition: transform 0.2s ease; }
+  #site-nav .nav-score:hover,
+  #site-nav .nav-score.active {
+    background: var(--nv-accent);
+    color: #fff;
+    box-shadow: 0 6px 16px -8px rgba(24,114,176,0.9);
+  }
+  #site-nav .nav-score:hover svg { transform: translateY(2px); }
+
+  #site-nav .nav-cta {
+    padding: 11px 22px;
+    background: var(--nv-accent);
+    color: #fff !important;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+  }
+  #site-nav .nav-cta:hover {
+    background: var(--nv-accent-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px -10px rgba(14,79,122,0.9);
+  }
+
+  #site-nav .nav-back {
+    color: var(--nv-ink-mid);
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+  }
+  #site-nav .nav-back:hover { color: var(--nv-accent); }
+
+  /* --- hamburger --- */
+  #site-nav .nav-toggle {
+    display: none;
+    flex-direction: column; justify-content: center; gap: 5px;
+    width: 44px; height: 44px;
+    padding: 0;
+    background: none; border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  #site-nav .nav-toggle span {
+    display: block;
+    width: 24px; height: 2px;
+    margin: 0 auto;
+    background: var(--nv-ink);
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+  #site-nav .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #site-nav .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  #site-nav .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* --- mobile panel --- */
+  #site-nav .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    background: var(--nv-solid);
+    border-bottom: 1px solid var(--nv-rule);
+    box-shadow: 0 18px 30px -22px rgba(21,22,26,0.5);
+    padding: 8px clamp(18px, 5vw, 28px) 22px;
+  }
+  #site-nav .mobile-menu.open { display: flex; }
+  #site-nav .mobile-menu a.m-link {
+    color: var(--nv-ink-mid);
+    font-size: 16px; font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 15px 2px;
+    border-bottom: 1px solid var(--nv-rule);
+    transition: color 0.2s ease;
+  }
+  #site-nav .mobile-menu a.m-link:hover,
+  #site-nav .mobile-menu a.m-link:active { color: var(--nv-ink); }
+  #site-nav .mobile-menu a.m-score {
+    margin-top: 16px;
+    text-align: center;
+    padding: 15px;
+    border: 1.5px solid var(--nv-accent);
+    border-radius: 999px;
+    color: var(--nv-accent);
+    font-size: 14px; font-weight: 700;
+  }
+  #site-nav .mobile-menu a.m-cta {
+    margin-top: 10px;
+    text-align: center;
+    padding: 16px;
+    background: var(--nv-accent);
+    color: #fff;
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease;
+  }
+  #site-nav .mobile-menu a.m-cta:active { background: var(--nv-accent-deep); }
+
+  @media (max-width: 860px) {
+    #site-nav .nav-links { display: none; }
+    #site-nav .nav-toggle { display: flex; }
+  }
+  @media (max-width: 560px) {
+    #site-nav .nav-mark { width: 82px; height: 36px; }
+    #site-nav .nav-word .w1 { font-size: 15px; }
+    #site-nav .nav-word .w2 { font-size: 9px; letter-spacing: 0.28em; }
+  }
+
+  .page-head {
+    background: var(--void); color: var(--bone);
+    padding: clamp(56px, 8vw, 110px) 0 clamp(48px, 6vw, 80px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .page-head .container { max-width: 760px; margin: 0 auto; padding: 0 clamp(22px, 5vw, 48px); }
+  .page-eyebrow {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ember);
+    display: inline-flex; align-items: center; gap: 14px;
+    margin-bottom: 22px;
+  }
+  .page-eyebrow::before { content: ''; width: 28px; height: 1.5px; background: var(--ember); }
+  .page-head h1 {
+    font-size: clamp(36px, 5.4vw, 64px);
+    font-weight: 900; line-height: 1.02;
+    letter-spacing: -0.035em;
+    color: var(--bone); margin-bottom: 18px;
+  }
+  .page-head .meta {
+    display: flex; gap: clamp(18px, 3vw, 36px); flex-wrap: wrap;
+    margin-top: 18px;
+    font-size: 12px; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--bone-soft);
+  }
+  .page-head .meta span { display: flex; align-items: center; gap: 8px; }
+  .page-head .meta span::before { content: ''; width: 5px; height: 5px; background: var(--ember); border-radius: 50%; }
+
+  .doc { padding: clamp(48px, 6vw, 88px) 0 clamp(64px, 8vw, 110px); }
+  .doc .container { max-width: 760px; margin: 0 auto; padding: 0 clamp(22px, 5vw, 48px); }
+
+  .doc h2 {
+    font-size: clamp(22px, 2.4vw, 28px);
+    font-weight: 900; color: var(--ink-dark);
+    letter-spacing: -0.025em; line-height: 1.2;
+    margin-top: clamp(48px, 6vw, 72px); margin-bottom: 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--rule-dark);
+  }
+  .doc h2:first-of-type { margin-top: 0; }
+  .doc h2 .num {
+    display: inline-block; color: var(--ox); margin-right: 12px;
+    font-variant-numeric: tabular-nums;
+  }
+  .doc h3 {
+    font-size: clamp(17px, 1.7vw, 20px);
+    font-weight: 800; color: var(--ink-dark);
+    letter-spacing: -0.015em; line-height: 1.3;
+    margin-top: 36px; margin-bottom: 12px;
+  }
+  .doc p {
+    font-size: 16px; line-height: 1.7;
+    color: var(--ink-mid); margin-bottom: 18px;
+  }
+  .doc p strong { color: var(--ink-dark); font-weight: 700; }
+  .doc ul { margin: 8px 0 22px; padding-left: 22px; list-style: none; }
+  .doc li {
+    font-size: 16px; line-height: 1.7;
+    color: var(--ink-mid); margin-bottom: 12px;
+    padding-left: 8px; position: relative;
+  }
+  .doc li::before {
+    content: '›'; color: var(--ox);
+    position: absolute; left: -16px; font-weight: 700;
+  }
+  .doc li strong { color: var(--ink-dark); font-weight: 700; }
+
+  .doc-intro {
+    background: var(--paper);
+    border-left: 3px solid var(--ox);
+    padding: clamp(20px, 3vw, 28px) clamp(22px, 3vw, 32px);
+    margin-bottom: clamp(36px, 5vw, 56px);
+  }
+  .doc-intro p { margin-bottom: 12px; }
+  .doc-intro p:last-child { margin-bottom: 0; }
+  .doc-intro p:first-child {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ox);
+  }
+
+  .doc-end {
+    margin-top: clamp(48px, 6vw, 72px);
+    padding-top: clamp(32px, 4vw, 48px);
+    border-top: 1px solid var(--rule-dark);
+    text-align: center; font-size: 13.5px; color: var(--ink-light);
+  }
+  .doc-end a { margin: 0 12px; }
+
+  footer.site-foot {
+    padding: 48px 0 36px;
+    background: var(--ink-deep);
+    color: var(--bone-mute); font-size: 13px;
+  }
+  .foot-inner {
+    max-width: 1180px; margin: 0 auto;
+    padding: 0 clamp(22px, 5vw, 48px);
+    display: flex; justify-content: space-between;
+    align-items: center; gap: 24px; flex-wrap: wrap;
+  }
+  .foot-brand-name { font-size: 17px; font-weight: 800; color: var(--bone); letter-spacing: -0.01em; }
+  .foot-brand-name small {
+    display: block; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ox); margin-top: 4px;
+  }
+  .foot-links { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+  .foot-links a { color: var(--bone-mute); font-size: 13px; font-weight: 600; text-decoration: none; }
+  .foot-links a:hover { color: var(--bone); }
+  .foot-social { display: flex; gap: 14px; align-items: center; }
+  .foot-social a {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px;
+    color: var(--bone-mute);
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+  }
+  .foot-social a:hover {
+    color: var(--bone); border-color: var(--ember);
+    background: rgba(24,114,176,0.15); transform: translateY(-2px);
+  }
+  .foot-social svg { width: 16px; height: 16px; fill: currentColor; display: block; }
+  .foot-bottom {
+    max-width: 1180px; margin: 28px auto 0;
+    padding: 18px clamp(22px, 5vw, 48px) 0;
+    border-top: 1px solid var(--rule);
+    font-size: 11.5px; color: var(--bone-mute);
+    text-align: center; letter-spacing: 0.04em;
+  }
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1514330020342685');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1514330020342685&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code --><!-- Event snippet for Meet Kenny Button Click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18158723117/f4h9CLfelMYcEK3A4NJD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script><!-- Event snippet for Request an Iron Audit Button Click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18158723117/o6i6CLrelMYcEK3A4NJD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script><!-- Event snippet for Get In Touch Button Click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18158723117/bk-zCL3elMYcEK3A4NJD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18158723117"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18158723117');
+</script><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJPP38RN');</script>
+<!-- End Google Tag Manager --></head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<nav id="site-nav" aria-label="Main">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand" aria-label="IronMind Advisors — home">
+      <div class="nav-mark">
+        <img src="ima-mark.png" alt="" width="586" height="251" decoding="async" />
+      </div>
+      <div class="nav-rule" aria-hidden="true"></div>
+      <div class="nav-word">
+        <span class="w1">IRONMIND</span>
+        <span class="w2">ADVISORS</span>
+      </div>
+    </a>
+    <a href="/" class="nav-back">&larr; Home</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- PAGE HEADER -->
+<header class="page-head">
+  <div class="container">
+    <div class="page-eyebrow">Legal · IronMind Advisors</div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <span>Effective May 1, 2026</span>
+      <span>Florida, United States</span>
+    </div>
+  </div>
+</header>
+
+<!-- DOCUMENT BODY -->
+<section class="doc">
+  <div class="container">
+
+    <div class="doc-intro">
+      <p>Plain English summary</p>
+      <p>IronMind Advisors collects only the information needed to respond to inquiries, deliver coaching engagements, and provide the Identity Score™. We do not sell your data. We do not run advertising trackers on this site. The full policy below explains exactly what we collect, why, who handles it on our behalf, and how to request access or deletion.</p>
+    </div>
+
+    <h2 id="s1"><span class="num">01</span>Who This Policy Applies To</h2>
+    <p>This Privacy Policy describes how IronMind Advisors ("we," "us," or "our"), operated by Kenny Stoddart and based in Jacksonville Beach, Florida, collects and handles personal information from visitors to <a href="https://www.ironmindadvisors.com">ironmindadvisors.com</a>, prospective Clients, and active coaching Clients.</p>
+    <p>It applies to information you provide through our website forms, the Identity Score™, direct email or phone contact, and the coaching relationship itself. It does not cover third-party websites we link to. Those sites publish their own policies, which we encourage you to read separately.</p>
+
+
+    <h2 id="s2"><span class="num">02</span>Information We Collect</h2>
+    <p>We collect only the information we actually need to run the business. We do not collect data speculatively.</p>
+
+    <h3>2.1 Information You Provide Directly</h3>
+    <ul>
+      <li><strong>Contact form submissions.</strong> When you send a note through the form on the homepage, we receive your name, email address, optional phone number, and the contents of your message.</li>
+      <li><strong>Identity Score™.</strong> When you complete the Identity Score, we receive your answers to the 40 questions, your composite score, and (if you choose to receive results by email) your name and email address.</li>
+      <li><strong>Direct email and phone contact.</strong> If you reach out to <a href="mailto:kenny@ironmindadvisors.com">kenny@ironmindadvisors.com</a> or call the number listed, the contents of that communication and any contact information you share become part of our records.</li>
+      <li><strong>Client engagement information.</strong> If you become a Client, we collect the information needed to deliver the engagement: scheduling preferences, billing details handled through our payment processor, intake responses, and the substance of advisory sessions covered by the confidentiality obligations in our <a href="/terms">Terms of Service</a>.</li>
+    </ul>
+
+    <h3>2.2 Information Collected Automatically</h3>
+    <ul>
+      <li><strong>Standard web server logs.</strong> Our hosting provider, Netlify, automatically records standard request data (IP address, browser type, pages visited, timestamps) for security and reliability purposes. We do not actively analyze these logs for marketing.</li>
+      <li><strong>Embedded video.</strong> The speaker profile page embeds YouTube videos using a privacy-respecting "facade" pattern. No data is sent to YouTube or Google until you actually click play on a video. At that point, YouTube's own terms and privacy policy apply to the playback session.</li>
+    </ul>
+
+    <h3>2.3 What We Do Not Collect</h3>
+    <p>We do not run advertising trackers, behavioral pixels, retargeting cookies, or third-party analytics that profile you across the internet. We do not buy contact lists. We do not enrich your data from external sources.</p>
+
+
+    <h2 id="s3"><span class="num">03</span>How We Use Your Information</h2>
+    <p>We use the information you provide for the specific purposes below, and not for any others.</p>
+    <ul>
+      <li><strong>To respond to your inquiry.</strong> When you submit a contact form or the Identity Score™, Kenny replies personally, usually inside 48 hours.</li>
+      <li><strong>To deliver your Identity Score results.</strong> If you opt in to receive results, we send you your composite score and notes by email.</li>
+      <li><strong>To deliver the coaching engagement.</strong> For active Clients, we use your information to schedule sessions, deliver advisory work, process payments, and maintain the records required by our <a href="/terms">Terms of Service</a>.</li>
+      <li><strong>To improve our methodology.</strong> We may use anonymized, non-identifiable patterns from Identity Score data to refine the Identity Gain™ framework. Your individual responses are never published or shared in identifiable form.</li>
+      <li><strong>To meet legal obligations.</strong> Where required by law, we retain records for tax, accounting, or regulatory compliance.</li>
+    </ul>
+    <p>We do not use your information for marketing email blasts. We do not send a newsletter. If you ever receive an email from IronMind Advisors, it will be a direct reply from Kenny or a transactional message tied to an active engagement.</p>
+
+
+    <h2 id="s4"><span class="num">04</span>Who We Share Information With</h2>
+    <p>We share information only with the service providers needed to operate the website and the coaching practice. We do not sell, rent, or trade personal information.</p>
+
+    <h3>4.1 Service Providers We Use</h3>
+    <ul>
+      <li><strong>Netlify</strong> (hosting and contact form processing). Contact form submissions are stored by Netlify and forwarded to Kenny's inbox. See Netlify's <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">privacy policy</a>.</li>
+      <li><strong>EmailJS</strong> (Identity Score™ results delivery). Your Identity Score responses, score, and the email address you optionally provide are transmitted through EmailJS to send you results. See EmailJS's <a href="https://www.emailjs.com/legal/privacy-policy/" target="_blank" rel="noopener">privacy policy</a>.</li>
+      <li><strong>YouTube / Google</strong> (embedded video playback). When you click play on an embedded video, your session is handled by YouTube under their privacy policy. We use the privacy-enhanced <code>youtube-nocookie.com</code> domain so no tracking cookies are set on the page before you choose to play a video.</li>
+      <li><strong>Payment processor</strong> (for active Clients only). Billing for coaching engagements is handled through a regulated payment processor that maintains its own privacy and PCI-compliance program. We do not store full payment card numbers on our systems.</li>
+    </ul>
+
+    <h3>4.2 Disclosures Required by Law</h3>
+    <p>We may disclose information if required by applicable law, regulation, valid court order, or governmental request. Where legally permitted, we will give you advance notice before doing so. This mirrors the confidentiality exceptions in Section 6.4 of our <a href="/terms">Terms of Service</a>.</p>
+
+    <h3>4.3 Business Transitions</h3>
+    <p>If IronMind Advisors is ever involved in a merger, acquisition, or transfer of substantially all its assets, your information may be transferred as part of that transaction. Any successor entity would be bound by the commitments in this Privacy Policy.</p>
+
+
+    <h2 id="s5"><span class="num">05</span>Cookies, Analytics &amp; Tracking</h2>
+    <p>This site is intentionally light on tracking.</p>
+    <ul>
+      <li><strong>No advertising cookies.</strong> We do not run Facebook Pixel, Google Ads tags, or any cross-site behavioral tracker.</li>
+      <li><strong>No third-party analytics by default.</strong> We may add a privacy-respecting analytics tool (such as Plausible or Microsoft Clarity) to understand which pages people visit. If we do, we will update this policy to name the tool and link to its privacy policy.</li>
+      <li><strong>Functional storage only.</strong> The site may use browser storage for functional purposes, such as remembering your Identity Score progress while you complete it. This data stays in your browser and is not transmitted to us.</li>
+      <li><strong>Embedded video.</strong> YouTube embeds use the <code>youtube-nocookie.com</code> domain. No cookies are set by YouTube until you actively click play on a video.</li>
+    </ul>
+
+
+    <h2 id="s6"><span class="num">06</span>Data Retention</h2>
+    <p>We retain different categories of information for different lengths of time, based on what the information is for.</p>
+    <ul>
+      <li><strong>Contact form messages and email correspondence:</strong> retained while the inquiry is being responded to, and archived for our internal records. You may request deletion at any time (see Section 7).</li>
+      <li><strong>Identity Score™ responses:</strong> retained associated with the email address you provided so we can send results and reference them in any follow-up conversation. Anonymized aggregate data may be retained indefinitely for methodology improvement.</li>
+      <li><strong>Active Client records:</strong> retained for the duration of the engagement and for as long afterwards as is required by tax, accounting, and professional record-keeping obligations under applicable law.</li>
+      <li><strong>Server logs:</strong> retained by Netlify on Netlify's own retention schedule (typically 30 days for raw logs).</li>
+    </ul>
+
+
+    <h2 id="s7"><span class="num">07</span>Your Rights</h2>
+    <p>Depending on where you live, you may have specific rights under privacy laws such as the GDPR (European Union and United Kingdom) or the CCPA / CPRA (California, United States). We honor the following requests for everyone, regardless of jurisdiction.</p>
+    <ul>
+      <li><strong>Access.</strong> You can ask us what personal information we hold about you and request a copy.</li>
+      <li><strong>Correction.</strong> You can ask us to correct any inaccurate or out-of-date information.</li>
+      <li><strong>Deletion.</strong> You can ask us to delete personal information we hold about you, subject to legal or contractual obligations that require us to retain certain records (for example, financial records for active Clients).</li>
+      <li><strong>Restriction or objection.</strong> You can ask us to stop using your information for specific purposes.</li>
+      <li><strong>Portability.</strong> You can ask us to provide your information in a portable format.</li>
+      <li><strong>Withdraw consent.</strong> Where we rely on your consent to process information (for example, sending Identity Score results by email), you can withdraw that consent at any time.</li>
+    </ul>
+    <p>To exercise any of these rights, email <a href="mailto:kenny@ironmindadvisors.com">kenny@ironmindadvisors.com</a> with the request. We will respond inside 30 days. We will not discriminate against you for exercising a right under applicable privacy law.</p>
+
+
+    <h2 id="s8"><span class="num">08</span>Security</h2>
+    <p>We use industry-standard technical and operational safeguards to protect your information.</p>
+    <ul>
+      <li>The website is served exclusively over HTTPS with HSTS, X-Frame-Options, X-Content-Type-Options, and a strict referrer policy configured at the edge.</li>
+      <li>Contact form submissions are encrypted in transit and stored on infrastructure operated by Netlify, which maintains SOC 2 compliance.</li>
+      <li>Payment processing for Client engagements is delegated to a PCI-compliant payment processor. We do not store full payment card numbers.</li>
+      <li>Confidential session content covered by the advisory relationship is protected under the confidentiality obligations in Section 6 of our <a href="/terms">Terms of Service</a>.</li>
+    </ul>
+    <p>No system is perfectly secure. If we ever experience a breach that affects your personal information, we will notify you and the appropriate authorities as required by law.</p>
+
+
+    <h2 id="s9"><span class="num">09</span>Children's Privacy</h2>
+    <p>IronMind Advisors provides services to adults only. Per Section 2 of our <a href="/terms">Terms of Service</a>, we do not engage Clients under the age of 18. We do not knowingly collect personal information from anyone under 18 through this website or the Identity Score™. If you believe we have inadvertently collected information from a minor, contact us and we will delete it.</p>
+
+
+    <h2 id="s10"><span class="num">10</span>International Transfers</h2>
+    <p>IronMind Advisors operates from the United States. The service providers we use (Netlify, EmailJS, YouTube) operate primarily from the United States. If you access the site or submit information from outside the United States, your information will be transferred to and processed in the United States. By using the site or submitting information, you consent to that transfer.</p>
+
+
+    <h2 id="s11"><span class="num">11</span>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy to reflect changes in our practices, the services we use, or applicable law. When we make material changes, we will update the "Effective" date at the top of this document. For active Clients, material changes will also be communicated by email at least 30 days before they take effect, consistent with the amendment process in our <a href="/terms">Terms of Service</a>.</p>
+    <p>Your continued use of the website after a policy update constitutes acceptance of the revised policy.</p>
+
+
+    <h2 id="s12"><span class="num">12</span>Contact</h2>
+    <p>Questions, requests, or concerns about this Privacy Policy or how we handle your information should be directed to:</p>
+    <p><strong>IronMind Advisors</strong><br>
+    Attn: Kenny Stoddart<br>
+    Email: <a href="mailto:kenny@ironmindadvisors.com">kenny@ironmindadvisors.com</a><br>
+    Phone: <a href="tel:+14048311961">+1 (404) 831-1961</a><br>
+    Location: Jacksonville Beach, Florida, United States<br>
+    Website: <a href="https://www.ironmindadvisors.com">ironmindadvisors.com</a></p>
+    <p>We respond to privacy inquiries personally, usually inside 48 hours.</p>
+
+    <div class="doc-end">
+      © 2026 IronMind Advisors. Sharp minds. Iron will.<br>
+      <a href="/">Home</a> · <a href="/terms">Terms of Service</a> · <a href="/#contact">Contact</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-brand-name">
+      Kenny Stoddart
+      <small>IronMind Advisors</small>
+    </div>
+    <div class="foot-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/speaker">Speaker</a>
+      <a href="/athletes">Elite Athletes</a>
+      <a href="/identityscore">Identity Score™</a>
+      <a href="/transition">New Graduates</a>
+      <a href="/#contact">Contact</a>
+      <a href="/terms">Terms</a>
+      <a href="/privacy">Privacy</a>
+    </div>
+    <div class="foot-social" aria-label="Social media">
+      <!-- TODO Nikola: replace # with Kenny's profile URLs when he sends them -->
+      <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
+      <a href="#" aria-label="YouTube" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.378.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.873.505 9.378.505 9.378.505s7.505 0 9.378-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+      <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    © 2026 IronMind Advisors. All rights reserved.
+  </div>
+</footer>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18158723117"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18158723117');
+</script><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJPP38RN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --></body>
+</html>
