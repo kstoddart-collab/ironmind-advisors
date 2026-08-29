@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Terms of Service · IronMind Advisors</title>
+<meta name="description" content="Terms of Service for IronMind Advisors executive coaching engagements. Effective May 1, 2026." />
+<meta name="robots" content="index, follow" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --void:        #0a0a0c;
+    --ink-deep:    #15161a;
+    --ink-soft:    #1f2128;
+    --bone:        #f4f1ec;
+    --paper:       #fdfcf8;
+    --bone-soft:   rgba(244,241,236,0.80);
+    --bone-mute:   rgba(244,241,236,0.64);
+    --bone-faint:  rgba(244,241,236,0.22);
+    --ink-dark:    #15161a;
+    --ink-mid:     rgba(21,22,26,0.78);
+    --ink-light:   rgba(21,22,26,0.55);
+    --rule-dark:   rgba(21,22,26,0.10);
+    --ox:          #1872b0;
+    --ember:       #3f95d4;
+    --rule:        rgba(244,241,236,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  html, body { overflow-x: clip; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bone);
+    color: var(--ink-dark);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16.5px;
+  }
+  ::selection { background: var(--ox); color: var(--bone); }
+  h1, h2, h3, h4 {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink-dark);
+    letter-spacing: -0.025em;
+  }
+  a { color: var(--ox); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: var(--ember); }
+
+  .skip-link {
+    position: absolute; top: -100px; left: 12px;
+    background: var(--ox); color: var(--bone);
+    padding: 12px 18px; font-weight: 700; font-size: 13px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    text-decoration: none; z-index: 100; transition: top 0.2s ease;
+  }
+  .skip-link:focus { top: 12px; }
+
+  /* ============ NAV — light header (shared across every page) ============ */
+  #site-nav {
+    --nv-bg:          rgba(253,252,248,0.97);
+    --nv-solid:       #fdfcf8;
+    --nv-ink:         #15161a;
+    --nv-ink-mid:     rgba(21,22,26,0.72);
+    --nv-rule:        rgba(21,22,26,0.10);
+    --nv-accent:      #1872b0;
+    --nv-accent-deep: #0e4f7a;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--nv-bg);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--nv-rule);
+  }
+  #site-nav a { text-decoration: none; }
+  #site-nav .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px clamp(22px, 5vw, 56px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  /* --- brand lockup: mark + rule + wordmark, read as one object --- */
+  #site-nav .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--nv-ink);
+  }
+  #site-nav .nav-mark {
+    width: 104px; height: 44px;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  #site-nav .nav-mark img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease;
+  }
+  #site-nav .nav-brand:hover .nav-mark img { transform: scale(1.04); }
+  #site-nav .nav-rule {
+    width: 1px; height: 34px;
+    background: rgba(21,22,26,0.16);
+    flex-shrink: 0;
+  }
+  #site-nav .nav-word {
+    line-height: 1.05;
+    font-family: 'Inter', 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  #site-nav .nav-word .w1 {
+    display: block;
+    font-weight: 900; font-size: 17px;
+    letter-spacing: 0.14em;
+    color: var(--nv-ink);
+  }
+  #site-nav .nav-word .w2 {
+    display: block;
+    font-weight: 700; font-size: 10.5px;
+    letter-spacing: 0.34em;
+    color: var(--nv-accent);
+    margin-top: 3px;
+  }
+
+  /* --- links --- */
+  #site-nav .nav-links { display: flex; gap: 30px; align-items: center; }
+  #site-nav .nav-link {
+    position: relative;
+    color: var(--nv-ink-mid);
+    font-size: 13.5px; font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 6px 0;
+    transition: color 0.2s ease;
+  }
+  #site-nav .nav-link::after {
+    content: '';
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 2px;
+    background: var(--nv-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.22s ease;
+  }
+  #site-nav .nav-link:hover { color: var(--nv-ink); }
+  #site-nav .nav-link:hover::after,
+  #site-nav .nav-link.active::after { transform: scaleX(1); }
+  #site-nav .nav-link.active { color: var(--nv-ink); }
+
+  /* --- Identity Score pill: one button, three audiences behind it --- */
+  #site-nav .nav-score {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 9px 18px;
+    border: 1.5px solid var(--nv-accent);
+    border-radius: 999px;
+    color: var(--nv-accent);
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  }
+  #site-nav .nav-score svg { width: 11px; height: 11px; transition: transform 0.2s ease; }
+  #site-nav .nav-score:hover,
+  #site-nav .nav-score.active {
+    background: var(--nv-accent);
+    color: #fff;
+    box-shadow: 0 6px 16px -8px rgba(24,114,176,0.9);
+  }
+  #site-nav .nav-score:hover svg { transform: translateY(2px); }
+
+  #site-nav .nav-cta {
+    padding: 11px 22px;
+    background: var(--nv-accent);
+    color: #fff !important;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+  }
+  #site-nav .nav-cta:hover {
+    background: var(--nv-accent-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px -10px rgba(14,79,122,0.9);
+  }
+
+  #site-nav .nav-back {
+    color: var(--nv-ink-mid);
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+  }
+  #site-nav .nav-back:hover { color: var(--nv-accent); }
+
+  /* --- hamburger --- */
+  #site-nav .nav-toggle {
+    display: none;
+    flex-direction: column; justify-content: center; gap: 5px;
+    width: 44px; height: 44px;
+    padding: 0;
+    background: none; border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  #site-nav .nav-toggle span {
+    display: block;
+    width: 24px; height: 2px;
+    margin: 0 auto;
+    background: var(--nv-ink);
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+  #site-nav .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #site-nav .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  #site-nav .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* --- mobile panel --- */
+  #site-nav .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    background: var(--nv-solid);
+    border-bottom: 1px solid var(--nv-rule);
+    box-shadow: 0 18px 30px -22px rgba(21,22,26,0.5);
+    padding: 8px clamp(18px, 5vw, 28px) 22px;
+  }
+  #site-nav .mobile-menu.open { display: flex; }
+  #site-nav .mobile-menu a.m-link {
+    color: var(--nv-ink-mid);
+    font-size: 16px; font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 15px 2px;
+    border-bottom: 1px solid var(--nv-rule);
+    transition: color 0.2s ease;
+  }
+  #site-nav .mobile-menu a.m-link:hover,
+  #site-nav .mobile-menu a.m-link:active { color: var(--nv-ink); }
+  #site-nav .mobile-menu a.m-score {
+    margin-top: 16px;
+    text-align: center;
+    padding: 15px;
+    border: 1.5px solid var(--nv-accent);
+    border-radius: 999px;
+    color: var(--nv-accent);
+    font-size: 14px; font-weight: 700;
+  }
+  #site-nav .mobile-menu a.m-cta {
+    margin-top: 10px;
+    text-align: center;
+    padding: 16px;
+    background: var(--nv-accent);
+    color: #fff;
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease;
+  }
+  #site-nav .mobile-menu a.m-cta:active { background: var(--nv-accent-deep); }
+
+  @media (max-width: 860px) {
+    #site-nav .nav-links { display: none; }
+    #site-nav .nav-toggle { display: flex; }
+  }
+  @media (max-width: 560px) {
+    #site-nav .nav-mark { width: 82px; height: 36px; }
+    #site-nav .nav-word .w1 { font-size: 15px; }
+    #site-nav .nav-word .w2 { font-size: 9px; letter-spacing: 0.28em; }
+  }
+
+  /* PAGE HEADER */
+  .page-head {
+    background: var(--void);
+    color: var(--bone);
+    padding: clamp(56px, 8vw, 110px) 0 clamp(48px, 6vw, 80px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .page-head .container { max-width: 760px; margin: 0 auto; padding: 0 clamp(22px, 5vw, 48px); }
+  .page-eyebrow {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ember);
+    display: inline-flex; align-items: center; gap: 14px;
+    margin-bottom: 22px;
+  }
+  .page-eyebrow::before { content: ''; width: 28px; height: 1.5px; background: var(--ember); }
+  .page-head h1 {
+    font-size: clamp(36px, 5.4vw, 64px);
+    font-weight: 900; line-height: 1.02;
+    letter-spacing: -0.035em;
+    color: var(--bone);
+    margin-bottom: 18px;
+  }
+  .page-head .meta {
+    display: flex; gap: clamp(18px, 3vw, 36px); flex-wrap: wrap;
+    margin-top: 18px;
+    font-size: 12px; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--bone-soft);
+  }
+  .page-head .meta span { display: flex; align-items: center; gap: 8px; }
+  .page-head .meta span::before {
+    content: ''; width: 5px; height: 5px;
+    background: var(--ember); border-radius: 50%;
+  }
+
+  /* DOCUMENT BODY */
+  .doc {
+    padding: clamp(48px, 6vw, 88px) 0 clamp(64px, 8vw, 110px);
+  }
+  .doc .container { max-width: 760px; margin: 0 auto; padding: 0 clamp(22px, 5vw, 48px); }
+
+  .doc h2 {
+    font-size: clamp(22px, 2.4vw, 28px);
+    font-weight: 900;
+    color: var(--ink-dark);
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    margin-top: clamp(48px, 6vw, 72px);
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--rule-dark);
+  }
+  .doc h2:first-child { margin-top: 0; }
+  .doc h2 .num {
+    display: inline-block;
+    color: var(--ox);
+    margin-right: 12px;
+    font-variant-numeric: tabular-nums;
+  }
+  .doc h3 {
+    font-size: clamp(17px, 1.7vw, 20px);
+    font-weight: 800;
+    color: var(--ink-dark);
+    letter-spacing: -0.015em;
+    line-height: 1.3;
+    margin-top: 36px;
+    margin-bottom: 12px;
+  }
+  .doc p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink-mid);
+    margin-bottom: 18px;
+  }
+  .doc p strong { color: var(--ink-dark); font-weight: 700; }
+  .doc ul {
+    margin: 8px 0 22px;
+    padding-left: 22px;
+    list-style: none;
+  }
+  .doc li {
+    font-size: 16px; line-height: 1.7;
+    color: var(--ink-mid);
+    margin-bottom: 12px;
+    padding-left: 8px;
+    position: relative;
+  }
+  .doc li::before {
+    content: '›';
+    color: var(--ox);
+    position: absolute;
+    left: -16px;
+    font-weight: 700;
+  }
+  .doc li strong { color: var(--ink-dark); font-weight: 700; }
+
+  .doc-end {
+    margin-top: clamp(48px, 6vw, 72px);
+    padding-top: clamp(32px, 4vw, 48px);
+    border-top: 1px solid var(--rule-dark);
+    text-align: center;
+    font-size: 13.5px;
+    color: var(--ink-light);
+  }
+  .doc-end a { margin: 0 12px; }
+
+  /* FOOTER */
+  footer.site-foot {
+    padding: 48px 0 36px;
+    background: var(--ink-deep);
+    color: var(--bone-mute);
+    font-size: 13px;
+  }
+  .foot-inner {
+    max-width: 1180px; margin: 0 auto;
+    padding: 0 clamp(22px, 5vw, 48px);
+    display: flex; justify-content: space-between;
+    align-items: center; gap: 24px; flex-wrap: wrap;
+  }
+  .foot-brand-name {
+    font-size: 17px; font-weight: 800;
+    color: var(--bone); letter-spacing: -0.01em;
+  }
+  .foot-brand-name small {
+    display: block; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ox); margin-top: 4px;
+  }
+  .foot-links { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+  .foot-links a { color: var(--bone-mute); font-size: 13px; font-weight: 600; text-decoration: none; }
+  .foot-links a:hover { color: var(--bone); }
+  .foot-social { display: flex; gap: 14px; align-items: center; }
+  .foot-social a {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px;
+    color: var(--bone-mute);
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+  }
+  .foot-social a:hover {
+    color: var(--bone); border-color: var(--ember);
+    background: rgba(24,114,176,0.15); transform: translateY(-2px);
+  }
+  .foot-social svg { width: 16px; height: 16px; fill: currentColor; display: block; }
+  .foot-bottom {
+    max-width: 1180px; margin: 28px auto 0;
+    padding: 18px clamp(22px, 5vw, 48px) 0;
+    border-top: 1px solid var(--rule);
+    font-size: 11.5px; color: var(--bone-mute);
+    text-align: center; letter-spacing: 0.04em;
+  }
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1514330020342685');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1514330020342685&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code --><!-- Event snippet for Meet Kenny Button Click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18158723117/f4h9CLfelMYcEK3A4NJD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script><!-- Event snippet for Request an Iron Audit Button Click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18158723117/o6i6CLrelMYcEK3A4NJD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script><!-- Event snippet for Get In Touch Button Click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18158723117/bk-zCL3elMYcEK3A4NJD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18158723117"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18158723117');
+</script><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJPP38RN');</script>
+<!-- End Google Tag Manager --></head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<nav id="site-nav" aria-label="Main">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand" aria-label="IronMind Advisors — home">
+      <div class="nav-mark">
+        <img src="ima-mark.png" alt="" width="586" height="251" decoding="async" />
+      </div>
+      <div class="nav-rule" aria-hidden="true"></div>
+      <div class="nav-word">
+        <span class="w1">IRONMIND</span>
+        <span class="w2">ADVISORS</span>
+      </div>
+    </a>
+    <a href="/" class="nav-back">&larr; Home</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- PAGE HEADER -->
+<header class="page-head">
+  <div class="container">
+    <div class="page-eyebrow">Legal · IronMind Advisors</div>
+    <h1>Terms of Service</h1>
+    <div class="meta">
+      <span>Effective May 1, 2026</span>
+      <span>Florida, United States</span>
+    </div>
+  </div>
+</header>
+
+<!-- DOCUMENT BODY -->
+<section class="doc">
+  <div class="container">
+
+    <h2 id="s1"><span class="num">01</span>Scope of Services</h2>
+    <p>IronMind Advisors provides elite executive coaching, identity-level advisory, and strategic consulting services tailored to the individual needs of each Client.</p>
+    <p>Services delivered under this agreement may include any combination of the following, as determined by IronMind Advisors in its professional discretion based on the Client's stated objectives and engagement type:</p>
+    <ul>
+      <li><strong>1:1 Coaching Sessions:</strong> Scheduled private sessions conducted via video conference, telephone, or in-person (where applicable), focused on performance, leadership, identity, and mindset development.</li>
+      <li><strong>Written Frameworks &amp; Tools:</strong> Proprietary diagnostics, worksheets, frameworks including the Identity Gain™ methodology, and written developmental guides provided for personal use by the Client.</li>
+      <li><strong>Asynchronous Advisory:</strong> Written feedback, voice notes, and guidance delivered between scheduled sessions via agreed-upon communication channels.</li>
+      <li><strong>Strategic Planning Support:</strong> Structured advisory on leadership transitions, organizational performance, personal brand positioning, and mission-critical decision-making contexts.</li>
+    </ul>
+    <p>All services are delivered at the professional discretion of IronMind Advisors and will be adapted based on each Client's evolving needs, progress, and engagement structure. IronMind Advisors reserves the right to adjust service delivery methods while maintaining the quality and intent of the engagement.</p>
+
+    <h3>1.1 What Is Not Included</h3>
+    <p>IronMind Advisors is a coaching and advisory firm. Services provided under this agreement expressly do not include, and shall not be construed as, any of the following:</p>
+    <ul>
+      <li>Psychotherapy, counseling, clinical mental health treatment, or any service regulated under mental health licensing statutes.</li>
+      <li>Psychiatric evaluation, diagnosis, or treatment of any mental health condition or disorder.</li>
+      <li>Medical advice, healthcare services, or recommendations regarding physical health, medication, or medical treatment.</li>
+      <li>Legal advice, legal representation, or any service that constitutes the practice of law.</li>
+      <li>Financial planning, investment advice, accounting, or any service regulated under financial advisory licensing requirements.</li>
+    </ul>
+    <p>Clients who require services in any of the above categories are encouraged to engage appropriately licensed professionals. Nothing in the advisory relationship should be interpreted as a substitute for professional medical, legal, or financial counsel.</p>
+
+
+    <h2 id="s2"><span class="num">02</span>Client Responsibilities</h2>
+    <p>The quality of this engagement is directly proportional to the quality of effort the Client brings to it.</p>
+    <p>IronMind Advisors enters each engagement expecting the following from the Client:</p>
+    <ul>
+      <li><strong>Active Participation:</strong> The Client agrees to show up fully prepared and engaged for each session, complete between-session commitments, and contribute honestly to the advisory process.</li>
+      <li><strong>Accurate Information:</strong> The Client agrees to provide truthful, complete, and current information about their background, goals, challenges, and circumstances. Withholding material information undermines the engagement and releases IronMind Advisors from responsibility for any resulting misdirection.</li>
+      <li><strong>Implementation Responsibility:</strong> The Client understands and accepts that all insights, frameworks, and recommendations provided by IronMind Advisors require the Client's own action to produce results. IronMind Advisors delivers the advisory. The Client delivers the execution.</li>
+      <li><strong>No Guarantee of Outcome:</strong> The Client acknowledges that no specific results, outcomes, revenue targets, performance benchmarks, or life changes are guaranteed. Results depend entirely on the Client's effort, commitment, external circumstances, and individual readiness for change.</li>
+      <li><strong>Minimum Age:</strong> The Client confirms they are at least 18 years of age. IronMind Advisors does not provide services to minors under any circumstances.</li>
+      <li><strong>Self-Determination:</strong> The Client accepts full responsibility for all decisions made, actions taken, and consequences experienced as a result of or in relation to the advisory engagement. IronMind Advisors provides guidance. The Client retains total agency over their choices.</li>
+    </ul>
+
+
+    <h2 id="s3"><span class="num">03</span>Engagement Terms &amp; Scheduling</h2>
+    <p>IronMind Advisors operates on a high-integrity, mutual-respect model. Scheduling policies are designed to protect both the Client's time and the quality of advisory work.</p>
+
+    <h3>3.1 Session Scheduling</h3>
+    <p>Sessions are scheduled through IronMind Advisors' designated booking system or directly with the advisor. The Client is responsible for scheduling sessions within any agreed-upon engagement window. Sessions not used within the engagement period are forfeited unless otherwise agreed in writing.</p>
+
+    <h3>3.2 Rescheduling &amp; Cancellations</h3>
+    <p>The Client may reschedule or cancel a session with a minimum of 48 hours' advance notice. Sessions cancelled with less than 48 hours' notice, or for which the Client does not appear (a "no-show"), will be forfeited without refund or credit, except in documented emergency circumstances at IronMind Advisors' sole discretion.</p>
+    <p>IronMind Advisors will make reasonable efforts to provide advance notice of any advisor-initiated rescheduling and will offer an equivalent session at no additional cost to the Client.</p>
+
+    <h3>3.3 Communication Norms</h3>
+    <p>Asynchronous communications (email, voice notes, written feedback) will receive a response within 2 to 3 business days during active engagements, unless otherwise specified in the Client's engagement agreement. IronMind Advisors is not available for real-time communications outside scheduled sessions unless explicitly agreed upon.</p>
+    <p>All communications should be directed through the agreed-upon primary channel. IronMind Advisors reserves the right to decline engagement through unofficial or unsanctioned channels.</p>
+
+    <h3>3.4 Right to Terminate Engagement for Conduct</h3>
+    <p>IronMind Advisors reserves the right to immediately suspend or permanently terminate any engagement if the Client engages in conduct that is disrespectful, abusive, threatening, or materially misaligned with the values and professional standards of the firm. In such cases, refunds will be issued on a prorated basis for any unused, prepaid sessions at IronMind Advisors' discretion. No refund will be issued for sessions already delivered.</p>
+
+
+    <h2 id="s4"><span class="num">04</span>Payment Terms</h2>
+    <p>IronMind Advisors operates on a clear, transparent payment structure. Prompt payment is a condition of maintaining an active engagement.</p>
+
+    <h3>4.1 Payment Schedule</h3>
+    <p>Payment for services is due at the time of engagement initiation, or per the schedule explicitly outlined in the Client's individual engagement agreement. No services will be delivered prior to receipt of confirmed payment, unless otherwise agreed in writing by IronMind Advisors.</p>
+
+    <h3>4.2 Accepted Payment Methods</h3>
+    <p>IronMind Advisors accepts payment via bank transfer, credit card, Stripe, or check, as offered at the time of engagement. The Client is responsible for any transaction fees associated with the chosen payment method, where applicable.</p>
+
+    <h3>4.3 Late Payment</h3>
+    <p>Invoices not paid within 7 days of the due date are considered past due. IronMind Advisors reserves the right to: (a) apply a late fee on unpaid balances; (b) suspend all services, including scheduled sessions and asynchronous advisory, until the account is brought current; and (c) terminate the engagement for non-payment in accordance with Section 9 of these Terms.</p>
+
+    <h3>4.4 Pricing</h3>
+    <p>Pricing for all services is as quoted at the time of engagement. IronMind Advisors reserves the right to adjust pricing for future engagements with a minimum of 30 days' written notice. Price changes do not apply retroactively to paid, active engagement packages.</p>
+
+
+    <h2 id="s5"><span class="num">05</span>Cancellation &amp; Refund Policy</h2>
+    <p>IronMind Advisors' refund policy is straightforward and designed to reflect the real-world value of time, preparation, and committed advisory work.</p>
+
+    <h3>5.1 Individual Session Cancellations</h3>
+    <p>Individual sessions cancelled with at least 48 hours' notice will be rescheduled at no charge. Sessions cancelled with less than 48 hours' notice, or missed without notice, are forfeited and non-refundable.</p>
+
+    <h3>5.2 Retainer &amp; Package Engagements</h3>
+    <p>For multi-session retainer packages or ongoing engagement agreements, the following applies:</p>
+    <ul>
+      <li>Cancellation requested prior to the first session will receive a full refund, less any applicable transaction or processing fees.</li>
+      <li>Cancellation requested after the first session has occurred will be eligible for a prorated refund of unused sessions only. No refund will be issued for sessions already delivered.</li>
+      <li>No partial refunds will be granted once more than 50% of the contracted engagement has been delivered, except in documented exceptional circumstances (e.g., medical emergency, verified hardship) as determined at IronMind Advisors' sole discretion.</li>
+    </ul>
+
+    <h3>5.3 Non-Refundable Items</h3>
+    <p>Onboarding, intake questionnaires, proprietary frameworks, written materials, and any custom deliverables already produced and delivered to the Client are non-refundable under all circumstances.</p>
+
+
+    <h2 id="s6"><span class="num">06</span>Confidentiality</h2>
+    <p>Discretion is foundational to the advisory relationship. Both parties commit to protecting the privacy and integrity of all information exchanged.</p>
+
+    <h3>6.1 Advisor Confidentiality</h3>
+    <p>IronMind Advisors agrees to hold all Client information, including personal history, professional circumstances, business details, financial matters, and the substance of advisory sessions, in strict confidence. Client information will not be disclosed to any third party without the Client's explicit written consent.</p>
+
+    <h3>6.2 Client Confidentiality</h3>
+    <p>The Client agrees to maintain the confidentiality of all proprietary methodologies, frameworks, tools, session content, processes, and materials provided by IronMind Advisors. This includes, without limitation, the Identity Gain™ framework, all written frameworks, worksheets, session recordings (where applicable), and any strategic guidance delivered during the engagement. The Client agrees not to share, reproduce, teach, or commercially exploit any IronMind Advisors proprietary content without express written authorization.</p>
+
+    <h3>6.3 Mutual Non-Disclosure</h3>
+    <p>Both parties agree to treat the content, methodologies, and details of the engagement as confidential and proprietary, consistent with the spirit of a mutual non-disclosure agreement. This obligation survives the termination of the engagement indefinitely, unless information has entered the public domain through no fault of either party.</p>
+
+    <h3>6.4 Exceptions</h3>
+    <p>Confidentiality obligations do not apply in the following circumstances:</p>
+    <ul>
+      <li>Disclosure is required by applicable law, regulation, court order, or lawful governmental authority, provided that IronMind Advisors will give the Client reasonable advance notice where legally permitted to do so.</li>
+      <li>Disclosure is necessary to prevent an imminent and serious risk of harm to the Client or to a third party, where a duty to act overrides the confidentiality obligation.</li>
+      <li>Information was already in the public domain at the time of disclosure through no breach by either party.</li>
+    </ul>
+
+
+    <h2 id="s7"><span class="num">07</span>Intellectual Property</h2>
+    <p>All materials, systems, and frameworks created by IronMind Advisors are proprietary. Clients receive a personal use license, not ownership.</p>
+
+    <h3>7.1 Ownership of IronMind Advisors Content</h3>
+    <p>All content, frameworks, tools, diagnostics, worksheets, session recordings, written guides, strategic models, and intellectual property created by or associated with IronMind Advisors, including but not limited to the Identity Gain™ framework and all derivative works, are and remain the sole and exclusive intellectual property of IronMind Advisors. No transfer of ownership occurs through the delivery of services or payment of fees.</p>
+
+    <h3>7.2 Limited License to Client</h3>
+    <p>IronMind Advisors grants the Client a limited, non-exclusive, non-transferable, revocable license to use any materials provided during the engagement solely for the Client's personal development and internal application. This license does not permit the Client to: (a) reproduce or copy materials for distribution; (b) teach, train, or coach others using IronMind Advisors' proprietary content; (c) publish, post, or share materials publicly in any medium; or (d) use any IronMind Advisors intellectual property for commercial purposes. Any unauthorized use will constitute a material breach of this agreement.</p>
+
+    <h3>7.3 Client Data &amp; Personal Story</h3>
+    <p>The Client retains full ownership of their personal story, experiences, business data, and any original content they share during the engagement. IronMind Advisors will not reproduce, publish, or commercially exploit any Client-specific personal information without explicit written consent. Anonymized, non-identifiable insights may be used by IronMind Advisors for internal development and professional improvement purposes only.</p>
+
+
+    <h2 id="s8"><span class="num">08</span>Disclaimers &amp; Limitations of Liability</h2>
+    <p>IronMind Advisors operates with integrity and high professional standards, and also within the real-world limits of what advisory work can guarantee.</p>
+
+    <h3>8.1 Coaching Is Not Therapy or Professional Advice</h3>
+    <p>The services provided by IronMind Advisors are advisory and coaching in nature. They do not constitute, and should not be treated as, psychotherapy, mental health treatment, medical care, psychiatric services, legal advice, or financial planning. Clients in need of licensed clinical or professional services should seek appropriately credentialed practitioners.</p>
+
+    <h3>8.2 No Guarantee of Results</h3>
+    <p>IronMind Advisors makes no representation or warranty that the Client will achieve any specific outcome, result, level of performance, revenue, promotion, personal transformation, or other measurable improvement as a result of the advisory engagement. All outcomes are contingent on the Client's effort, decision-making, and circumstances beyond IronMind Advisors' control.</p>
+
+    <h3>8.3 Limitation of Liability</h3>
+    <p>To the maximum extent permitted by applicable law, IronMind Advisors shall not be liable to the Client for any indirect, incidental, consequential, special, or punitive damages arising from or in connection with the advisory engagement, including but not limited to lost profits, lost business opportunities, reputational harm, or decisions made by the Client based on advisory sessions.</p>
+    <p>In all cases, IronMind Advisors' total aggregate liability to the Client for any claim arising under or related to this agreement shall not exceed the total fees paid by the Client to IronMind Advisors in the three (3) calendar months immediately preceding the event giving rise to the claim.</p>
+
+    <h3>8.4 Indemnification</h3>
+    <p>The Client agrees to indemnify, defend, and hold harmless IronMind Advisors and its principal advisor(s), agents, contractors, and affiliates from and against any third-party claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of or related to: (a) the Client's use of services; (b) the Client's implementation of, or failure to implement, advisory recommendations; (c) the Client's violation of these Terms; or (d) any act or omission of the Client that causes harm to a third party.</p>
+
+
+    <h2 id="s9"><span class="num">09</span>Termination</h2>
+    <p>Either party may exit this engagement cleanly. Termination procedures exist to make transitions orderly and fair.</p>
+
+    <h3>9.1 Termination by Either Party</h3>
+    <p>Either party may terminate this agreement at any time by providing a minimum of fourteen (14) days' written notice to the other party. Notice must be delivered via the Client's designated contact email or IronMind Advisors' official contact address on file.</p>
+
+    <h3>9.2 Termination for Cause by IronMind Advisors</h3>
+    <p>IronMind Advisors reserves the right to terminate this agreement immediately and without advance notice in any of the following circumstances:</p>
+    <ul>
+      <li>The Client's material breach of any provision of these Terms that is not remedied within 5 business days of written notice.</li>
+      <li>Non-payment of fees outstanding for more than 14 days beyond the due date.</li>
+      <li>Abusive, threatening, or harassing conduct directed toward IronMind Advisors or its representatives.</li>
+      <li>Any conduct by the Client that IronMind Advisors determines, in good faith, is materially incompatible with the integrity or values of the firm.</li>
+    </ul>
+
+    <h3>9.3 Effect of Termination</h3>
+    <p>Upon termination by either party and for any reason, all outstanding fees owed to IronMind Advisors become immediately due and payable. Sections covering Confidentiality (Section 6), Intellectual Property (Section 7), Limitations of Liability (Section 8), and Dispute Resolution (Section 10) survive termination indefinitely and remain fully in effect.</p>
+
+
+    <h2 id="s10"><span class="num">10</span>Dispute Resolution</h2>
+    <p>In the event of any disagreement, both parties commit to resolving it efficiently and in good faith before pursuing formal action.</p>
+
+    <h3>10.1 Good-Faith Resolution</h3>
+    <p>Prior to initiating any formal legal or arbitration proceedings, the parties agree to attempt to resolve any dispute, claim, or controversy arising from or relating to this agreement through direct, good-faith negotiation. The party raising the dispute must provide written notice to the other party, and both parties agree to engage in resolution discussions within 14 days of such notice.</p>
+
+    <h3>10.2 Binding Arbitration</h3>
+    <p>If good-faith negotiation fails to resolve the dispute within 30 days of the initial written notice, the parties agree that any remaining dispute shall be resolved through binding arbitration administered by a mutually agreed-upon arbitration service in accordance with its then-current commercial arbitration rules. Arbitration shall take place in Florida, United States. The arbitrator's decision shall be final and binding upon both parties, and judgment upon the award may be entered in any court of competent jurisdiction.</p>
+
+    <h3>10.3 Governing Law</h3>
+    <p>This agreement shall be governed by and construed in accordance with the laws of the State of Florida, United States, without regard to its conflict of law principles.</p>
+
+    <h3>10.4 Class Action Waiver</h3>
+    <p>Both parties expressly waive any right to bring or participate in any class action, collective action, or representative proceeding arising from or relating to this agreement or the services provided. All disputes must be brought on an individual basis only.</p>
+
+
+    <h2 id="s11"><span class="num">11</span>Amendments &amp; Entire Agreement</h2>
+    <p>These Terms represent the complete agreement between the parties and supersede all prior representations, conversations, and arrangements.</p>
+
+    <h3>11.1 Amendments</h3>
+    <p>IronMind Advisors reserves the right to update or amend these Terms of Service at any time. Clients will be notified of material changes via written notice (email to the address on file) no fewer than thirty (30) days prior to the amended terms taking effect. Continued engagement with IronMind Advisors after the effective date of any amendment constitutes the Client's acceptance of the revised Terms.</p>
+
+    <h3>11.2 Entire Agreement</h3>
+    <p>This document, together with any individual engagement agreement, scope-of-work letter, or addendum executed between IronMind Advisors and the Client, constitutes the entire agreement between the parties with respect to the subject matter herein. It supersedes all prior and contemporaneous communications, proposals, representations, and agreements, whether written or oral, relating to the engagement.</p>
+
+    <h3>11.3 Severability</h3>
+    <p>If any provision of this agreement is found by a court or arbitrator to be unenforceable, invalid, or illegal, that provision shall be modified to the minimum extent necessary to make it enforceable, or severed if it cannot be modified, without affecting the validity and enforceability of the remaining provisions.</p>
+
+    <h3>11.4 Waiver</h3>
+    <p>No failure or delay by either party in exercising any right under this agreement shall constitute a waiver of that right. A waiver of any single breach does not constitute a waiver of any subsequent breach of the same or any other provision.</p>
+
+
+    <h2 id="s12"><span class="num">12</span>Contact &amp; Acknowledgment</h2>
+    <p>Questions about these Terms should be directed to IronMind Advisors before the engagement begins. Clarity is a shared responsibility.</p>
+
+    <h3>12.1 Contact Information</h3>
+    <p><strong>Firm:</strong> IronMind Advisors<br>
+    <strong>Primary Contact Email:</strong> <a href="mailto:kenny@ironmindadvisors.com">kenny@ironmindadvisors.com</a><br>
+    <strong>Phone:</strong> <a href="tel:+14048311961">+1 (404) 831-1961</a><br>
+    <strong>Location:</strong> Jacksonville Beach, Florida<br>
+    <strong>Website:</strong> <a href="https://www.ironmindadvisors.com">ironmindadvisors.com</a></p>
+    <p>All formal notices required under this agreement (termination, dispute initiation, amendment objections) must be submitted in writing to the contact email above. Notices submitted via unofficial channels will not be considered valid for purposes of this agreement.</p>
+
+    <h3>12.2 Client Acknowledgment</h3>
+    <p>By engaging IronMind Advisors, whether through signing an individual engagement agreement, making payment, or initiating services, the Client confirms that they have read this Terms of Service agreement in its entirety, that they understand its contents, and that they agree to be bound by all provisions contained herein. No physical signature is required for these Terms to be binding where electronic or conduct-based acceptance is legally sufficient under applicable law.</p>
+
+    <div class="doc-end">
+      © 2026 IronMind Advisors. Sharp minds. Iron will.<br>
+      <a href="/">Home</a> · <a href="/privacy">Privacy Policy</a> · <a href="/#contact">Contact</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-brand-name">
+      Kenny Stoddart
+      <small>IronMind Advisors</small>
+    </div>
+    <div class="foot-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/speaker">Speaker</a>
+      <a href="/athletes">Elite Athletes</a>
+      <a href="/identityscore">Identity Score™</a>
+      <a href="/transition">New Graduates</a>
+      <a href="/#contact">Contact</a>
+      <a href="/terms">Terms</a>
+      <a href="/privacy">Privacy</a>
+    </div>
+    <div class="foot-social" aria-label="Social media">
+      <!-- TODO Nikola: replace # with Kenny's profile URLs when he sends them -->
+      <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
+      <a href="#" aria-label="YouTube" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.378.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.873.505 9.378.505 9.378.505s7.505 0 9.378-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+      <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    © 2026 IronMind Advisors. All rights reserved.
+  </div>
+</footer>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18158723117"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18158723117');
+</script><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJPP38RN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --></body>
+</html>

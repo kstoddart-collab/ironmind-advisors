@@ -1,0 +1,2525 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Identity Score™ For Executives · Kenny Stoddart</title>
+<meta name="description" content="Get your composite score out of 1,000 that reveals how anchored your executive identity actually is. 90 seconds. Confidential." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="canonical" href="https://www.ironmindadvisors.com/identityscore" />
+<meta name="robots" content="index, follow" />
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<style>
+  :root {
+    --void:        #0a0a0c;
+    --ink-deep:    #15161a;
+    --ink-soft:    #1f2128;
+    --bone:        #f4f1ec;
+    --paper:       #fdfcf8;
+    --bone-soft:   rgba(244,241,236,0.72);
+    --bone-mute:   rgba(244,241,236,0.46);
+    --bone-faint:  rgba(244,241,236,0.18);
+    --ink-dark:    #15161a;
+    --ink-mid:     rgba(21,22,26,0.72);
+    --ink-light:   rgba(21,22,26,0.5);
+    --rule-dark:   rgba(21,22,26,0.10);
+    --ox:          #1872b0;
+    --ox-deep:     #0e4f7a;
+    --ember:       #3f95d4;
+    --gold:        #d8a050;
+    --sage:        #5a8a7a;
+    --rust:        #b85a30;
+    --crimson:     #8b1a1a;
+    --rule:        rgba(244,241,236,0.10);
+    --rule-soft:   rgba(244,241,236,0.05);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  html, body { overflow-x: clip; }   /* clip (not hidden) so position:sticky on the nav keeps working */
+
+  /* Respect users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--void);
+    color: var(--bone);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16.5px;
+    min-height: 100vh;
+  }
+  ::selection { background: var(--ox); color: var(--bone); }
+
+  h1, h2, h3, h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+    color: var(--bone);
+  }
+
+  a { color: var(--ox); text-decoration: none; }
+  a:hover { color: var(--ember); }
+
+  /* VIEW MANAGEMENT */
+  .view { display: none; }
+  .view.active { display: block; animation: fadeIn 0.45s ease; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ============ NAV — light header (shared across every page) ============ */
+  #site-nav {
+    --nv-bg:          rgba(253,252,248,0.97);
+    --nv-solid:       #fdfcf8;
+    --nv-ink:         #15161a;
+    --nv-ink-mid:     rgba(21,22,26,0.72);
+    --nv-rule:        rgba(21,22,26,0.10);
+    --nv-accent:      #1872b0;
+    --nv-accent-deep: #0e4f7a;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--nv-bg);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--nv-rule);
+  }
+  #site-nav a { text-decoration: none; }
+  #site-nav .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px clamp(22px, 5vw, 56px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  /* --- brand lockup: mark + rule + wordmark, read as one object --- */
+  #site-nav .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--nv-ink);
+  }
+  #site-nav .nav-mark {
+    width: 104px; height: 44px;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  #site-nav .nav-mark img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease;
+  }
+  #site-nav .nav-brand:hover .nav-mark img { transform: scale(1.04); }
+  #site-nav .nav-rule {
+    width: 1px; height: 34px;
+    background: rgba(21,22,26,0.16);
+    flex-shrink: 0;
+  }
+  #site-nav .nav-word {
+    line-height: 1.05;
+    font-family: 'Inter', 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  #site-nav .nav-word .w1 {
+    display: block;
+    font-weight: 900; font-size: 17px;
+    letter-spacing: 0.14em;
+    color: var(--nv-ink);
+  }
+  #site-nav .nav-word .w2 {
+    display: block;
+    font-weight: 700; font-size: 10.5px;
+    letter-spacing: 0.34em;
+    color: var(--nv-accent);
+    margin-top: 3px;
+  }
+
+  /* --- links --- */
+  #site-nav .nav-links { display: flex; gap: 30px; align-items: center; }
+  #site-nav .nav-link {
+    position: relative;
+    color: var(--nv-ink-mid);
+    font-size: 13.5px; font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 6px 0;
+    transition: color 0.2s ease;
+  }
+  #site-nav .nav-link::after {
+    content: '';
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 2px;
+    background: var(--nv-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.22s ease;
+  }
+  #site-nav .nav-link:hover { color: var(--nv-ink); }
+  #site-nav .nav-link:hover::after,
+  #site-nav .nav-link.active::after { transform: scaleX(1); }
+  #site-nav .nav-link.active { color: var(--nv-ink); }
+
+  /* --- Identity Score pill: one button, three audiences behind it --- */
+  #site-nav .nav-score {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 9px 18px;
+    border: 1.5px solid var(--nv-accent);
+    border-radius: 999px;
+    color: var(--nv-accent);
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  }
+  #site-nav .nav-score svg { width: 11px; height: 11px; transition: transform 0.2s ease; }
+  #site-nav .nav-score:hover,
+  #site-nav .nav-score.active {
+    background: var(--nv-accent);
+    color: #fff;
+    box-shadow: 0 6px 16px -8px rgba(24,114,176,0.9);
+  }
+  #site-nav .nav-score:hover svg { transform: translateY(2px); }
+
+  #site-nav .nav-cta {
+    padding: 11px 22px;
+    background: var(--nv-accent);
+    color: #fff !important;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+  }
+  #site-nav .nav-cta:hover {
+    background: var(--nv-accent-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px -10px rgba(14,79,122,0.9);
+  }
+
+  #site-nav .nav-back {
+    color: var(--nv-ink-mid);
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+  }
+  #site-nav .nav-back:hover { color: var(--nv-accent); }
+
+  /* --- hamburger --- */
+  #site-nav .nav-toggle {
+    display: none;
+    flex-direction: column; justify-content: center; gap: 5px;
+    width: 44px; height: 44px;
+    padding: 0;
+    background: none; border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  #site-nav .nav-toggle span {
+    display: block;
+    width: 24px; height: 2px;
+    margin: 0 auto;
+    background: var(--nv-ink);
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+  #site-nav .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #site-nav .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  #site-nav .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* --- mobile panel --- */
+  #site-nav .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    background: var(--nv-solid);
+    border-bottom: 1px solid var(--nv-rule);
+    box-shadow: 0 18px 30px -22px rgba(21,22,26,0.5);
+    padding: 8px clamp(18px, 5vw, 28px) 22px;
+  }
+  #site-nav .mobile-menu.open { display: flex; }
+  #site-nav .mobile-menu a.m-link {
+    color: var(--nv-ink-mid);
+    font-size: 16px; font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 15px 2px;
+    border-bottom: 1px solid var(--nv-rule);
+    transition: color 0.2s ease;
+  }
+  #site-nav .mobile-menu a.m-link:hover,
+  #site-nav .mobile-menu a.m-link:active { color: var(--nv-ink); }
+  #site-nav .mobile-menu a.m-score {
+    margin-top: 16px;
+    text-align: center;
+    padding: 15px;
+    border: 1.5px solid var(--nv-accent);
+    border-radius: 999px;
+    color: var(--nv-accent);
+    font-size: 14px; font-weight: 700;
+  }
+  #site-nav .mobile-menu a.m-cta {
+    margin-top: 10px;
+    text-align: center;
+    padding: 16px;
+    background: var(--nv-accent);
+    color: #fff;
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease;
+  }
+  #site-nav .mobile-menu a.m-cta:active { background: var(--nv-accent-deep); }
+
+  @media (max-width: 860px) {
+    #site-nav .nav-links { display: none; }
+    #site-nav .nav-toggle { display: flex; }
+  }
+  @media (max-width: 560px) {
+    #site-nav .nav-mark { width: 82px; height: 36px; }
+    #site-nav .nav-word .w1 { font-size: 15px; }
+    #site-nav .nav-word .w2 { font-size: 9px; letter-spacing: 0.28em; }
+  }
+
+  /* PROGRESS BAR */
+  .progress-track {
+    height: 2px;
+    background: var(--rule);
+    position: relative;
+  }
+  .progress-bar {
+    position: absolute; top: 0; left: 0;
+    height: 100%;
+    background: var(--ox);
+    width: 0%;
+    transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .container { max-width: 880px; margin: 0 auto; padding: 0 clamp(22px, 5vw, 48px); }
+  .container-wide { max-width: 1180px; margin: 0 auto; padding: 0 clamp(22px, 5vw, 48px); }
+
+  /* COMMON */
+  .eyebrow {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ox);
+    display: inline-flex; align-items: center; gap: 14px;
+    margin-bottom: 28px;
+  }
+  .eyebrow::before {
+    content: ''; width: 28px; height: 1.5px; background: var(--ox);
+  }
+  .eyebrow.center { justify-content: center; }
+  .eyebrow.center::before { display: none; }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 17px 32px;
+    background: var(--ox);
+    color: var(--bone);
+    border: none;
+    font-family: inherit;
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  .btn-primary:hover {
+    background: var(--ember);
+    transform: translateY(-1px);
+    box-shadow: 0 14px 32px -10px rgba(24,114,176,0.5);
+  }
+  .btn-primary:disabled {
+    background: var(--ink-soft);
+    color: var(--bone-mute);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  .btn-ghost {
+    display: inline-block;
+    padding: 17px 30px;
+    background: transparent;
+    color: var(--bone);
+    border: 1.5px solid var(--bone-faint);
+    font-family: inherit;
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  .btn-ghost:hover { border-color: var(--bone); }
+
+  input.text-input {
+    width: 100%;
+    background: var(--ink-deep);
+    border: 1px solid var(--rule);
+    padding: 16px 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--bone);
+    transition: border-color 0.2s ease;
+    -webkit-appearance: none;
+  }
+  input.text-input:focus { outline: none; border-color: var(--ox); }
+  input.text-input::placeholder { color: var(--bone-mute); }
+
+  /* ================ VIEW 1: WELCOME ================ */
+  .welcome-wrap {
+    min-height: calc(100vh - 60px);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: clamp(48px, 8vw, 120px) 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .welcome-wrap::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 20%, rgba(24,114,176,0.18), transparent 60%),
+      radial-gradient(ellipse 50% 60% at 15% 90%, rgba(14,79,122,0.22), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  /* grid overlay removed: restraint over decoration */
+  .welcome-card {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .welcome-h1 {
+    font-size: clamp(48px, 8vw, 104px);
+    font-weight: 900;
+    letter-spacing: -0.045em;
+    line-height: 0.96;
+    margin-bottom: 24px;
+  }
+  .welcome-h1 .ox { color: var(--ox); }
+  .welcome-sub {
+    font-size: clamp(17px, 1.9vw, 21px);
+    color: var(--bone-soft);
+    line-height: 1.55;
+    margin-bottom: 44px;
+    max-width: 620px;
+    margin-left: auto; margin-right: auto;
+  }
+
+  .expect-card {
+    background: var(--ink-deep);
+    border: 1px solid var(--rule);
+    padding: clamp(24px, 4vw, 36px);
+    margin-bottom: 36px;
+    text-align: left;
+  }
+  .expect-row {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .expect-row:last-child { border-bottom: none; padding-bottom: 4px; }
+  .expect-row:first-child { padding-top: 4px; }
+  .expect-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--ox);
+    margin-top: 10px;
+  }
+  .expect-row strong {
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--bone);
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .expect-row span.expect-body {
+    font-size: 14.5px;
+    color: var(--bone-soft);
+    line-height: 1.55;
+    display: block;
+  }
+
+  .honesty {
+    font-size: 15.5px;
+    font-style: normal;
+    color: var(--ox);
+    line-height: 1.55;
+    max-width: 560px;
+    margin: 28px auto 36px;
+    padding: 0 16px;
+  }
+
+  .name-wrap, .begin-wrap {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .name-wrap { margin-bottom: 16px; }
+  .begin-wrap .btn-primary { width: 100%; padding: 19px 32px; font-size: 14.5px; }
+
+  /* ================ VIEW 2: ASSESSMENT (CREAM) ================ */
+  .view-assess {
+    background: var(--bone);
+    color: var(--ink-dark);
+    min-height: 100vh;
+  }
+  .assess-topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(244,241,236,0.96);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--rule-dark);
+  }
+  .assess-topbar-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 12px clamp(22px, 5vw, 48px);
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 16px;
+  }
+  .assess-back-btn {
+    background: transparent;
+    border: none;
+    color: var(--ink-mid);
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px; font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 6px 10px;
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: color 0.2s ease;
+  }
+  .assess-back-btn:hover { color: var(--ink-dark); }
+  .domain-label {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    text-align: center;
+  }
+
+  .domain-header {
+    text-align: center;
+    padding: clamp(40px, 6vw, 72px) clamp(22px, 5vw, 48px) clamp(28px, 4vw, 44px);
+  }
+  .domain-pill {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 56px; height: 56px;
+    background: var(--ink-dark);
+    color: var(--bone);
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    margin-bottom: 22px;
+  }
+  .domain-icon {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 44px; height: 44px;
+    margin-bottom: 18px;
+  }
+  .domain-icon svg {
+    width: 100%; height: 100%;
+    stroke: var(--ox);
+    stroke-width: 1.5;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .domain-icon svg [fill]:not([fill="none"]) { fill: var(--ox); }
+  h2.domain-title {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 1;
+    margin-bottom: 14px;
+    color: var(--ink-dark);
+  }
+  .domain-desc {
+    font-size: clamp(15px, 1.7vw, 18px);
+    color: var(--ink-mid);
+    line-height: 1.55;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .questions-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 clamp(22px, 5vw, 48px) 120px;
+  }
+  .q-card {
+    background: var(--paper);
+    border: 1px solid var(--rule-dark);
+    padding: clamp(24px, 3.5vw, 36px);
+    margin-bottom: 14px;
+  }
+  .q-text {
+    font-size: clamp(16px, 1.7vw, 19px);
+    line-height: 1.5;
+    color: var(--ink-dark);
+    letter-spacing: -0.01em;
+    margin-bottom: 22px;
+    font-weight: 500;
+  }
+  .q-num {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ox);
+    margin-right: 10px;
+  }
+  .rating-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+  .rating-btn {
+    background: var(--bone);
+    border: 1.5px solid var(--rule-dark);
+    padding: 14px 6px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    color: var(--ink-mid);
+    transition: all 0.18s ease;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 4px;
+    min-height: 64px;
+  }
+  .rating-btn:hover {
+    border-color: var(--ox);
+    color: var(--ox);
+    transform: translateY(-1px);
+  }
+  .rating-btn.selected {
+    background: var(--ink-dark);
+    border-color: var(--ink-dark);
+    color: var(--bone);
+  }
+  .rating-btn .num {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .rating-btn .lbl {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .assess-bottombar {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+    background: rgba(244,241,236,0.96);
+    backdrop-filter: blur(14px);
+    border-top: 1px solid var(--rule-dark);
+  }
+  .assess-bottombar-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 14px clamp(22px, 5vw, 48px);
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 16px;
+  }
+  .domain-counter {
+    font-size: 11px; font-weight: 700;
+    color: var(--ink-light);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  /* ================ VIEW 3: CALCULATING (DARK) ================ */
+  .calc-wrap {
+    min-height: calc(100vh - 60px);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 60px clamp(22px, 5vw, 48px);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .calc-wrap::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(24,114,176,0.18), transparent 60%);
+    pointer-events: none;
+  }
+  .pulse-ring {
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(24,114,176,0.35);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 40px;
+    position: relative;
+    z-index: 1;
+    animation: pulseRing 2.4s ease-in-out infinite;
+  }
+  .pulse-ring::before {
+    content: '';
+    position: absolute; inset: 14px;
+    border-radius: 50%;
+    border: 1px solid rgba(24,114,176,0.2);
+  }
+  @keyframes pulseRing {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(24,114,176,0.5); }
+    50% { box-shadow: 0 0 0 28px rgba(24,114,176,0); }
+  }
+  .calc-label {
+    font-size: clamp(20px, 2.5vw, 26px);
+    font-weight: 800;
+    color: var(--bone);
+    letter-spacing: -0.02em;
+  }
+  .calc-domains {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 10px 18px;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    font-size: 12.5px;
+    color: var(--bone-mute);
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .calc-domains span { transition: color 0.4s ease; }
+  .calc-domains span.lit { color: var(--ox); font-weight: 700; }
+  .calc-progress-track {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    height: 3px;
+    background: var(--rule);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  .calc-progress-bar {
+    height: 100%;
+    background: var(--ox);
+    width: 0%;
+    transition: width 0.1s linear;
+  }
+
+  /* ================ VIEW 4: EMAIL CAPTURE (DARK) ================ */
+  .capture-wrap {
+    min-height: calc(100vh - 60px);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 60px clamp(22px, 5vw, 48px);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .capture-wrap::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 50% 60% at 50% 30%, rgba(24,114,176,0.14), transparent 60%);
+    pointer-events: none;
+  }
+  .capture-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 580px;
+    width: 100%;
+  }
+  .capture-h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .capture-h1 .ox { color: var(--ox); }
+  .capture-sub {
+    font-size: clamp(16px, 1.8vw, 19px);
+    color: var(--bone-soft);
+    line-height: 1.55;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto; margin-right: auto;
+  }
+  .capture-form {
+    max-width: 440px;
+    margin: 0 auto;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .capture-form .btn-primary { padding: 18px; font-size: 14.5px; }
+  .capture-err {
+    color: var(--ember);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    margin-top: -6px;
+    min-height: 16px;
+  }
+  .capture-confirm {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 14px;
+    align-items: start;
+    text-align: left;
+    background: var(--ink-deep);
+    border: 1px solid var(--rule);
+    padding: 18px 20px;
+    margin: 4px 0 4px;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+  }
+  .capture-confirm:hover { border-color: rgba(24,114,176,0.45); }
+  .capture-confirm.checked { border-color: var(--ox); }
+  .capture-confirm input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px; height: 22px;
+    margin: 0;
+    border: 1.5px solid var(--bone-faint);
+    background: var(--void);
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.18s ease;
+  }
+  .capture-confirm input:hover { border-color: var(--ox); }
+  .capture-confirm input:checked {
+    background: var(--ox);
+    border-color: var(--ox);
+  }
+  .capture-confirm input:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px; top: 2px;
+    width: 6px; height: 11px;
+    border: solid var(--bone);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .capture-confirm input:focus-visible { outline: 2px solid var(--ox); outline-offset: 2px; }
+  .capture-confirm .confirm-text {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--bone-soft);
+    font-weight: 500;
+  }
+  .capture-confirm .confirm-text strong {
+    color: var(--bone);
+    font-weight: 700;
+  }
+
+  /* ================ VIEW 5: RESULTS ================ */
+  .view-results-stack { background: var(--void); }
+  .results-section { padding: clamp(64px, 9vw, 120px) 0; }
+  .results-section.dark { background: var(--void); color: var(--bone); }
+  .results-section.dark-deep { background: var(--ink-deep); color: var(--bone); }
+  .results-section.cream { background: var(--bone); color: var(--ink-dark); }
+  .results-section.cream h2,
+  .results-section.cream h3 { color: var(--ink-dark); }
+  .results-section h2.section-h2 {
+    font-size: clamp(36px, 5.5vw, 64px);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: clamp(36px, 5vw, 60px);
+  }
+  .results-section h2.section-h2 .ox { color: var(--ox); }
+
+  /* Results A: Hero IGS */
+  .results-hero {
+    position: relative;
+    overflow: hidden;
+  }
+  .results-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 30%, rgba(24,114,176,0.20), transparent 60%);
+    pointer-events: none;
+  }
+  /* grid overlay removed */
+  .results-hero-inner { text-align: center; position: relative; z-index: 1; }
+  .hero-name-line {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ox);
+    margin-bottom: 32px;
+  }
+  .igs-ring-outer {
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    margin: 0 auto 36px;
+    background:
+      conic-gradient(var(--ox) calc(var(--fill, 0) * 1%), rgba(244,241,236,0.10) 0);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    transition: --fill 0.1s ease;
+  }
+  @media (max-width: 480px) {
+    .igs-ring-outer { width: 240px; height: 240px; }
+  }
+  .igs-ring-inner {
+    width: 80%; height: 80%;
+    background: var(--void);
+    border-radius: 50%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    position: relative;
+  }
+  .igs-ring-inner .label {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--bone-mute);
+  }
+  .igs-ring-inner .score {
+    font-size: clamp(64px, 10vw, 100px);
+    font-weight: 900;
+    color: var(--bone);
+    line-height: 1;
+    margin: 8px 0 4px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.04em;
+  }
+  .igs-ring-inner .denom {
+    font-size: 13px;
+    color: var(--bone-mute);
+    font-weight: 500;
+  }
+  .tier-badge {
+    display: inline-block;
+    padding: 8px 22px;
+    color: var(--void);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .tier-desc {
+    font-size: clamp(16px, 1.9vw, 20px);
+    color: var(--bone-soft);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.55;
+  }
+
+  /* Results B: Domain Bars (cream) */
+  .bars-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; }
+  .bar-row { animation: barFadeIn 0.5s ease backwards; }
+  @keyframes barFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .bar-top {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 10px; gap: 12px;
+  }
+  .bar-name {
+    display: flex; align-items: center; gap: 12px;
+    font-size: clamp(15px, 1.6vw, 18px);
+    color: var(--ink-dark);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .bar-name .domain-icon-mini {
+    width: 22px; height: 22px;
+  }
+  .bar-name .domain-icon-mini svg {
+    width: 100%; height: 100%;
+    stroke: var(--ink-mid);
+    stroke-width: 1.5;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .bar-name .domain-icon-mini svg [fill]:not([fill="none"]) { fill: var(--ink-mid); }
+  .bar-score {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--ink-dark);
+    font-variant-numeric: tabular-nums;
+  }
+  .bar-track {
+    width: 100%;
+    height: 10px;
+    background: rgba(21,22,26,0.08);
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    width: 0%;
+    transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Results C: Insight cards (dark) */
+  .insights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  @media (max-width: 880px) { .insights-grid { grid-template-columns: 1fr; } }
+  .insight-card {
+    background: var(--ink-deep);
+    border: 1px solid var(--rule);
+    padding: clamp(24px, 3vw, 36px);
+  }
+  .insight-card.ox { border-color: rgba(24,114,176,0.4); }
+  .insight-tag {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ox);
+    margin-bottom: 16px;
+    display: block;
+  }
+  .insight-card h3 {
+    font-size: clamp(22px, 2.4vw, 28px);
+    font-weight: 800;
+    color: var(--bone);
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+  }
+  .insight-card p {
+    color: var(--bone-soft);
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+
+  /* Results D: Milestones (cream) */
+  .milestones { max-width: 920px; margin: 0 auto; }
+  .milestones-desktop {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    position: relative;
+    gap: 16px;
+  }
+  @media (max-width: 760px) { .milestones-desktop { display: none; } }
+  .milestones-desktop::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 10%; right: 10%;
+    height: 1.5px;
+    background: rgba(21,22,26,0.16);
+    z-index: 0;
+  }
+  .milestone-col {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .milestone-node {
+    width: 44px; height: 44px;
+    background: var(--bone);
+    color: var(--ink-light);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    border: 1.5px solid var(--rule-dark);
+    transition: all 0.3s ease;
+  }
+  .milestone-col.passed .milestone-node {
+    background: var(--ox);
+    color: var(--bone);
+    border-color: var(--ox);
+    opacity: 0.45;
+  }
+  .milestone-col.current .milestone-node {
+    background: var(--ink-dark);
+    color: var(--bone);
+    border-color: var(--ink-dark);
+    transform: scale(1.15);
+    box-shadow: 0 12px 28px -10px rgba(21,22,26,0.5);
+  }
+  .milestone-name {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 4px;
+  }
+  .milestone-col.current .milestone-name { color: var(--ink-dark); }
+  .milestone-range {
+    font-size: 11px;
+    color: var(--ink-light);
+    font-weight: 500;
+  }
+  .milestone-body {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-mid);
+    text-align: center;
+    max-width: 200px;
+    margin-left: auto; margin-right: auto;
+    display: none;
+  }
+  .milestone-col.current .milestone-body { display: block; }
+
+  .milestones-mobile { display: none; padding-left: 32px; position: relative; }
+  @media (max-width: 760px) { .milestones-mobile { display: block; } }
+  .milestones-mobile::before {
+    content: '';
+    position: absolute;
+    left: 21px;
+    top: 6px; bottom: 6px;
+    width: 1.5px;
+    background: rgba(21,22,26,0.16);
+  }
+  .milestone-mobile-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .milestone-mobile-row .milestone-node {
+    margin-left: -32px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .milestone-mobile-row .milestone-text { padding-top: 8px; }
+  .milestone-mobile-row .milestone-body {
+    text-align: left;
+    max-width: none;
+    margin: 8px 0 0;
+    display: none;
+  }
+  .milestone-mobile-row.current .milestone-body { display: block; }
+
+  /* Results E: CTA (dark) */
+  .cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  @media (max-width: 720px) { .cta-grid { grid-template-columns: 1fr; } }
+  .cta-card {
+    background: var(--ink-deep);
+    border: 1px solid var(--rule);
+    padding: clamp(24px, 3vw, 36px);
+    text-align: left;
+  }
+  .cta-card h3 {
+    font-size: clamp(20px, 2.4vw, 26px);
+    font-weight: 800;
+    color: var(--bone);
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+  }
+  .cta-card p {
+    color: var(--bone-soft);
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+  .cta-h2 {
+    text-align: center;
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 1;
+    margin-bottom: 20px;
+    max-width: 720px;
+    margin-left: auto; margin-right: auto;
+  }
+  .cta-h2 .ox { color: var(--ox); }
+  .cta-lede {
+    text-align: center;
+    color: var(--bone-soft);
+    font-size: clamp(16px, 1.8vw, 19px);
+    line-height: 1.55;
+    max-width: 600px;
+    margin: 0 auto 48px;
+  }
+  .clear-link {
+    display: block;
+    text-align: center;
+    margin-top: 32px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--bone-mute);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-family: inherit;
+  }
+  .clear-link:hover { color: var(--bone); }
+
+  /* ================ IRON AUDIT REQUEST BLOCK ================ */
+  /* Block-local variables, mapped onto the site's brand tokens */
+  .iron-audit {
+    --ia-bg:            var(--ink-deep);
+    --ia-surface:       var(--void);
+    --ia-surface-alt:   var(--ink-soft);
+    --ia-border:        var(--rule);
+    --ia-border-hover:  rgba(24,114,176,0.45);
+    --ia-border-active: var(--ox);
+    --ia-text:          var(--bone);
+    --ia-text-soft:     var(--bone-soft);
+    --ia-text-mute:     var(--bone-mute);
+    --ia-accent:        var(--ox);
+    --ia-accent-hover:  var(--ember);
+    --ia-highlight:     var(--gold);
+    --ia-error:         var(--ember);
+    --ia-radius:        0px;
+
+    background: var(--ia-bg);
+    color: var(--ia-text);
+    scroll-margin-top: 24px;
+  }
+  .ia-card {
+    max-width: 620px;
+    margin: 0 auto;
+    background: var(--ia-surface);
+    border: 1px solid var(--ia-border);
+    border-top: 3px solid var(--ia-accent);
+    border-radius: var(--ia-radius);
+    padding: clamp(28px, 5vw, 52px);
+    text-align: center;
+  }
+  .ia-h2 {
+    font-size: clamp(28px, 4.2vw, 44px);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 1.03;
+    margin-bottom: 16px;
+    color: var(--ia-text);
+  }
+  .ia-h2 .ox { color: var(--ia-accent); }
+  .ia-lede {
+    font-size: clamp(15px, 1.7vw, 18px);
+    line-height: 1.55;
+    color: var(--ia-text-soft);
+    max-width: 480px;
+    margin: 0 auto 32px;
+  }
+
+  /* Read-only echo of what the hidden fields carry */
+  .ia-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--ia-border);
+    border: 1px solid var(--ia-border);
+    margin-bottom: 32px;
+    text-align: left;
+  }
+  .ia-stat {
+    background: var(--ia-surface-alt);
+    padding: 14px 18px;
+  }
+  .ia-stat.wide { grid-column: 1 / -1; }
+  .ia-stat-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ia-text-mute);
+    margin-bottom: 5px;
+  }
+  .ia-stat strong {
+    font-size: 14.5px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--ia-text);
+  }
+  .ia-stat.score strong {
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    color: var(--ia-highlight);
+  }
+
+  .ia-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+  }
+  .ia-hp { position: absolute; left: -9999px; }
+  .ia-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ia-text-mute);
+  }
+  .ia-form input.text-input {
+    background: var(--ia-surface-alt);
+    border-color: var(--ia-border);
+    color: var(--ia-text);
+    border-radius: var(--ia-radius);
+  }
+  .ia-form input.text-input:focus { border-color: var(--ia-border-active); }
+  .ia-err {
+    color: var(--ia-error);
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: -6px;
+    min-height: 16px;
+  }
+  .ia-check {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 14px;
+    align-items: start;
+    background: var(--ia-surface-alt);
+    border: 1px solid var(--ia-border);
+    border-radius: var(--ia-radius);
+    padding: 18px 20px;
+    margin: 2px 0;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+  }
+  .ia-check:hover { border-color: var(--ia-border-hover); }
+  .ia-check.checked { border-color: var(--ia-border-active); }
+  .ia-check input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px; height: 22px;
+    margin: 0;
+    border: 1.5px solid var(--bone-faint);
+    background: var(--ia-surface);
+    border-radius: var(--ia-radius);
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.18s ease;
+  }
+  .ia-check input:hover { border-color: var(--ia-accent); }
+  .ia-check input:checked {
+    background: var(--ia-accent);
+    border-color: var(--ia-accent);
+  }
+  .ia-check input:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px; top: 2px;
+    width: 6px; height: 11px;
+    border: solid var(--ia-text);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .ia-check input:focus-visible { outline: 2px solid var(--ia-accent); outline-offset: 2px; }
+  .ia-check-text {
+    font-size: 13.5px;
+    line-height: 1.55;
+    font-weight: 500;
+    color: var(--ia-text-soft);
+  }
+  .ia-submit {
+    width: 100%;
+    padding: 18px;
+    font-size: 14.5px;
+    background: var(--ia-accent);
+    color: var(--ia-text);
+    border-radius: var(--ia-radius);
+    margin-top: 4px;
+  }
+  .ia-submit:hover:not(:disabled) { background: var(--ia-accent-hover); }
+  .ia-submit[aria-busy="true"] { opacity: 0.6; cursor: progress; }
+  .ia-fine {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--ia-text-mute);
+    text-align: center;
+    margin-top: 4px;
+  }
+
+  .ia-success { display: none; }
+  .ia-success.active { display: block; text-align: center; }
+  .ia-success h3 {
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    color: var(--ia-text);
+  }
+  .ia-success h3 .ox { color: var(--ia-accent); }
+  .ia-success p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ia-text-soft);
+  }
+
+  @media (max-width: 560px) {
+    .ia-stats { grid-template-columns: 1fr; }
+    .ia-stat.wide { grid-column: auto; }
+  }
+  /* Footer Bar */
+  .footer-bar {
+    background: var(--ox);
+    color: var(--bone);
+    padding: 16px clamp(22px, 5vw, 48px);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+  .footer-bar strong { font-weight: 800; }
+
+  footer.site-foot {
+    padding: 24px 0;
+    background: var(--ink-deep);
+    color: var(--bone-mute);
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1514330020342685');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1514330020342685&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code --><!-- Event snippet for Meet Kenny Button Click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18158723117/f4h9CLfelMYcEK3A4NJD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script><!-- Event snippet for Request an Iron Audit Button Click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18158723117/o6i6CLrelMYcEK3A4NJD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script><!-- Event snippet for Get In Touch Button Click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18158723117/bk-zCL3elMYcEK3A4NJD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18158723117"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18158723117');
+</script><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJPP38RN');</script>
+<!-- End Google Tag Manager --></head>
+<body>
+
+<!-- NAV -->
+<nav id="site-nav" aria-label="Main">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand" aria-label="IronMind Advisors — home">
+      <div class="nav-mark">
+        <img src="ima-mark.png" alt="" width="586" height="251" decoding="async" />
+      </div>
+      <div class="nav-rule" aria-hidden="true"></div>
+      <div class="nav-word">
+        <span class="w1">IRONMIND</span>
+        <span class="w2">ADVISORS</span>
+      </div>
+    </a>
+    <a href="/" class="nav-back">&larr; Back</a>
+  </div>
+</nav>
+
+<!-- Hidden Netlify form: registers fields at build time so Netlify accepts the AJAX POST below -->
+<form hidden method='post' name='assessment-results' data-netlify='true' netlify-honeypot='bot-field'><input type='hidden' name='form-name' value='assessment-results' />
+  <input type="text" name="user_name" />
+  <input type="email" name="user_email" />
+  <input type="tel" name="user_phone" />
+  <input type="text" name="igs_score" />
+  <input type="text" name="igs_tier" />
+  <textarea name="domain_scores"></textarea>
+  <input type="text" name="completion_date" />
+  <input name="bot-field" />
+</form>
+
+<!-- PROGRESS -->
+<div class="progress-track">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+
+<!-- ================ VIEW 1: WELCOME (DARK) ================ -->
+<section class="view active" id="view-welcome">
+  <div class="welcome-wrap">
+    <div class="container welcome-card">
+      <div class="eyebrow center">Identity Score™ For Executives</div>
+
+      <h1 class="welcome-h1">Discover your <span class="ox">Identity Gain™.</span></h1>
+
+      <p class="welcome-sub">
+        Get your composite score out of 1,000 that reveals how anchored, aligned, and expansive your executive identity actually is.
+      </p>
+
+      <div class="expect-card">
+        <div class="expect-row">
+          <div class="expect-dot"></div>
+          <div>
+            <strong>8 domains</strong>
+            <span class="expect-body">Leadership Identity. Emotional Resilience. Boundaries &amp; Values. Physical Presence. Relationships &amp; Belonging. Purpose &amp; Conviction. Financial Confidence. Legacy &amp; Vision.</span>
+          </div>
+        </div>
+        <div class="expect-row">
+          <div class="expect-dot"></div>
+          <div>
+            <strong>90 seconds</strong>
+            <span class="expect-body">Answer honestly, not aspirationally.</span>
+          </div>
+        </div>
+        <div class="expect-row">
+          <div class="expect-dot"></div>
+          <div>
+            <strong>Your composite score</strong>
+            <span class="expect-body">A score out of 1,000 with domain breakdowns, tier placement, and what to do about it.</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="honesty">Answer based on how you actually are. Not how you aspire to be. The score is most valuable when it's honest.</p>
+
+      <div class="name-wrap">
+        <input type="text" id="name-input" class="text-input" placeholder="Your first name" autocomplete="given-name" />
+      </div>
+
+      <div class="begin-wrap">
+        <button id="begin-btn" class="btn-primary" disabled>Start my Identity Score →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================ VIEW 2: ASSESSMENT (CREAM FOR FOCUS) ================ -->
+<section class="view view-assess" id="view-assessment">
+  <div class="assess-topbar">
+    <div class="assess-topbar-inner">
+      <button id="prev-btn" class="assess-back-btn">
+        <span aria-hidden="true">←</span>
+        <span>Back</span>
+      </button>
+      <span id="domain-label" class="domain-label"></span>
+      <span style="width: 60px;"></span>
+    </div>
+  </div>
+
+  <div class="domain-header">
+    <div id="domain-pill" class="domain-pill"></div>
+    <div id="domain-icon-area" class="domain-icon"></div>
+    <h2 id="domain-title" class="domain-title"></h2>
+    <p id="domain-desc" class="domain-desc"></p>
+  </div>
+
+  <div class="questions-wrap">
+    <div id="questions-container"></div>
+  </div>
+
+  <div class="assess-bottombar">
+    <div class="assess-bottombar-inner">
+      <span id="domain-counter" class="domain-counter"></span>
+      <button id="next-btn" class="btn-primary" disabled>Next domain →</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================ VIEW 3: CALCULATING (DARK) ================ -->
+<section class="view" id="view-calculating">
+  <div class="calc-wrap">
+    <div class="pulse-ring">
+      <span class="calc-label">Calculating</span>
+    </div>
+    <div id="calc-domains" class="calc-domains"></div>
+    <div class="calc-progress-track">
+      <div id="calc-progress" class="calc-progress-bar"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================ VIEW 4: EMAIL CAPTURE (DARK) ================ -->
+<section class="view" id="view-capture">
+  <div class="capture-wrap">
+    <div class="capture-inner">
+      <div class="eyebrow center">Your Score Is Ready</div>
+      <h1 class="capture-h1">Where should we <span class="ox">send your report?</span></h1>
+      <p class="capture-sub">
+        Your Identity Score report is written, not generated. In your inbox within 24 hours. Domain breakdowns. Kenny's notes on what they mean. Your answers stay confidential.
+      </p>
+
+      <form id="capture-form" class="capture-form" novalidate>
+        <input type="email" id="capture-email" class="text-input" placeholder="Email address" autocomplete="email" required />
+        <div id="capture-email-err" class="capture-err"></div>
+
+        <input type="tel" id="capture-phone" class="text-input" placeholder="Phone (optional)" autocomplete="tel" />
+
+        <label class="capture-confirm" id="capture-confirm">
+          <input type="checkbox" id="capture-confirm-box" />
+          <span class="confirm-text">
+            You will receive your results directly from Kenny. <strong>Do you confirm that you will respond to that email to take the next step?</strong>
+          </span>
+        </label>
+        <div id="capture-confirm-err" class="capture-err"></div>
+
+        <button type="submit" id="capture-submit" class="btn-primary" disabled>Show my results →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================ VIEW 5: RESULTS ================ -->
+<section class="view view-results-stack" id="view-results">
+  <!-- A. Hero Score (DARK) -->
+  <div class="results-section dark results-hero">
+    <div class="container-wide results-hero-inner">
+      <p class="hero-name-line" id="hero-name-line"></p>
+
+      <div class="igs-ring-outer" id="igs-ring" style="--fill: 0;">
+        <div class="igs-ring-inner">
+          <span class="label">Identity Gain™</span>
+          <span class="score" id="igs-score">0</span>
+          <span class="denom">out of 1,000</span>
+        </div>
+      </div>
+
+      <div id="tier-badge" class="tier-badge"></div>
+      <p id="tier-desc" class="tier-desc"></p>
+    </div>
+  </div>
+
+  <!-- B. Domain Bars (CREAM) -->
+  <div class="results-section cream">
+    <div class="container">
+      <h2 class="section-h2">Your <span class="ox">domain scores.</span></h2>
+      <div id="bars-list" class="bars-list"></div>
+    </div>
+  </div>
+
+  <!-- C. Insight Cards (DARK) -->
+  <div class="results-section dark-deep">
+    <div class="container-wide">
+      <h2 class="section-h2">What your score <span class="ox">reveals.</span></h2>
+      <div id="insights-grid" class="insights-grid"></div>
+    </div>
+  </div>
+
+  <!-- D. Milestones (CREAM) -->
+  <div class="results-section cream">
+    <div class="container-wide">
+      <h2 class="section-h2">Where you are on the <span class="ox">arc.</span></h2>
+      <div class="milestones">
+        <div class="milestones-desktop" id="milestones-desktop"></div>
+        <div class="milestones-mobile" id="milestones-mobile"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E. Iron Audit Request (DARK) -->
+  <div class="results-section iron-audit" id="iron-audit">
+    <div class="container">
+      <div class="ia-card">
+        <div class="eyebrow center">Your Next Step</div>
+        <h2 class="ia-h2">Bring this score into an <span class="ox">Iron Audit.</span></h2>
+        <p class="ia-lede">
+          A confidential forty-five-minute conversation, built on the score you just produced. Kenny reads your domain breakdown before you speak.
+        </p>
+
+        <div class="ia-stats">
+          <div class="ia-stat score">
+            <span class="ia-stat-label">Composite score</span>
+            <strong id="ia-stat-score">—</strong>
+          </div>
+          <div class="ia-stat">
+            <span class="ia-stat-label">Tier</span>
+            <strong id="ia-stat-tier">—</strong>
+          </div>
+          <div class="ia-stat wide">
+            <span class="ia-stat-label">Your three lowest domains</span>
+            <strong id="ia-stat-lowest">—</strong>
+          </div>
+        </div>
+
+        <form id="iron-audit-form" class="ia-form" method="POST" name="iron-audit-request" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="iron-audit-request" />
+          <p class="ia-hp"><label>Leave empty: <input name="bot-field" /></label></p>
+
+          <input type="hidden" id="ia-igs-score" name="igs_score" value="" />
+          <input type="hidden" id="ia-igs-tier" name="igs_tier" value="" />
+          <input type="hidden" id="ia-igs-lowest" name="igs_lowest" value="" />
+
+          <label class="ia-label" for="ia-email">Email</label>
+          <input type="email" id="ia-email" name="email" class="text-input" placeholder="you@example.com" autocomplete="email" required />
+          <div class="ia-err" id="ia-email-err"></div>
+
+          <label class="ia-check" id="ia-check">
+            <input type="checkbox" id="ia-remind" name="day_90_reminder" value="Yes" />
+            <span class="ia-check-text">Remind me at day 90 to retake this and measure my Identity Gain™</span>
+          </label>
+
+          <button type="submit" class="btn-primary ia-submit" id="ia-submit">Request my Iron Audit — $0</button>
+          <p class="ia-fine">Your score and domain breakdown travel with this request. Straight to Kenny. No sales calls.</p>
+        </form>
+
+        <div class="ia-success" id="ia-success" role="status">
+          <h3>Your Iron Audit request is <span class="ox">with Kenny.</span></h3>
+          <p>He replies personally within 48 hours, with your score already in hand.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- F. CTA (DARK) -->
+  <div class="results-section dark">
+    <div class="container-wide">
+      <h2 class="cta-h2">Your score is a starting point. <span class="ox">Not a verdict.</span></h2>
+      <p class="cta-lede">
+        Identity Gain™ engagements are built around your score, your lowest domains, and the milestone you're standing on. What you just took is the diagnostic. The work happens next.
+      </p>
+
+      <div class="cta-grid">
+        <div class="cta-card">
+          <h3>Talk to Kenny</h3>
+          <p>Bring your Identity Score results into a confidential call. Map what's costing you most, and whether an Identity Gain™ engagement is the right next step.</p>
+          <button type="button" id="request-call-btn" class="btn-ghost">Request a call</button>
+        </div>
+        <div class="cta-card">
+          <h3>Retake in 90 days</h3>
+          <p>The score is a snapshot. Take it again in 90 days to measure where the architecture has shifted, and where it hasn't.</p>
+          <button id="retake-btn" class="btn-ghost">Retake</button>
+        </div>
+      </div>
+
+      <button id="clear-btn" class="clear-link">Clear all data and start over</button>
+    </div>
+  </div>
+
+  <!-- G. Footer Bar (OX) -->
+  <div class="footer-bar" id="footer-bar"></div>
+</section>
+
+<footer class="site-foot">
+  © 2026 IronMind Advisors · Confidential by design
+</footer>
+
+
+<script>
+(function() {
+  // ===== EmailJS init =====
+  try {
+    if (typeof emailjs !== 'undefined') {
+      emailjs.init('uOKlxkuTvvG_oTXoM');
+    }
+  } catch (e) {}
+
+  // ===== DATA =====
+  const DOMAINS = [
+    {
+      name: "Leadership Identity",
+      desc: "How you show up. Your presence, authority, and executive voice.",
+      icon: '<svg viewBox="0 0 24 24"><path d="M12 2L15 9L22 9L16.5 13.5L18.5 21L12 17L5.5 21L7.5 13.5L2 9L9 9Z"/></svg>',
+      questions: [
+        "I walk into high-stakes rooms with a settled, grounded sense of who I am.",
+        "My leadership presence is consistent whether I'm with the board, my team, or a stranger.",
+        "I express my perspective with authority even when it's unpopular or uncomfortable.",
+        "I feel like the same person in my leadership role as I do in private.",
+        "My sense of authority comes from within. Not from my title, position, or results."
+      ],
+      insightHigh: "Your leadership presence is a real asset. You lead from a settled, internal place of authority. People follow you because of who you are, not just what you've built.",
+      insightLow: "Your leadership presence may be more role-dependent than you realize. When the title shifts, so might your authority. This is the foundational domain. Worth prioritizing first."
+    },
+    {
+      name: "Emotional Resilience",
+      desc: "Your capacity to absorb pressure, navigate adversity, and return to center.",
+      icon: '<svg viewBox="0 0 24 24"><path d="M12 2L20 6L20 12C20 17 16 21 12 22C8 21 4 17 4 12L4 6Z"/><circle cx="12" cy="12" r="4" fill="none"/></svg>',
+      questions: [
+        "When I face a major setback or failure, I recover my sense of self relatively quickly.",
+        "I can hold tension, ambiguity, or conflict without it destabilizing my internal state.",
+        "Criticism or negative feedback doesn't fundamentally shake my self-concept.",
+        "I am able to feel difficult emotions without being controlled or consumed by them.",
+        "Under sustained pressure, I remain recognizably myself. Not a diminished version."
+      ],
+      insightHigh: "You've built real shock absorption. Adversity doesn't define you, it informs you. This resilience is a multiplier for everything else in your identity stack.",
+      insightLow: "External events may be moving your internal weather more than you'd like to admit. Building this domain creates the stability that makes everything else possible."
+    },
+    {
+      name: "Boundaries & Values",
+      desc: "Living by conviction rather than compliance. Knowing and holding your non-negotiables.",
+      icon: '<svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="11" rx="2" fill="none"/><path d="M6 11V7a6 6 0 0 1 12 0v4" fill="none"/><line x1="12" y1="16" x2="12" y2="18"/></svg>',
+      questions: [
+        "I can clearly articulate my top 3 to 5 core values without hesitation.",
+        "I consistently make decisions that align with my values, even at personal or professional cost.",
+        "I say no to opportunities, relationships, and requests that conflict with my values.",
+        "I rarely compromise my standards to avoid conflict or maintain approval.",
+        "The people closest to me would describe me as someone who lives by their word."
+      ],
+      insightHigh: "You live by conviction, not approval. This is rare at senior levels, and it's the invisible foundation of long-term trust and influence.",
+      insightLow: "There's a gap between what you say you value and how you're actually operating. Closing that gap is one of the highest-impact moves available to you right now."
+    },
+    {
+      name: "Physical Presence",
+      desc: "Energy, vitality, and embodied confidence that commands respect.",
+      icon: '<svg viewBox="0 0 24 24"><polygon points="13,2 5,13 11,13 11,22 19,11 13,11"/></svg>',
+      questions: [
+        "My energy levels support the demands of my leadership role without chronic depletion.",
+        "I am intentional about how I physically present. Posture, pace, and composure under pressure.",
+        "I prioritize sleep, movement, and recovery as non-negotiable leadership inputs.",
+        "My physical state reflects who I intend to be, not a stressed or survival version of myself.",
+        "I feel at home in my body, and that comfort translates into confident physical presence."
+      ],
+      insightHigh: "Your body is a leadership tool you're actually using. Energy, composure, and embodied confidence are showing up as real assets in how you lead.",
+      insightLow: "Your physical state may be working against your leadership presence in ways you haven't fully named yet. This domain is often the first to erode, and the fastest to rebuild."
+    },
+    {
+      name: "Relationships & Belonging",
+      desc: "Connections that reflect and reinforce your true self. Not your role or rank.",
+      icon: '<svg viewBox="0 0 24 24"><circle cx="5" cy="5" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="12" cy="19" r="2.5"/><line x1="7" y1="6.5" x2="10" y2="17"/><line x1="17" y1="6.5" x2="14" y2="17"/><line x1="7.5" y1="5" x2="16.5" y2="5"/></svg>',
+      questions: [
+        "I have at least 2 to 3 people in my life who know me beyond my title and achievements.",
+        "My closest relationships reflect who I actually am. Not who I need to perform as.",
+        "I feel a genuine sense of belonging in at least one community or group I'm part of.",
+        "I am honest about my struggles, doubts, and uncertainties with people I trust.",
+        "I invest in relationships that challenge and expand me. Not just validate or serve me."
+      ],
+      insightHigh: "You've built real connections. Not just a network. The people around you know you, not just your accomplishments. That's identity-grade belonging.",
+      insightLow: "You may be more isolated than your calendar suggests. High performers often confuse activity with connection. This domain deserves deliberate investment."
+    },
+    {
+      name: "Purpose & Conviction",
+      desc: "Absolute clarity on why you lead. The internal compass that survives the storm.",
+      icon: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none"/><path d="M16 8L12 12M8 16L12 12"/><line x1="12" y1="7" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="17"/><line x1="7" y1="12" x2="9" y2="12"/><line x1="15" y1="12" x2="17" y2="12"/></svg>',
+      questions: [
+        "I can articulate why I lead, beyond titles, compensation, or external recognition.",
+        "My sense of purpose feels intrinsic. It doesn't depend on others recognizing it.",
+        "When I face a major decision, I have an internal compass that guides me clearly.",
+        "I feel connected to something larger than my current role, company, or season of life.",
+        "My daily work and the reason I exist as a leader feel meaningfully aligned."
+      ],
+      insightHigh: "You know why you lead. That clarity is the compass that survives every transition, setback, and season of doubt. It's your most durable leadership asset.",
+      insightLow: "Your why may have gotten buried under the weight of how and what. When purpose is unclear, performance becomes the only available metric. Which is never enough."
+    },
+    {
+      name: "Financial Confidence",
+      desc: "Your relationship with worth, value, and money as an expression of identity.",
+      icon: '<svg viewBox="0 0 24 24"><polygon points="12,2 22,9 12,22 2,9"/><line x1="2" y1="9" x2="12" y2="14"/><line x1="22" y1="9" x2="12" y2="14"/></svg>',
+      questions: [
+        "My sense of self-worth is not dependent on my net worth, income, or financial outcomes.",
+        "I make financial decisions from a place of abundance and clarity. Not scarcity or fear.",
+        "I charge, earn, and invest in ways that reflect what I genuinely believe I am worth.",
+        "I am at peace with my current financial position, even while working to improve it.",
+        "Money is a tool I direct. Not a signal I use to measure my value as a person."
+      ],
+      insightHigh: "Your relationship with money reflects your relationship with worth. Both are healthy. You're directing resources, not being directed by them.",
+      insightLow: "There may be a hidden link between how you think about money and how you think about your own value. This domain is often the most surprising, and the most liberating to develop."
+    },
+    {
+      name: "Legacy & Vision",
+      desc: "Future-self alignment. Building and leading toward what only you can leave behind.",
+      icon: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="5" fill="none"/><circle cx="12" cy="12" r="9" fill="none"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>',
+      questions: [
+        "I have a clear picture of what I want to be known for when my career is complete.",
+        "My current daily choices are building toward the legacy I intend to leave.",
+        "I can describe the version of myself I'm becoming. Not just the goals I'm chasing.",
+        "I actively invest in people and causes that will outlast my direct involvement.",
+        "I feel a sense of forward momentum. Like my best leadership chapter is still ahead."
+      ],
+      insightHigh: "You're building toward something that will outlast you. And you know it. That future-orientation shapes present decisions in ways that compound over time.",
+      insightLow: "You may be executing brilliantly without knowing where you're ultimately building to. Clarifying your legacy doesn't slow you down. It gives your velocity a direction."
+    }
+  ];
+
+  const TIERS = [
+    { min: 800, max: 1000, name: "Identity Architect",  color: "#d8a050", desc: "You operate from a deeply integrated identity. Stable, expansive, and largely self-authored. You are building from abundance." },
+    { min: 650, max: 799,  name: "Identity Builder",    color: "#1872b0", desc: "Strong foundations are in place. You have real clarity in several domains, and the gaps you have are workable. Not structural." },
+    { min: 500, max: 649,  name: "Identity Seeker",     color: "#5a8a7a", desc: "You're in an active phase of growth. Some domains feel solid; others feel uncertain. You're asking the right questions. The answers are forming." },
+    { min: 350, max: 499,  name: "Identity Fragmented", color: "#b85a30", desc: "There are meaningful disconnects between who you are and how you're operating. These gaps aren't fatal. But they're costly. And they're addressable." },
+    { min: 0,   max: 349,  name: "Identity Crisis",     color: "#8b1a1a", desc: "Your sense of self may be heavily dependent on external factors. This is not a judgment. It's a starting point. Many of the strongest leaders started here." }
+  ];
+
+  const MILESTONES = [
+    { name: "Awareness",   range: "0 / 349",    text: "You've taken the first step by measuring where you stand. Awareness precedes every meaningful shift. This is where the strongest work begins." },
+    { name: "Clarity",     range: "350 / 499",  text: "You're starting to see the gaps between who you are and how you're operating. This clarity, while uncomfortable, is the prerequisite for aligned action." },
+    { name: "Alignment",   range: "500 / 649",  text: "Identity and action are converging. You're making decisions from a more integrated place. The work now is consistency and depth." },
+    { name: "Integration", range: "650 / 799",  text: "Your domains are reinforcing each other. Identity isn't something you perform. It's something you inhabit. The compound effect is becoming visible." },
+    { name: "Expansion",   range: "800 / 1000", text: "You've moved beyond stability into growth. Your identity is not just anchored. It's generative. You're creating conditions for others to find their own." }
+  ];
+
+  const RATING_LABELS = ["Not at all", "Rarely", "Sometimes", "Often", "Consistently"];
+  const STORAGE_KEY = 'ironmind_igs_state';
+
+  // ===== STATE =====
+  let state = {
+    name: "", email: "", phone: "",
+    currentDomain: 0,
+    answers: Array.from({ length: 8 }, () => Array(5).fill(null)),
+    completed: false,
+    results: null
+  };
+
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (parsed && typeof parsed === 'object') state = Object.assign(state, parsed);
+    }
+  } catch (e) {}
+
+  function saveState() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e) {}
+  }
+
+  function showView(name) {
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    const el = document.getElementById('view-' + name);
+    if (el) el.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const total = 40;
+    const answered = state.answers.flat().filter(a => a !== null).length;
+    const bar = document.getElementById('progressBar');
+    if (!bar) return;
+    const activeView = document.querySelector('.view.active');
+    if (!activeView) { bar.style.width = '0%'; return; }
+    const id = activeView.id;
+    let pct = 0;
+    if (id === 'view-welcome') pct = 0;
+    else if (id === 'view-assessment') pct = (answered / total) * 100;
+    else if (id === 'view-calculating') pct = 95;
+    else if (id === 'view-capture' || id === 'view-results') pct = 100;
+    bar.style.width = pct + '%';
+  }
+
+  // WELCOME
+  const nameInput = document.getElementById('name-input');
+  const beginBtn = document.getElementById('begin-btn');
+  if (state.name) nameInput.value = state.name;
+  beginBtn.disabled = !nameInput.value.trim();
+  nameInput.addEventListener('input', function() {
+    beginBtn.disabled = !this.value.trim();
+  });
+  beginBtn.addEventListener('click', function() {
+    state.name = nameInput.value.trim();
+    if (!state.completed) state.currentDomain = 0;
+    saveState();
+    if (state.completed && state.results) {
+      showView('results');
+      renderResults();
+    } else {
+      showView('assessment');
+      renderDomain(state.currentDomain);
+    }
+  });
+
+  // ASSESSMENT
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+
+  prevBtn.addEventListener('click', function() {
+    if (state.currentDomain > 0) {
+      state.currentDomain--;
+      saveState();
+      renderDomain(state.currentDomain);
+    } else {
+      showView('welcome');
+    }
+  });
+
+  nextBtn.addEventListener('click', function() {
+    if (!allAnswered()) return;
+    if (state.currentDomain < DOMAINS.length - 1) {
+      state.currentDomain++;
+      saveState();
+      renderDomain(state.currentDomain);
+    } else {
+      saveState();
+      showView('calculating');
+      runCalculation();
+    }
+  });
+
+  function allAnswered() {
+    return state.answers[state.currentDomain].every(a => a !== null);
+  }
+
+  function updateNextBtn() {
+    const answered = allAnswered();
+    nextBtn.disabled = !answered;
+    nextBtn.textContent = state.currentDomain === DOMAINS.length - 1
+      ? 'Calculate my score →'
+      : 'Next domain →';
+  }
+
+  function renderDomain(idx) {
+    const domain = DOMAINS[idx];
+    const num = String(idx + 1).padStart(2, '0');
+
+    document.getElementById('domain-label').textContent =
+      'Domain ' + (idx + 1) + ' of ' + DOMAINS.length + ' · ' + domain.name;
+    document.getElementById('domain-pill').textContent = num;
+    document.getElementById('domain-icon-area').innerHTML = domain.icon;
+    document.getElementById('domain-title').textContent = domain.name;
+    document.getElementById('domain-desc').textContent = domain.desc;
+    document.getElementById('domain-counter').textContent =
+      'Domain ' + (idx + 1) + ' of ' + DOMAINS.length;
+
+    const container = document.getElementById('questions-container');
+    container.innerHTML = '';
+    domain.questions.forEach((q, qi) => {
+      const card = document.createElement('div');
+      card.className = 'q-card';
+      const qText = document.createElement('p');
+      qText.className = 'q-text';
+      qText.innerHTML = '<span class="q-num">Q' + (qi + 1) + '</span>' + q;
+      card.appendChild(qText);
+
+      const row = document.createElement('div');
+      row.className = 'rating-row';
+      for (let r = 1; r <= 5; r++) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'rating-btn';
+        if (state.answers[idx][qi] === r) btn.classList.add('selected');
+        btn.innerHTML =
+          '<span class="num">' + r + '</span>' +
+          '<span class="lbl">' + RATING_LABELS[r - 1] + '</span>';
+        btn.dataset.r = r;
+        btn.addEventListener('click', function() {
+          state.answers[idx][qi] = parseInt(this.dataset.r);
+          row.querySelectorAll('.rating-btn').forEach(b => b.classList.remove('selected'));
+          this.classList.add('selected');
+          saveState();
+          updateProgress();
+          updateNextBtn();
+        });
+        row.appendChild(btn);
+      }
+      card.appendChild(row);
+      container.appendChild(card);
+    });
+
+    updateNextBtn();
+    updateProgress();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // CALCULATING
+  function runCalculation() {
+    const calcDomains = document.getElementById('calc-domains');
+    const calcProgress = document.getElementById('calc-progress');
+    calcDomains.innerHTML = DOMAINS.map((d, i) =>
+      '<span data-idx="' + i + '">' + d.name + '</span>'
+    ).join('');
+
+    const totalTime = 2800;
+    const interval = 80;
+    let elapsed = 0;
+    let lit = 0;
+
+    const timer = setInterval(function() {
+      elapsed += interval;
+      const pct = Math.min((elapsed / totalTime) * 100, 100);
+      calcProgress.style.width = pct + '%';
+
+      const shouldLight = Math.floor((elapsed / totalTime) * DOMAINS.length);
+      while (lit < shouldLight && lit < DOMAINS.length) {
+        const el = calcDomains.querySelector('[data-idx="' + lit + '"]');
+        if (el) el.classList.add('lit');
+        lit++;
+      }
+
+      if (elapsed >= totalTime) {
+        clearInterval(timer);
+        DOMAINS.forEach((_, i) => {
+          const el = calcDomains.querySelector('[data-idx="' + i + '"]');
+          if (el) el.classList.add('lit');
+        });
+        computeResults();
+        saveState();
+        showView('capture');
+      }
+    }, interval);
+  }
+
+  // SCORING
+  function computeResults() {
+    const domainScores = DOMAINS.map((domain, i) => {
+      const raw = state.answers[i].reduce((sum, v) => sum + (v || 0), 0);
+      const pct = Math.round(((raw - 5) / 20) * 100);
+      const igs = Math.round(pct * 1.25);
+      return { name: domain.name, raw: raw, pct: pct, igs: igs, index: i };
+    });
+    const compositeIGS = domainScores.reduce((sum, d) => sum + d.igs, 0);
+    const tier = TIERS.find(t => compositeIGS >= t.min && compositeIGS <= t.max) || TIERS[TIERS.length - 1];
+    const sorted = [...domainScores].sort((a, b) => b.pct - a.pct);
+    const highest = sorted[0];
+    const lowest = sorted[sorted.length - 1];
+
+    let milestoneIdx = 0;
+    if (compositeIGS >= 800) milestoneIdx = 4;
+    else if (compositeIGS >= 650) milestoneIdx = 3;
+    else if (compositeIGS >= 500) milestoneIdx = 2;
+    else if (compositeIGS >= 350) milestoneIdx = 1;
+
+    state.results = { domainScores, compositeIGS, tier, highest, lowest, milestoneIdx, sorted };
+    state.completed = true;
+  }
+
+  // EMAIL CAPTURE
+  const captureForm = document.getElementById('capture-form');
+  const captureEmail = document.getElementById('capture-email');
+  const capturePhone = document.getElementById('capture-phone');
+  const captureSubmit = document.getElementById('capture-submit');
+  const captureErr = document.getElementById('capture-email-err');
+  const captureConfirm = document.getElementById('capture-confirm');
+  const captureConfirmBox = document.getElementById('capture-confirm-box');
+  const captureConfirmErr = document.getElementById('capture-confirm-err');
+
+  function validEmail(s) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s); }
+
+  function refreshCaptureBtn() {
+    captureSubmit.disabled = !(validEmail(captureEmail.value.trim()) && captureConfirmBox.checked);
+  }
+  captureEmail.addEventListener('input', function() { captureErr.textContent = ''; refreshCaptureBtn(); });
+  captureConfirmBox.addEventListener('change', function() {
+    captureConfirm.classList.toggle('checked', this.checked);
+    if (this.checked) captureConfirmErr.textContent = '';
+    refreshCaptureBtn();
+  });
+  refreshCaptureBtn();
+
+  captureForm.addEventListener('submit', function(ev) {
+    ev.preventDefault();
+    const email = captureEmail.value.trim();
+    const phone = capturePhone.value.trim();
+
+    if (!email) { captureErr.textContent = 'Please enter your email so we can send your report.'; return; }
+    if (!validEmail(email)) { captureErr.textContent = 'That doesn\'t look right. Try again.'; return; }
+    if (!captureConfirmBox.checked) { captureConfirmErr.textContent = 'Please confirm you will respond to Kenny\'s email.'; return; }
+
+    state.email = email;
+    state.phone = phone;
+    saveState();
+
+    captureSubmit.disabled = true;
+    captureSubmit.textContent = 'Sending...';
+
+    sendResultsEmail();
+
+    setTimeout(function() {
+      showView('results');
+      renderResults();
+    }, 350);
+  });
+
+  function sendResultsEmail() {
+    if (!state.results) return;
+
+    const r = state.results;
+    const domainLines = r.domainScores.map(d => d.name + ': ' + d.pct + '/100').join('\n');
+    const completionDate = new Date().toLocaleString('en-US', {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+      hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+    });
+
+    const fields = {
+      user_name: state.name || 'Anonymous',
+      user_email: state.email,
+      user_phone: state.phone || 'Not provided',
+      igs_score: r.compositeIGS + '/1000',
+      igs_tier: r.tier.name,
+      domain_scores: domainLines,
+      completion_date: completionDate
+    };
+
+    // Path 1: Netlify Forms (durable: submissions land in dashboard + email notification)
+    try {
+      const body = new URLSearchParams();
+      body.append('form-name', 'assessment-results');
+      Object.keys(fields).forEach(function(k) { body.append(k, fields[k]); });
+      body.append('bot-field', '');
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString()
+      })
+        .then(function(res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          try { console.log('[assessment] assessment-results captured by Netlify Forms'); } catch (e) {}
+        })
+        .catch(function(err) {
+          try { console.error('[assessment] Netlify Forms submission failed:', err); } catch (e) {}
+        });
+    } catch (e) {
+      try { console.error('[assessment] Netlify Forms threw:', e); } catch (ee) {}
+    }
+
+    // Path 2: EmailJS (best-effort: instant email if template is configured correctly)
+    if (typeof emailjs === 'undefined') return;
+
+    const templateParams = Object.assign({
+      to_email: 'kenny@ironmindadvisors.com',
+      reply_to: state.email || 'kenny@ironmindadvisors.com'
+    }, fields);
+
+    emailjs.send('service_rqkabua', 'template_38yv0ev', templateParams)
+      .then(function() {
+        try { console.log('[assessment] EmailJS sent'); } catch (e) {}
+      })
+      .catch(function(err) {
+        try { console.error('[assessment] EmailJS failed (Netlify Forms is primary):', err); } catch (e) {}
+      });
+  }
+
+  // RESULTS
+  function renderResults() {
+    const r = state.results;
+    if (!r) return;
+
+    document.getElementById('hero-name-line').textContent =
+      (state.name ? state.name.toUpperCase() + '’S ' : '') + 'IDENTITY GAIN REPORT';
+
+    animateCounter('igs-score', r.compositeIGS, 1800);
+    setTimeout(function() {
+      const ring = document.getElementById('igs-ring');
+      const target = (r.compositeIGS / 1000) * 100;
+      const start = performance.now();
+      const dur = 1800;
+      function step(now) {
+        const t = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        ring.style.setProperty('--fill', (eased * target).toFixed(2));
+        if (t < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }, 200);
+
+    const badge = document.getElementById('tier-badge');
+    badge.textContent = r.tier.name;
+    badge.style.backgroundColor = r.tier.color;
+    badge.style.color = (r.tier.color === '#d8a050' || r.tier.color === '#5a8a7a') ? '#0a0a0c' : '#f4f1ec';
+    document.getElementById('tier-desc').textContent = r.tier.desc;
+
+    const barsList = document.getElementById('bars-list');
+    barsList.innerHTML = '';
+    r.sorted.forEach((d, i) => {
+      const domain = DOMAINS[d.index];
+      let color = '#1872b0';
+      if (d.pct >= 80) color = '#d8a050';
+      else if (d.pct >= 60) color = '#1872b0';
+      else if (d.pct >= 40) color = '#b85a30';
+      else color = '#8b1a1a';
+
+      const row = document.createElement('div');
+      row.className = 'bar-row';
+      row.style.animationDelay = (i * 70) + 'ms';
+      row.innerHTML =
+        '<div class="bar-top">' +
+          '<div class="bar-name"><div class="domain-icon-mini">' + domain.icon + '</div>' + d.name + '</div>' +
+          '<div class="bar-score">' + d.pct + '/100</div>' +
+        '</div>' +
+        '<div class="bar-track"><div class="bar-fill" data-target="' + d.pct + '" style="background:' + color + '"></div></div>';
+      barsList.appendChild(row);
+    });
+    setTimeout(function() {
+      document.querySelectorAll('.bar-fill').forEach(b => { b.style.width = b.dataset.target + '%'; });
+    }, 400);
+
+    const grid = document.getElementById('insights-grid');
+    const highDomain = DOMAINS[r.highest.index];
+    const lowDomain = DOMAINS[r.lowest.index];
+    grid.innerHTML =
+      '<div class="insight-card">' +
+        '<span class="insight-tag">Your Anchor</span>' +
+        '<h3>' + r.highest.name + '</h3>' +
+        '<p>' + highDomain.insightHigh + '</p>' +
+      '</div>' +
+      '<div class="insight-card ox">' +
+        '<span class="insight-tag">Your Edge</span>' +
+        '<h3>' + r.lowest.name + '</h3>' +
+        '<p>' + lowDomain.insightLow + '</p>' +
+      '</div>' +
+      '<div class="insight-card">' +
+        '<span class="insight-tag">Your Current Stage</span>' +
+        '<h3>' + r.tier.name + '</h3>' +
+        '<p>' + r.tier.desc + '</p>' +
+      '</div>';
+
+    renderMilestones(r.milestoneIdx);
+    renderIronAudit(r);
+
+    const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById('footer-bar').innerHTML =
+      '<strong>' + (state.name || 'Your') + ' · IGS ' + r.compositeIGS + '/1000 · ' + r.tier.name + ' · ' + today + '</strong>';
+  }
+
+  // IRON AUDIT REQUEST
+  function lowestThreeNames(r) {
+    // r.sorted is highest -> lowest by domain percentage; take the tail, weakest first
+    return r.sorted.slice(-3).reverse().map(function(d) { return d.name; }).join(', ');
+  }
+
+  function renderIronAudit(r) {
+    if (!r) return;
+    const lowestThree = lowestThreeNames(r);
+
+    // Hidden fields carried with the request
+    const scoreField = document.getElementById('ia-igs-score');
+    const tierField = document.getElementById('ia-igs-tier');
+    const lowestField = document.getElementById('ia-igs-lowest');
+    if (scoreField) scoreField.value = String(r.compositeIGS);
+    if (tierField) tierField.value = r.tier.name;
+    if (lowestField) lowestField.value = lowestThree;
+
+    // Visible echo of the same values
+    const statScore = document.getElementById('ia-stat-score');
+    const statTier = document.getElementById('ia-stat-tier');
+    const statLowest = document.getElementById('ia-stat-lowest');
+    if (statScore) statScore.textContent = r.compositeIGS + ' / 1,000';
+    if (statTier) statTier.textContent = r.tier.name;
+    if (statLowest) statLowest.textContent = lowestThree;
+
+    // Pre-fill with the address given at the report step
+    const iaEmail = document.getElementById('ia-email');
+    if (iaEmail && state.email && !iaEmail.value) iaEmail.value = state.email;
+  }
+
+  const iaForm = document.getElementById('iron-audit-form');
+  const iaEmailInput = document.getElementById('ia-email');
+  const iaEmailErr = document.getElementById('ia-email-err');
+  const iaSubmit = document.getElementById('ia-submit');
+  const iaCheck = document.getElementById('ia-check');
+  const iaRemind = document.getElementById('ia-remind');
+  const iaSuccess = document.getElementById('ia-success');
+
+  iaRemind.addEventListener('change', function() {
+    iaCheck.classList.toggle('checked', this.checked);
+  });
+  iaEmailInput.addEventListener('input', function() { iaEmailErr.textContent = ''; });
+
+  iaForm.addEventListener('submit', function(ev) {
+    ev.preventDefault();
+    const email = iaEmailInput.value.trim();
+
+    if (!email) { iaEmailErr.textContent = 'Please add your email so Kenny can reply.'; iaEmailInput.focus(); return; }
+    if (!validEmail(email)) { iaEmailErr.textContent = 'That doesn\'t look right. Try again.'; iaEmailInput.focus(); return; }
+
+    // Keep the most recent address on the shared assessment state
+    state.email = email;
+    saveState();
+
+    // Re-assert the score payload in case results were restored from storage
+    if (state.results) renderIronAudit(state.results);
+
+    iaSubmit.disabled = true;
+    iaSubmit.setAttribute('aria-busy', 'true');
+
+    const body = new URLSearchParams();
+    new FormData(iaForm).forEach(function(v, k) { body.append(k, v); });
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString()
+    })
+      .then(function(res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        try { console.log('[assessment] iron-audit-request captured by Netlify Forms'); } catch (e) {}
+      })
+      .catch(function(err) {
+        try { console.error('[assessment] Iron Audit request submission failed:', err); } catch (e) {}
+      })
+      .then(showIronAuditSuccess);
+  });
+
+  function showIronAuditSuccess() {
+    iaSubmit.disabled = false;
+    iaSubmit.removeAttribute('aria-busy');
+    iaForm.style.display = 'none';
+    iaSuccess.classList.add('active');
+    iaSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  // "Request a call" scrolls to the Iron Audit block instead of leaving the page
+  document.getElementById('request-call-btn').addEventListener('click', function() {
+    const target = document.getElementById('iron-audit');
+    if (!target) return;
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (iaForm.style.display !== 'none') {
+      setTimeout(function() { iaEmailInput.focus({ preventScroll: true }); }, 500);
+    }
+  });
+
+  function animateCounter(id, target, duration) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const start = performance.now();
+    function tick(now) {
+      const t = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(eased * target);
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  function renderMilestones(activeIdx) {
+    const desk = document.getElementById('milestones-desktop');
+    const mob = document.getElementById('milestones-mobile');
+
+    desk.innerHTML = MILESTONES.map((m, i) => {
+      const cls = i === activeIdx ? 'current' : (i < activeIdx ? 'passed' : '');
+      return '<div class="milestone-col ' + cls + '">' +
+        '<div class="milestone-node">' + (i + 1) + '</div>' +
+        '<div class="milestone-name">' + m.name + '</div>' +
+        '<div class="milestone-range">' + m.range + '</div>' +
+        '<p class="milestone-body">' + m.text + '</p>' +
+      '</div>';
+    }).join('');
+
+    mob.innerHTML = MILESTONES.map((m, i) => {
+      const cls = i === activeIdx ? 'current' : (i < activeIdx ? 'passed' : '');
+      return '<div class="milestone-mobile-row ' + cls + '">' +
+        '<div class="milestone-node">' + (i + 1) + '</div>' +
+        '<div class="milestone-text">' +
+          '<div class="milestone-name">' + m.name + '</div>' +
+          '<div class="milestone-range">' + m.range + '</div>' +
+          '<p class="milestone-body">' + m.text + '</p>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+  }
+
+  // RETAKE / CLEAR
+  document.getElementById('retake-btn').addEventListener('click', function() {
+    state.answers = Array.from({ length: 8 }, () => Array(5).fill(null));
+    state.currentDomain = 0;
+    state.completed = false;
+    state.results = null;
+    saveState();
+    showView('welcome');
+    nameInput.value = state.name;
+    beginBtn.disabled = !state.name;
+  });
+
+  document.getElementById('clear-btn').addEventListener('click', function() {
+    if (!confirm('This will erase all your answers and results. Are you sure?')) return;
+    state = {
+      name: "", email: "", phone: "",
+      currentDomain: 0,
+      answers: Array.from({ length: 8 }, () => Array(5).fill(null)),
+      completed: false, results: null
+    };
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+    nameInput.value = '';
+    beginBtn.disabled = true;
+    showView('welcome');
+  });
+
+  if (state.completed && state.results) {
+    showView('results');
+    renderResults();
+  } else {
+    updateProgress();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18158723117"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18158723117');
+</script><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJPP38RN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --></body>
+</html>
