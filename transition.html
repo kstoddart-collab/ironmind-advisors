@@ -70,104 +70,218 @@
   #site-nav a, footer.site-foot a { text-decoration: none; }
   #site-nav .container, footer.site-foot .container { max-width: 1200px; margin: 0 auto; padding: 0 clamp(22px, 5vw, 56px); }
 
-  /* ---------- nav ---------- */
+  /* ============ NAV — light header (shared across every page) ============ */
   #site-nav {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(10,10,12,0.88);
+    --nv-bg:          rgba(253,252,248,0.97);
+    --nv-solid:       #fdfcf8;
+    --nv-ink:         #15161a;
+    --nv-ink-mid:     rgba(21,22,26,0.72);
+    --nv-rule:        rgba(21,22,26,0.10);
+    --nv-accent:      #1872b0;
+    --nv-accent-deep: #0e4f7a;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--nv-bg);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--rule);
+    border-bottom: 1px solid var(--nv-rule);
   }
-  .nav-inner {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 16px 0; gap: 24px;
+  #site-nav a { text-decoration: none; }
+  #site-nav .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px clamp(22px, 5vw, 56px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
   }
-  .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--bone); }
-  .nav-mark {
-    width: 140px; height: 64px;
+
+  /* --- brand lockup: mark + rule + wordmark, read as one object --- */
+  #site-nav .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--nv-ink);
+  }
+  #site-nav .nav-mark {
+    width: 104px; height: 44px;
+    flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
+  }
+  #site-nav .nav-mark img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease;
+  }
+  #site-nav .nav-brand:hover .nav-mark img { transform: scale(1.04); }
+  #site-nav .nav-rule {
+    width: 1px; height: 34px;
+    background: rgba(21,22,26,0.16);
     flex-shrink: 0;
   }
-  .nav-mark img { width: 100%; height: 100%; object-fit: contain; display: block; transition: transform 0.2s ease; }
-  .nav-brand:hover .nav-mark img { transform: scale(1.03); }
-  @media (max-width: 560px) { .nav-mark { width: 104px; height: 50px; } }
-  .nav-name { font-family: Archivo, sans-serif; font-weight: 800; font-size: 15px; letter-spacing: -0.01em; color: var(--bone); }
-  .nav-name small {
-    display: block; font-weight: 600; font-size: 10px;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--ox); margin-top: 1px;
+  #site-nav .nav-word {
+    line-height: 1.05;
+    font-family: 'Inter', 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
   }
-  .nav-links { display: flex; gap: 28px; align-items: center; }
-  .nav-links a.nav-link {
-    color: var(--bone-soft);
-    font-size: 13px; font-weight: 600;
-    transition: color 0.2s ease; letter-spacing: 0.01em;
+  #site-nav .nav-word .w1 {
+    display: block;
+    font-weight: 900; font-size: 17px;
+    letter-spacing: 0.14em;
+    color: var(--nv-ink);
   }
-  .nav-links a.nav-link:hover, .nav-links a.nav-link.active { color: var(--bone); }
-  .nav-links a.nav-link.active::after { content: ''; display: block; height: 2px; background: var(--ox); margin-top: 4px; }
-  .nav-cta {
-    padding: 11px 22px; background: var(--ox); color: var(--bone) !important;
-    font-size: 13px; font-weight: 700; letter-spacing: 0.02em;
-    transition: all 0.2s ease;
+  #site-nav .nav-word .w2 {
+    display: block;
+    font-weight: 700; font-size: 10.5px;
+    letter-spacing: 0.34em;
+    color: var(--nv-accent);
+    margin-top: 3px;
   }
-  .nav-cta:hover { background: var(--ember); transform: translateY(-1px); }
 
-  /* Grouped "Identity Score for:" nav item — one label, three audiences */
-  .nav-group { display: inline-flex; align-items: center; white-space: nowrap; }
-  .nav-group-label {
-    color: var(--bone-mute);
-    font-size: 13px; font-weight: 600;
+  /* --- links --- */
+  #site-nav .nav-links { display: flex; gap: 30px; align-items: center; }
+  #site-nav .nav-link {
+    position: relative;
+    color: var(--nv-ink-mid);
+    font-size: 13.5px; font-weight: 600;
     letter-spacing: 0.01em;
-    margin-right: 7px;
-  }
-  .nav-group .nav-sep { color: var(--bone-faint); font-size: 13px; margin-right: 5px; }
-  .nav-toggle {
-    display: none; flex-direction: column; justify-content: center; gap: 5px;
-    width: 44px; height: 44px; padding: 0;
-    background: none; border: none; cursor: pointer; flex-shrink: 0;
-  }
-  .nav-toggle span { display: block; width: 24px; height: 2px; margin: 0 auto; background: var(--bone); transition: transform 0.25s ease, opacity 0.2s ease; }
-  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-  .mobile-menu {
-    display: none; position: absolute; top: 100%; left: 0; right: 0;
-    flex-direction: column;
-    background: rgba(10,10,12,0.98);
-    backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--rule);
-    padding: 8px clamp(18px, 5vw, 28px) 22px;
-  }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a.m-link {
-    color: var(--bone-soft); font-size: 16px; font-weight: 600;
-    letter-spacing: 0.01em; text-decoration: none;
-    padding: 15px 2px; border-bottom: 1px solid var(--rule);
+    padding: 6px 0;
     transition: color 0.2s ease;
   }
-  .mobile-menu a.m-link:hover, .mobile-menu a.m-link:active { color: var(--bone); }
-  .mobile-menu a.m-cta {
-    margin-top: 16px; text-align: center; padding: 16px;
-    background: var(--ox); color: var(--bone);
-    font-size: 14px; font-weight: 700; letter-spacing: 0.02em;
-    text-decoration: none; transition: background 0.2s ease;
+  #site-nav .nav-link::after {
+    content: '';
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 2px;
+    background: var(--nv-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.22s ease;
   }
-  .mobile-menu a.m-cta:active { background: var(--ember); }
+  #site-nav .nav-link:hover { color: var(--nv-ink); }
+  #site-nav .nav-link:hover::after,
+  #site-nav .nav-link.active::after { transform: scaleX(1); }
+  #site-nav .nav-link.active { color: var(--nv-ink); }
 
-  /* Grouped "Identity Score for" block inside the mobile panel */
-  .m-group { display: flex; flex-direction: column; }
-  .m-group-label {
-    padding: 16px 2px 4px;
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--ox);
+  /* --- Identity Score pill: one button, three audiences behind it --- */
+  #site-nav .nav-score {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 9px 18px;
+    border: 1.5px solid var(--nv-accent);
+    border-radius: 999px;
+    color: var(--nv-accent);
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   }
-  .mobile-menu a.m-link.m-sub { padding: 12px 2px 12px 14px; }
-  /* Tighten spacing so the audience group still fits beside the CTA */
-  @media (min-width: 801px) and (max-width: 1080px) { .nav-links { gap: 18px; } .nav-group-label { margin-right: 5px; } }
-  @media (max-width: 800px) { .nav-links { display: none; } .nav-toggle { display: flex; } }
+  #site-nav .nav-score svg { width: 11px; height: 11px; transition: transform 0.2s ease; }
+  #site-nav .nav-score:hover,
+  #site-nav .nav-score.active {
+    background: var(--nv-accent);
+    color: #fff;
+    box-shadow: 0 6px 16px -8px rgba(24,114,176,0.9);
+  }
+  #site-nav .nav-score:hover svg { transform: translateY(2px); }
+
+  #site-nav .nav-cta {
+    padding: 11px 22px;
+    background: var(--nv-accent);
+    color: #fff !important;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+  }
+  #site-nav .nav-cta:hover {
+    background: var(--nv-accent-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px -10px rgba(14,79,122,0.9);
+  }
+
+  #site-nav .nav-back {
+    color: var(--nv-ink-mid);
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+  }
+  #site-nav .nav-back:hover { color: var(--nv-accent); }
+
+  /* --- hamburger --- */
+  #site-nav .nav-toggle {
+    display: none;
+    flex-direction: column; justify-content: center; gap: 5px;
+    width: 44px; height: 44px;
+    padding: 0;
+    background: none; border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  #site-nav .nav-toggle span {
+    display: block;
+    width: 24px; height: 2px;
+    margin: 0 auto;
+    background: var(--nv-ink);
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+  #site-nav .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #site-nav .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  #site-nav .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* --- mobile panel --- */
+  #site-nav .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    background: var(--nv-solid);
+    border-bottom: 1px solid var(--nv-rule);
+    box-shadow: 0 18px 30px -22px rgba(21,22,26,0.5);
+    padding: 8px clamp(18px, 5vw, 28px) 22px;
+  }
+  #site-nav .mobile-menu.open { display: flex; }
+  #site-nav .mobile-menu a.m-link {
+    color: var(--nv-ink-mid);
+    font-size: 16px; font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 15px 2px;
+    border-bottom: 1px solid var(--nv-rule);
+    transition: color 0.2s ease;
+  }
+  #site-nav .mobile-menu a.m-link:hover,
+  #site-nav .mobile-menu a.m-link:active { color: var(--nv-ink); }
+  #site-nav .mobile-menu a.m-score {
+    margin-top: 16px;
+    text-align: center;
+    padding: 15px;
+    border: 1.5px solid var(--nv-accent);
+    border-radius: 999px;
+    color: var(--nv-accent);
+    font-size: 14px; font-weight: 700;
+  }
+  #site-nav .mobile-menu a.m-cta {
+    margin-top: 10px;
+    text-align: center;
+    padding: 16px;
+    background: var(--nv-accent);
+    color: #fff;
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease;
+  }
+  #site-nav .mobile-menu a.m-cta:active { background: var(--nv-accent-deep); }
+
+  @media (max-width: 860px) {
+    #site-nav .nav-links { display: none; }
+    #site-nav .nav-toggle { display: flex; }
+  }
+  @media (max-width: 560px) {
+    #site-nav .nav-mark { width: 82px; height: 36px; }
+    #site-nav .nav-word .w1 { font-size: 15px; }
+    #site-nav .nav-word .w2 { font-size: 9px; letter-spacing: 0.28em; }
+  }
+
 
   .btn:focus-visible{outline:2px solid var(--steel-lt);outline-offset:3px;border-radius:3px}
 
@@ -462,26 +576,21 @@
 <body>
 
 <nav id="site-nav" aria-label="Main">
-  <div class="container nav-inner">
-    <a href="/" class="nav-brand">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand" aria-label="IronMind Advisors — home">
       <div class="nav-mark">
-        <img src="/ima-logo.png" alt="" width="90" height="44" decoding="async" />
+        <img src="/ima-mark.png" alt="" width="586" height="251" decoding="async" />
       </div>
-      <div class="nav-name">
-        Kenny Stoddart
-        <small>IronMind Advisors</small>
+      <div class="nav-rule" aria-hidden="true"></div>
+      <div class="nav-word">
+        <span class="w1">IRONMIND</span>
+        <span class="w2">ADVISORS</span>
       </div>
     </a>
     <div class="nav-links">
       <a href="/about" class="nav-link">Meet Kenny</a>
-      <a href="/#method" class="nav-link">Method</a>
       <a href="/speaker" class="nav-link">Speaker</a>
-      <span class="nav-group">
-        <span class="nav-group-label">Identity Score™ for:</span>
-        <a href="/identityscore" class="nav-link">Executives</a><span class="nav-sep">,</span>
-        <a href="/athletes" class="nav-link">Elite Athletes</a>
-      </span>
-      <a href="/transition" class="nav-link active" aria-current="page">New Graduates</a>
+      <a href="/#identity-score" class="nav-score active">Identity Score&trade; <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2v8M2.5 6.5 6 10l3.5-3.5"/></svg></a>
       <a href="/#contact" class="nav-cta">Get in Touch</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -490,14 +599,8 @@
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="/about" class="m-link">Meet Kenny</a>
-    <a href="/#method" class="m-link">Method</a>
     <a href="/speaker" class="m-link">Speaker</a>
-    <div class="m-group">
-      <span class="m-group-label">Identity Score™ for</span>
-      <a href="/identityscore" class="m-link m-sub">Executives</a>
-      <a href="/athletes" class="m-link m-sub">Elite Athletes</a>
-    </div>
-    <a href="/transition" class="m-link" aria-current="page">New Graduates</a>
+    <a href="/#identity-score" class="m-score">Identity Score&trade;</a>
     <a href="/#contact" class="m-cta">Get in Touch</a>
   </div>
 </nav>
