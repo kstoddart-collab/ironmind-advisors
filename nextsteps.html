@@ -18,7 +18,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-
   :root{
     --ground:#0a0f1a;
     --panel:#131c29;
@@ -316,31 +315,47 @@
 
   main{display:block}
   section{padding:84px 0 0;scroll-margin-top:72px}
-  .col{max-width:66ch}
 
   h1{
     font-family:Archivo,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;
-    font-size:clamp(36px,6.4vw,68px);line-height:1.02;letter-spacing:-.03em;
-    color:var(--ink);margin:0;max-width:15ch;text-wrap:balance;
+    font-size:clamp(36px,5.6vw,62px);line-height:1.02;letter-spacing:-.03em;
+    color:var(--ink);margin:0;text-wrap:balance;
   }
   h2{
-    font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(25px,3.6vw,38px);
-    line-height:1.1;letter-spacing:-.025em;color:var(--ink);margin:14px 0 0;
-    text-wrap:balance;max-width:22ch;
+    font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(25px,3.3vw,35px);
+    line-height:1.1;letter-spacing:-.025em;color:var(--ink);margin:14px 0 0;text-wrap:balance;
   }
   h3{font-family:Archivo,sans-serif;font-weight:700;letter-spacing:-.015em;color:var(--ink)}
   p{margin:20px 0 0}
 
+  /* ------------------------------------------------------------
+     SPLIT — the page's spine. A heading rail on the left, the copy
+     column on the right, so full-width text never leaves a dead
+     margin on wide screens. Collapses to one column under 920px.
+     ------------------------------------------------------------ */
+  .split{display:grid;gap:20px;grid-template-columns:1fr}
+  @media(min-width:920px){
+    .split{grid-template-columns:minmax(0,330px) minmax(0,1fr);gap:0 64px;align-items:start}
+  }
+  .split-head{margin:0}
+  .split-head h2,.split-head h3{margin:12px 0 0}
+  .split-head > .label{display:block}
+  .split-body > :first-child{margin-top:0}
+  .split-body p{max-width:60ch}
+
   /* ---------- hero ---------- */
-  .hero{padding:80px 0 0}
-  .kicker{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 24px}
+  .hero{padding:76px 0 0}
+  .kicker{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 26px}
   .kicker .label{color:var(--steel-lt)}
   .kicker .sep{color:var(--hair)}
-  .lede{font-size:19px;line-height:1.58;color:var(--ink-2);margin:28px 0 0;max-width:58ch}
+  .hero-grid{display:grid;gap:34px;grid-template-columns:1fr}
+  @media(min-width:900px){.hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 64px;align-items:start}}
+  .lede{font-size:18.5px;line-height:1.6;color:var(--ink-2);margin:0 0 0;max-width:52ch}
+  .lede + .lede{margin-top:22px}
   .lede b{color:var(--ink);font-weight:600}
-  .hero-rule{margin:40px 0 0;height:3px;width:104px;background:var(--steel);border-radius:2px}
+  .hero-rule{margin:34px 0 0;height:3px;width:104px;background:var(--steel);border-radius:2px}
 
-  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin:36px 0 0;align-items:center}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin:32px 0 0;align-items:center}
   .btn{
     display:inline-block;padding:13px 26px;border-radius:6px;text-decoration:none;
     font-family:Archivo,sans-serif;font-weight:700;font-size:14.5px;letter-spacing:.01em;
@@ -353,9 +368,10 @@
   .cta-note{font-size:13.5px;color:var(--faint);margin:16px 0 0}
 
   /* ---------- story block with portrait ---------- */
-  .story{display:grid;gap:36px;margin:36px 0 0;grid-template-columns:1fr;align-items:start}
-  @media(min-width:900px){.story{grid-template-columns:1fr 360px;gap:52px}}
-  .story-copy p:first-child{margin-top:24px}
+  .story{display:grid;gap:36px;margin:32px 0 0;grid-template-columns:1fr;align-items:start}
+  @media(min-width:900px){.story{grid-template-columns:minmax(0,1fr) 360px;gap:56px}}
+  .story-copy > p:first-child{margin-top:0}
+  .story-copy p{max-width:62ch}
   .portrait{margin:0}
   .portrait img{
     display:block;width:100%;height:auto;border-radius:10px;
@@ -369,13 +385,13 @@
 
   /* ---------- stat band ---------- */
   .stats{
-    margin:72px 0 0;display:grid;gap:1px;background:var(--hair-soft);
+    margin:64px 0 0;display:grid;gap:1px;background:var(--hair-soft);
     border-block:1px solid var(--hair-soft);grid-template-columns:1fr 1fr;
   }
-  @media(min-width:900px){.stats{grid-template-columns:repeat(5,1fr)}}
+  @media(min-width:860px){.stats{grid-template-columns:repeat(5,1fr)}}
   .stat{background:var(--ground);padding:26px 22px}
   .stat .n{
-    font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(24px,3vw,30px);line-height:1;
+    font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(23px,2.6vw,29px);line-height:1;
     letter-spacing:-.03em;color:var(--ink);display:block;
   }
   .stat p{
@@ -384,11 +400,11 @@
   }
 
   /* ---------- pull quote ---------- */
-  .pull{margin:80px 0 0;padding:36px 0 36px 28px;border-left:3px solid var(--steel)}
+  .pull{margin:72px 0 0;padding:34px 0 34px 28px;border-left:3px solid var(--steel)}
   .pull blockquote{
     margin:0;font-family:Archivo,sans-serif;font-weight:700;
-    font-size:clamp(21px,3.2vw,31px);line-height:1.24;letter-spacing:-.02em;
-    color:var(--ink);max-width:26ch;text-wrap:balance;
+    font-size:clamp(21px,3.1vw,30px);line-height:1.24;letter-spacing:-.02em;
+    color:var(--ink);max-width:30ch;text-wrap:balance;
   }
   .pull cite{
     display:block;margin:20px 0 0;font-style:normal;
@@ -396,25 +412,27 @@
     text-transform:uppercase;color:var(--muted);
   }
 
-  /* ---------- dark panel (the gap) ---------- */
-  .panel-dark{
-    margin:80px 0 0;background:var(--panel);border:1px solid var(--hair-soft);
+  /* ---------- boxed sections ---------- */
+  .box{
+    background:var(--panel);border:1px solid var(--hair-soft);
     border-radius:10px;padding:40px 36px;
   }
-  .panel-dark h2{margin:14px 0 0;max-width:24ch}
-  .panel-dark p{max-width:62ch;font-size:16px}
-  @media(max-width:600px){.panel-dark{padding:28px 22px}}
+  .box-quiet{background:var(--panel-2)}
+  .box-accent{
+    background:rgba(53,118,181,.10);border-color:rgba(53,118,181,.32);
+  }
+  @media(max-width:600px){.box{padding:26px 22px}}
 
   /* ---------- price card ---------- */
   .price{
-    margin:40px 0 0;background:var(--panel-2);border:1px solid var(--hair-soft);
+    margin:36px 0 0;background:var(--panel-2);border:1px solid var(--hair-soft);
     border-top:3px solid var(--steel);border-radius:10px;
-    padding:34px 34px;display:flex;flex-wrap:wrap;gap:26px 40px;
+    padding:32px 34px;display:flex;flex-wrap:wrap;gap:26px 40px;
     justify-content:space-between;align-items:flex-end;
   }
   .price-main{display:flex;flex-wrap:wrap;align-items:baseline;gap:16px}
   .price-fig{
-    font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(46px,8vw,68px);
+    font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(44px,7vw,64px);
     line-height:1;letter-spacing:-.04em;color:var(--ink);font-variant-numeric:tabular-nums;
   }
   .price-for{
@@ -431,7 +449,8 @@
   @media(max-width:600px){.price{padding:26px 22px}}
 
   /* ---------- covered list ---------- */
-  .covers{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-direction:column;gap:0}
+  .covers{list-style:none;margin:0;padding:0;display:grid;gap:0;grid-template-columns:1fr}
+  @media(min-width:820px){.covers{grid-template-columns:1fr 1fr;column-gap:52px}}
   .covers li{
     padding:18px 0;border-top:1px solid var(--hair-soft);
     display:grid;grid-template-columns:9px 1fr;gap:16px;align-items:baseline;
@@ -441,7 +460,7 @@
   .covers b{color:var(--ink);font-weight:600}
 
   /* ---------- steps ---------- */
-  .steps{display:grid;gap:1px;margin:28px 0 0;background:var(--hair-soft);
+  .steps{display:grid;gap:1px;margin:0;background:var(--hair-soft);
     border:1px solid var(--hair-soft);border-radius:8px;overflow:hidden;grid-template-columns:1fr}
   @media(min-width:700px){.steps{grid-template-columns:repeat(2,1fr)}}
   @media(min-width:1000px){.steps{grid-template-columns:repeat(4,1fr)}}
@@ -450,22 +469,21 @@
   .step h3{font-size:17px;margin:0 0 8px}
   .step p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.58}
 
-  /* ---------- sub-label ---------- */
-  .sub-label{
-    display:block;margin:64px 0 0;font-family:"IBM Plex Mono",monospace;
-    font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--steel-lt);
-  }
+  /* ---------- block spacing inside a section ---------- */
+  .stack{margin:56px 0 0}
+  /* full-column block: label above, grid spans the whole column */
+  .block > .label{display:block;margin:0 0 20px;color:var(--steel-lt)}
+  .stack-sm{margin:36px 0 0}
 
-  /* ---------- refund note ---------- */
-  .refund{
-    margin:64px 0 0;background:rgba(53,118,181,.10);
-    border:1px solid rgba(53,118,181,.32);border-radius:10px;padding:32px 32px;
-  }
-  .refund h3{font-size:21px;margin:0}
-  .refund p{max-width:62ch;font-size:15.5px;color:var(--ink-2)}
-  @media(max-width:600px){.refund{padding:24px 20px}}
+  /* ---------- fit criteria (referrals) ---------- */
+  .fit{display:grid;gap:1px;margin:32px 0 0;background:var(--hair-soft);
+    border:1px solid var(--hair-soft);border-radius:8px;overflow:hidden;grid-template-columns:1fr}
+  @media(min-width:760px){.fit{grid-template-columns:repeat(3,1fr)}}
+  .fit-item{background:var(--panel-2);padding:22px 22px}
+  .fit-item h3{font-size:16.5px;margin:0 0 8px}
+  .fit-item p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.58}
 
-  .note{margin:32px 0 0;font-size:15px;color:var(--muted);max-width:62ch;line-height:1.62}
+  .note{margin:0;font-size:15px;color:var(--muted);line-height:1.64;max-width:60ch}
   .note b{color:var(--ink-2);font-weight:600}
 
   /* ---------- final CTA ---------- */
@@ -473,8 +491,6 @@
     margin:88px 0 96px;background:var(--panel);border:1px solid var(--hair-soft);
     border-left:3px solid var(--steel);border-radius:10px;padding:44px 38px;
   }
-  .final h2{margin:14px 0 0;max-width:20ch}
-  .final p{max-width:58ch;font-size:16.5px}
   .contact{
     display:grid;gap:24px 32px;margin:36px 0 0;padding:28px 0 0;
     border-top:1px solid var(--hair-soft);grid-template-columns:1fr;
@@ -483,12 +499,13 @@
   @media(min-width:960px){.contact{grid-template-columns:repeat(4,1fr)}}
   .contact .label{display:block;margin:0 0 8px}
   .contact a,.contact span{
+    display:inline-block;padding:5px 0;
     font-family:Archivo,sans-serif;font-weight:700;font-size:15px;
     color:var(--ink);text-decoration:none;letter-spacing:-.01em;
   }
   .contact a:hover{color:var(--steel-lt)}
   .byline{
-    margin:32px 0 0;padding:20px 0 0;border-top:1px solid var(--hair-soft);
+    margin:30px 0 0;padding:20px 0 0;border-top:1px solid var(--hair-soft);
     font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
     text-transform:uppercase;color:var(--faint);line-height:1.9;
   }
@@ -543,27 +560,29 @@
       <span class="label">Class of 2026</span>
     </div>
 
-    <h1>The Gift That Doesn&rsquo;t Get Returned</h1>
-
-    <p class="lede">
-      You&rsquo;ve spent eighteen years preparing your child for this moment &mdash; the tuition, the early
-      mornings, the practices and applications and hard conversations. Here is what nobody tells you:
-      <b>the diploma prepares them academically. It does not prepare them mentally.</b>
-    </p>
-
-    <p class="lede">
-      Your son or daughter is about to walk into a room where the rules were never explained to them.
-      This program explains the rules. What follows is who I am, what I&rsquo;m offering, and exactly what
-      it costs.
-    </p>
-
-    <div class="hero-rule" aria-hidden="true"></div>
-
-    <div class="cta-row">
-      <a class="btn btn-primary" href="tel:+14048311961">Call Kenny directly &rarr;</a>
-      <a class="btn btn-ghost" href="/the-gift-that-doesnt-get-returned.pdf" download>Download the letter (PDF)</a>
+    <div class="hero-grid">
+      <div>
+        <h1>The Gift That Doesn&rsquo;t Get Returned</h1>
+        <div class="hero-rule" aria-hidden="true"></div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tel:+14048311961">Call Kenny directly &rarr;</a>
+          <a class="btn btn-ghost" href="/the-gift-that-doesnt-get-returned.pdf" download>Download the letter (PDF)</a>
+        </div>
+        <p class="cta-note">The first conversation is a conversation, not a pitch.</p>
+      </div>
+      <div>
+        <p class="lede">
+          You&rsquo;ve spent eighteen years preparing your child for this moment &mdash; the tuition, the
+          early mornings, the practices and applications and hard conversations. Here is what nobody tells
+          you: <b>the diploma prepares them academically. It does not prepare them mentally.</b>
+        </p>
+        <p class="lede">
+          Your son or daughter is about to walk into a room where the rules were never explained to them.
+          This program explains the rules. What follows is who I am, what I&rsquo;m offering, and exactly
+          what it costs.
+        </p>
+      </div>
     </div>
-    <p class="cta-note">The first conversation is a conversation, not a pitch.</p>
   </div>
 </header>
 
@@ -571,7 +590,7 @@
 <section id="why">
   <div class="wrap">
     <span class="label">01 &mdash; Why I built this</span>
-    <h2>I looked unstoppable. I was falling apart.</h2>
+    <h2 style="max-width:26ch">I looked unstoppable. I was falling apart.</h2>
 
     <div class="story">
       <div class="story-copy">
@@ -626,20 +645,26 @@
 <!-- ============ 02 — THE GAP ============ -->
 <section id="gap" style="padding-top:0">
   <div class="wrap">
-    <div class="panel-dark">
-      <span class="label" style="color:var(--steel-lt)">02 &mdash; The gap I&rsquo;m filling</span>
-      <h2>The transition out of college is the most under-supported moment in a person&rsquo;s life.</h2>
-      <p>
-        They go from a structure that tells them exactly what to do &mdash; schedule, team, coach,
-        syllabus, scoreboard &mdash; to an environment with none of it, where standards are invisible,
-        feedback is rare, and everyone appears to have it handled. That gap is where imposter syndrome,
-        anxiety, isolation, and quiet burnout take root. Not at 45. At 23.
-      </p>
-      <p>
-        I built IronMind for high performers who look fine on the outside and are privately struggling.
-        That describes a lot of executives. It also describes a lot of 22-year-olds who would never say
-        it out loud &mdash; including, quite possibly, yours.
-      </p>
+    <div class="box">
+      <div class="split">
+        <div class="split-head">
+          <span class="label" style="color:var(--steel-lt)">02 &mdash; The gap I&rsquo;m filling</span>
+          <h2>The transition out of college is the most under-supported moment in a person&rsquo;s life.</h2>
+        </div>
+        <div class="split-body">
+          <p>
+            They go from a structure that tells them exactly what to do &mdash; schedule, team, coach,
+            syllabus, scoreboard &mdash; to an environment with none of it, where standards are invisible,
+            feedback is rare, and everyone appears to have it handled. That gap is where imposter syndrome,
+            anxiety, isolation, and quiet burnout take root. Not at 45. At 23.
+          </p>
+          <p>
+            I built IronMind for high performers who look fine on the outside and are privately struggling.
+            That describes a lot of executives. It also describes a lot of 22-year-olds who would never say
+            it out loud &mdash; including, quite possibly, yours.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -647,8 +672,26 @@
 <!-- ============ 03 — THE INVESTMENT ============ -->
 <section id="investment">
   <div class="wrap">
-    <span class="label">03 &mdash; The investment</span>
-    <h2>What it costs, and why it costs that.</h2>
+    <div class="split">
+      <div class="split-head">
+        <span class="label">03 &mdash; The investment</span>
+        <h2>What it costs, and why it costs that.</h2>
+      </div>
+      <div class="split-body">
+        <p>
+          I went through more versions of this number than I can count. Let me be straight with you:
+          <strong>this is not a financial move for me. I don&rsquo;t do this for the money.</strong> But
+          without commitment, nothing works &mdash; not training, not coaching, not mentorship. The number
+          exists to create commitment, not revenue.
+        </p>
+        <p>
+          And at this stage, that first commitment almost has to come from you. Most young professionals
+          stepping out of school simply can&rsquo;t fund something like this themselves. That&rsquo;s not a
+          knock on them; it&rsquo;s just where they are. So the parent goes first. That is the whole reason
+          this is framed as a gift.
+        </p>
+      </div>
+    </div>
 
     <div class="price">
       <div class="price-main">
@@ -662,81 +705,151 @@
       </div>
     </div>
 
-    <div class="col">
-      <p>
-        I went through more versions of this number than I can count. Let me be straight with you:
-        <strong>this is not a financial move for me. I don&rsquo;t do this for the money.</strong> But
-        without commitment, nothing works &mdash; not training, not coaching, not mentorship. The number
-        exists to create commitment, not revenue.
-      </p>
-      <p>
-        And at this stage, that first commitment almost has to come from you. Most young professionals
-        stepping out of school simply can&rsquo;t fund something like this themselves. That&rsquo;s not a
-        knock on them; it&rsquo;s just where they are. So the parent goes first. That is the whole reason
-        this is framed as a gift.
-      </p>
+    <div class="stack block">
+      <span class="label" style="color:var(--steel-lt)">What the $2,500 covers</span>
+      <ul class="covers">
+          <li><span><b>My network.</b> Real introductions and access &mdash; the thing young professionals need most and get least.</span></li>
+          <li><span><b>My time.</b> Direct, concierge-level coaching from me. Not a course, not a portal, not a chatbot with my face on it.</span></li>
+          <li><span><b>My guidance.</b> Straight answers on what actually derails careers &mdash; including the answers they don&rsquo;t want to hear.</span></li>
+          <li><span><b>The community.</b> A peer group of other young professionals doing the same hard work at the same time.</span></li>
+          <li><span><b>Friday mornings, on the record.</b> Every week, whatever they bring me.</span></li>
+          <li><span><b>The five pillars.</b> Discipline, resilience, consistency, accountability, and community &mdash; built in the arena, not a textbook.</span></li>
+        </ul>
     </div>
 
-    <span class="sub-label">What the $2,500 covers</span>
-    <ul class="covers">
-      <li><span><b>My network.</b> Real introductions and access &mdash; the thing young professionals need most and get least.</span></li>
-      <li><span><b>My time.</b> Direct, concierge-level coaching from me. Not a course, not a portal, not a chatbot with my face on it.</span></li>
-      <li><span><b>My guidance.</b> Straight answers on what actually derails careers &mdash; including the answers they don&rsquo;t want to hear.</span></li>
-      <li><span><b>The community.</b> A peer group of other young professionals doing the same hard work at the same time.</span></li>
-      <li><span><b>Friday mornings, on the record.</b> Every week, whatever they bring me.</span></li>
-      <li><span><b>The five pillars.</b> Discipline, resilience, consistency, accountability, and community &mdash; built in the arena, not a textbook.</span></li>
-    </ul>
-
-    <span class="sub-label">After three months</span>
-    <div class="col">
-      <p>
-        We&rsquo;ll both know by then. Three months is long enough to see whether the commitment is real.
-        If it is, there&rsquo;s an optional <strong>$250/month community membership</strong> to stay
-        connected to the network and keep access to the program. If it isn&rsquo;t, we shake hands and part
-        well. <strong>I am not interested in quietly billing families forever.</strong> That is not what
-        this is.
-      </p>
-    </div>
-
-    <span class="sub-label">What happens after you say yes</span>
-    <div class="steps">
-      <div class="step">
-        <span class="label">Step 01</span>
-        <h3>We talk first</h3>
-        <p>A call with you, then a call with them. No money changes hands until I&rsquo;m confident this is a fit for your young professional.</p>
+    <div class="split stack">
+      <div class="split-head">
+        <span class="label" style="color:var(--steel-lt)">After three months</span>
       </div>
-      <div class="step">
-        <span class="label">Step 02</span>
-        <h3>The honest baseline</h3>
-        <p>Self-esteem, wellness, fitness. I ask hard questions on purpose. This is where we find out what we&rsquo;re actually building on.</p>
-      </div>
-      <div class="step">
-        <span class="label">Step 03</span>
-        <h3>The plan</h3>
-        <p>A 90-day roadmap built around where they are and where they&rsquo;re headed &mdash; not a generic curriculum.</p>
-      </div>
-      <div class="step">
-        <span class="label">Step 04</span>
-        <h3>The reps</h3>
-        <p>Weekly coaching, Friday mornings on the record, network introductions, and a peer group that keeps them honest.</p>
+      <div class="split-body">
+        <p>
+          We&rsquo;ll both know by then. Three months is long enough to see whether the commitment is real.
+          If it is, there&rsquo;s an optional <strong>$250/month community membership</strong> to stay
+          connected to the network and keep access to the program. If it isn&rsquo;t, we shake hands and
+          part well. <strong>I am not interested in quietly billing families forever.</strong> That is not
+          what this is.
+        </p>
       </div>
     </div>
 
-    <p class="note">
-      One note, parent to parent: I will hold your son or daughter to a high standard, and I will not
-      co-sign excuses. If they bring me complaints disconnected from growth, I&rsquo;ll redirect them.
-      That is not a lack of care &mdash; <b>it is the opposite, and it is the whole reason this works.</b>
-    </p>
+    <div class="stack block">
+      <span class="label" style="color:var(--steel-lt)">What happens after you say yes</span>
+      <div class="steps">
+          <div class="step">
+            <span class="label">Step 01</span>
+            <h3>We talk first</h3>
+            <p>A call with you, then a call with them. No money changes hands until I&rsquo;m confident this is a fit for your young professional.</p>
+          </div>
+          <div class="step">
+            <span class="label">Step 02</span>
+            <h3>The honest baseline</h3>
+            <p>Self-esteem, wellness, fitness. I ask hard questions on purpose. This is where we find out what we&rsquo;re actually building on.</p>
+          </div>
+          <div class="step">
+            <span class="label">Step 03</span>
+            <h3>The plan</h3>
+            <p>A 90-day roadmap built around where they are and where they&rsquo;re headed &mdash; not a generic curriculum.</p>
+          </div>
+          <div class="step">
+            <span class="label">Step 04</span>
+            <h3>The reps</h3>
+            <p>Weekly coaching, Friday mornings on the record, network introductions, and a peer group that keeps them honest.</p>
+    </div>
+      </div>
+    </div>
 
-    <div class="refund">
-      <h3>The investment is fully refundable.</h3>
-      <p>
-        If you call me at any point and say, &ldquo;Kenny, we want a different path&rdquo; &mdash; here comes
-        your money. No argument, no retention pitch, no hard feelings. I mean that literally. I have to put
-        a price on this because it costs money to deliver and I&rsquo;m running a business. But I don&rsquo;t
-        want the number to be the reason a young person who needs this doesn&rsquo;t get it. If it&rsquo;s the
-        obstacle, call me. We&rsquo;ll talk.
-      </p>
+    <div class="split stack">
+      <div class="split-head">
+        <span class="label" style="color:var(--steel-lt)">Parent to parent</span>
+      </div>
+      <div class="split-body">
+        <p class="note">
+          I will hold your son or daughter to a high standard, and I will not co-sign excuses. If they bring
+          me complaints disconnected from growth, I&rsquo;ll redirect them. That is not a lack of care
+          &mdash; <b>it is the opposite, and it is the whole reason this works.</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="box box-accent stack">
+      <div class="split">
+        <div class="split-head">
+          <h3 style="font-size:21px;margin:0">The investment is fully refundable.</h3>
+        </div>
+        <div class="split-body">
+          <p style="color:var(--ink-2)">
+            If you call me at any point and say, &ldquo;Kenny, we want a different path&rdquo; &mdash; here
+            comes your money. No argument, no retention pitch, no hard feelings. I mean that literally. I
+            have to put a price on this because it costs money to deliver and I&rsquo;m running a business.
+            But I don&rsquo;t want the number to be the reason a young person who needs this doesn&rsquo;t
+            get it. If it&rsquo;s the obstacle, call me. We&rsquo;ll talk.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 — HOW THIS GROWS ============ -->
+<section id="referrals">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-head">
+        <span class="label">04 &mdash; How this grows</span>
+        <h2>The only marketing I do is you.</h2>
+      </div>
+      <div class="split-body">
+        <p>
+          I run this deliberately lean. No ad budget, no funnel, no sales team &mdash; which is exactly why
+          the number is what it is, and why I can hand every dollar back without blinking. What I spend
+          instead is time, and there is a fixed amount of it. So this grows one way: someone in the program
+          tells someone who belongs in it.
+        </p>
+        <p>
+          I want to be careful with that word, though. <strong>A referral is not &ldquo;anyone who can
+          afford it.&rdquo;</strong> I am not trying to fill seats, and the ability to pay has never been
+          the qualifier &mdash; if it were, I would have built something far easier to sell. The wrong
+          person in the room costs the right ones something real: the honesty drops, the standard slips,
+          and what should be a proving ground turns into a networking group.
+        </p>
+        <p>
+          What I&rsquo;m building is a community of ambitious young professionals who push each other
+          &mdash; people who are serious about the work and about each other. That only holds if the people
+          in it were vouched for by someone who understood what it was.
+        </p>
+      </div>
+    </div>
+
+    <div class="stack block">
+      <span class="label" style="color:var(--steel-lt)">Who I&rsquo;m looking for</span>
+      <div class="fit">
+          <div class="fit-item">
+            <h3>Ambitious</h3>
+            <p>Genuinely wants more from their life and career than what is being handed to them.</p>
+          </div>
+          <div class="fit-item">
+            <h3>Coachable</h3>
+            <p>Can hear the answer they didn&rsquo;t want and do something with it instead of defending against it.</p>
+          </div>
+          <div class="fit-item">
+            <h3>Quietly struggling</h3>
+            <p>Looks fine on the outside. Would never say out loud that the transition is harder than expected.</p>
+    </div>
+      </div>
+    </div>
+
+    <div class="split stack">
+      <div class="split-head">
+        <span class="label" style="color:var(--steel-lt)">If you know someone</span>
+      </div>
+      <div class="split-body">
+        <p class="note">
+          If your son or daughter gets what I hope they get from this, and you find yourself thinking of
+          another family in the same spot &mdash; that is the introduction I would be grateful for.
+          <b>One name you would personally vouch for is worth more to me than a hundred inquiries.</b>
+          Send them my number, or send me theirs. I&rsquo;ll take it from there.
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -745,12 +858,22 @@
 <section id="contact" style="padding-top:0">
   <div class="wrap">
     <div class="final">
-      <span class="label" style="color:var(--steel-lt)">Let&rsquo;s talk</span>
-      <h2>Your child doesn&rsquo;t have to figure this out the way I did.</h2>
-      <p>
-        The first conversation is a conversation, not a pitch. Call me directly &mdash; I&rsquo;d rather
-        answer your questions myself than have you decide from a piece of paper.
-      </p>
+      <div class="split">
+        <div class="split-head">
+          <span class="label" style="color:var(--steel-lt)">Let&rsquo;s talk</span>
+          <h2>Your child doesn&rsquo;t have to figure this out the way I did.</h2>
+        </div>
+        <div class="split-body">
+          <p>
+            The first conversation is a conversation, not a pitch. Call me directly &mdash; I&rsquo;d rather
+            answer your questions myself than have you decide from a piece of paper.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="tel:+14048311961">Call 404-831-1961 &rarr;</a>
+            <a class="btn btn-ghost" href="/the-gift-that-doesnt-get-returned.pdf" download>Download the letter (PDF)</a>
+          </div>
+        </div>
+      </div>
 
       <div class="contact">
         <div>
@@ -774,11 +897,6 @@
       <p class="byline">
         &mdash; Kenny Stoddart &middot; Founder &amp; CEO, IronMind Advisors &middot; Jon Gordon Certified Trainer &middot; Creator of the Identity Gain OS&trade;
       </p>
-
-      <div class="cta-row" style="margin-top:8px">
-        <a class="btn btn-primary" href="tel:+14048311961">Call 404-831-1961 &rarr;</a>
-        <a class="btn btn-ghost" href="/the-gift-that-doesnt-get-returned.pdf" download>Download the letter (PDF)</a>
-      </div>
     </div>
   </div>
 </section>
