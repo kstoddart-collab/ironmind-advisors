@@ -3,3 +3,6 @@
 
 # Collapse the .html form onto the canonical extensionless path
 /identityscore.html  /identityscore  301!
+
+# /nextsteps — parent letter (unlisted)
+/nextsteps.html  /nextsteps  301!
