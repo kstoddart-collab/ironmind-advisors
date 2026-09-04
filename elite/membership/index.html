@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IronMind Elite — Membership</title>
+<meta name="description" content="You're now a member of IronMind Elite. Here's what membership means, what's included, and how it starts.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a0a0c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IronMind Elite">
+<meta property="og:title" content="You're now a member of IronMind Elite. Let's get started.">
+<meta property="og:description" content="Membership is $250 a month. Everything on this page is included from the day you walk in.">
+<meta property="og:image" content="https://ironmind-elite.com/assets/ironmind-raptor.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0c'/%3E%3Cpath d='M22 74V26h10v48H22zm22 0V26h9l15 26V26h10v48h-9L54 48v26h-10z' fill='%23f4f1ec'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&display=swap">
+
+<style>
+:root{
+  --void:#0a0a0c; --ink-deep:#15161a; --ink-soft:#1f2128;
+  --bone:#f4f1ec; --paper:#fdfcf8;
+  --bone-soft:rgba(244,241,236,.80); --bone-mute:rgba(244,241,236,.62); --bone-faint:rgba(244,241,236,.30);
+  --rule:rgba(244,241,236,.10); --rule-soft:rgba(244,241,236,.055); --rule-strong:rgba(244,241,236,.22);
+  --ox:#1872b0; --ox-deep:#0e4f7a; --ember:#3f95d4; --gold:#d8a050; --cyan:#22a3ef;
+  --sans:'Inter',-apple-system,system-ui,sans-serif;
+  --serif:'Fraunces',Georgia,serif;
+  --pad:clamp(20px,5vw,64px);
+  --maxw:1280px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+body{
+  margin:0;background:var(--void);color:var(--bone);
+  font-family:var(--sans);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--ox);color:var(--paper)}
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
+
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+.narrow{max-width:660px}
+
+/* grain */
+.grain{
+  position:fixed;inset:-50%;z-index:1;pointer-events:none;opacity:.16;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  animation:grain 8s steps(6) infinite;mix-blend-mode:overlay;
+}
+@keyframes grain{
+  0%,100%{transform:translate(0,0)}16%{transform:translate(-4%,-3%)}33%{transform:translate(3%,-5%)}
+  50%{transform:translate(-2%,4%)}66%{transform:translate(4%,2%)}83%{transform:translate(-3%,-2%)}
+}
+
+/* nav */
+header{position:sticky;top:0;z-index:60;background:rgba(10,10,12,.86);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--rule)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:70px}
+.mark{display:flex;align-items:center;gap:11px}
+.mark svg{width:30px;height:30px;flex:none}
+.mark .wordmark{font-weight:900;font-size:16px;letter-spacing:-.02em;line-height:1}
+.mark .sub{display:block;font-size:8.5px;font-weight:700;letter-spacing:.24em;color:var(--bone-faint);margin-top:4px}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.nav-link{font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--bone-mute);padding:9px 14px;transition:color .25s}
+.nav-link:hover{color:var(--bone)}
+@media (max-width:700px){.nav-link.hide-sm{display:none}}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;cursor:pointer;
+  font-size:12.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  padding:13px 22px;border-radius:2px;border:1px solid transparent;
+  transition:transform .25s cubic-bezier(.2,.7,.3,1),background .25s,border-color .25s,color .25s,box-shadow .25s;
+}
+.btn .arw{transition:transform .3s cubic-bezier(.2,.7,.3,1)}
+.btn:hover .arw{transform:translateX(4px)}
+.btn-solid{background:var(--ox);color:var(--paper)}
+.btn-solid:hover{background:var(--ember);box-shadow:0 10px 34px -10px rgba(63,149,212,.7)}
+.btn-ghost{border-color:var(--rule-strong);color:var(--bone)}
+.btn-ghost:hover{border-color:var(--bone);background:rgba(244,241,236,.05)}
+.btn-sm{padding:10px 16px;font-size:11.5px;white-space:nowrap}
+
+/* hero */
+.hero{position:relative;z-index:2;padding-block:clamp(64px,7.6vw,96px) clamp(56px,7vw,84px);overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.hero-bg .grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(var(--rule-soft) 1px,transparent 1px),linear-gradient(90deg,var(--rule-soft) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 90% 70% at 50% 40%,#000 20%,transparent 78%);
+  -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 40%,#000 20%,transparent 78%);
+}
+.hero-bg .floor{position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(to top,var(--void) 12%,transparent)}
+.hero-inner{max-width:960px;position:relative}
+.tag{
+  display:inline-flex;align-items:center;gap:10px;margin-bottom:30px;
+  border:1px solid var(--rule);border-radius:100px;padding:7px 16px 7px 13px;
+  background:rgba(244,241,236,.035);
+}
+.tag .dot{width:6px;height:6px;border-radius:50%;background:var(--ember);animation:pulse 2.6s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(63,149,212,.55)}70%{box-shadow:0 0 0 9px rgba(63,149,212,0)}100%{box-shadow:0 0 0 0 rgba(63,149,212,0)}}
+.tag span{font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--bone-soft)}
+h1{
+  margin:0 0 26px;font-weight:900;letter-spacing:-.045em;line-height:.94;
+  font-size:clamp(40px,6.4vw,78px);text-wrap:balance;
+}
+h1 .em{
+  display:block;font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.025em;
+  background:linear-gradient(100deg,var(--ember) 0%,#7dc0ea 42%,var(--gold) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.lede{max-width:640px;margin:0 0 16px;font-size:clamp(16.5px,1.9vw,20px);line-height:1.62;color:var(--bone-soft)}
+.lede b{color:var(--bone);font-weight:600}
+.sub-lede{max-width:640px;margin:0 0 38px;font-size:15.5px;color:var(--bone-mute)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero-note{margin-top:26px;display:flex;align-items:center;gap:12px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bone-faint)}
+.hero-note .rule{width:34px;height:1px;background:var(--rule-strong)}
+
+/* section furniture */
+section{position:relative;z-index:2;padding-block:clamp(58px,7.4vw,96px)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;padding-bottom:26px;margin-bottom:44px;border-bottom:1px solid var(--rule)}
+.sec-head .eyebrow{font-size:10px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--ember)}
+.sec-head h2{margin:10px 0 0;font-size:clamp(26px,3.6vw,42px);font-weight:900;letter-spacing:-.035em;line-height:1.04;text-wrap:balance}
+.sec-head p{margin:0;max-width:340px;font-size:14.5px;color:var(--bone-mute);text-align:right}
+@media (max-width:760px){.sec-head{display:block}.sec-head p{text-align:left;margin-top:14px;max-width:none}}
+.prose p{margin:0 0 18px;color:var(--bone-soft);font-size:16.5px;line-height:1.68;max-width:62ch}
+.prose p:last-child{margin-bottom:0}
+.prose b,.prose strong{color:var(--bone);font-weight:700}
+.pull{
+  font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.4vw,25px);line-height:1.4;
+  color:var(--bone);border-left:2px solid var(--ox);padding-left:24px;margin:34px 0 0;max-width:46ch;letter-spacing:-.015em;
+}
+
+/* price panel */
+.price{
+  margin-top:40px;border:1px solid var(--rule);border-radius:3px;overflow:hidden;max-width:620px;
+  background:linear-gradient(168deg,rgba(31,33,40,.62),rgba(21,22,26,.28));position:relative;
+}
+.price::after{content:'';position:absolute;left:0;right:0;top:0;height:2px;background:var(--ox)}
+.price-top{padding:30px 30px 26px}
+.price-now{display:flex;align-items:flex-end;gap:12px}
+.price-fig{
+  font-size:clamp(52px,9vw,76px);font-weight:900;letter-spacing:-.05em;line-height:.84;
+  background:linear-gradient(160deg,var(--bone) 30%,rgba(244,241,236,.66));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.price-per{font-size:10.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--bone-faint);padding-bottom:10px}
+.price-cap{margin:16px 0 0;font-size:14.5px;line-height:1.6;color:var(--bone-mute);max-width:46ch}
+.price-bot{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  padding:16px 30px;border-top:1px solid var(--rule);background:rgba(10,10,12,.4);
+}
+.price-bot .what{font-size:9.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--bone-faint)}
+.badge{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--bone);
+  border:1px solid color-mix(in srgb,var(--ox) 46%,transparent);
+  background:color-mix(in srgb,var(--ox) 14%,transparent);
+  padding:7px 13px;border-radius:2px;
+}
+.badge svg{flex:none}
+.fineprint{margin-top:18px;font-size:13px;line-height:1.7;color:var(--bone-faint);max-width:56ch}
+
+/* included list */
+.incl{display:grid;gap:2px;background:var(--rule);border:1px solid var(--rule)}
+.inc{background:var(--void);padding:24px 26px;display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:start;transition:background .3s}
+.inc:hover{background:rgba(31,33,40,.5)}
+.inc .k{font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--ember);padding-top:5px;line-height:1.5}
+.inc h3{margin:0 0 6px;font-size:17.5px;font-weight:800;letter-spacing:-.022em}
+.inc p{margin:0;font-size:14.5px;color:var(--bone-mute);line-height:1.6;max-width:56ch}
+@media (max-width:720px){.inc{grid-template-columns:1fr;gap:10px}.inc .k{padding-top:0}}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:var(--rule);border:1px solid var(--rule)}
+@media (max-width:1000px){.pillars{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.pillars{grid-template-columns:1fr}}
+.pil{background:var(--void);padding:26px 22px 28px;position:relative;transition:background .3s}
+.pil:hover{background:rgba(31,33,40,.5)}
+.pil .n{display:block;font-family:var(--serif);font-style:italic;font-size:13px;color:var(--ember);margin-bottom:14px}
+.pil h3{margin:0 0 9px;font-size:16px;font-weight:900;letter-spacing:.02em;text-transform:uppercase}
+.pil p{margin:0;font-size:13.5px;line-height:1.58;color:var(--bone-mute)}
+
+/* fit columns */
+.fit{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,56px)}
+.fit h3{margin:0 0 18px;padding-bottom:14px;border-bottom:1px solid var(--rule);font-size:10.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--bone-faint)}
+.fit ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.fit li{position:relative;padding-left:22px;font-size:15px;line-height:1.58;color:var(--bone-soft)}
+.fit li b{color:var(--bone);font-weight:700}
+.yes li::before{content:'';position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:1px;background:var(--ox);transform:rotate(45deg)}
+.no li::before{content:'';position:absolute;left:0;top:11px;width:9px;height:1px;background:var(--bone-faint)}
+
+/* kenny */
+.kenny{border-block:1px solid var(--rule);background:rgba(21,22,26,.5)}
+.creds-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:var(--rule);border:1px solid var(--rule);margin-top:44px}
+@media (max-width:900px){.creds-grid{grid-template-columns:repeat(2,1fr)}}
+.cred{background:var(--void);padding:26px 22px;text-align:center}
+.cred .n{
+  display:block;font-size:clamp(22px,3vw,32px);font-weight:900;letter-spacing:-.045em;line-height:1;margin-bottom:9px;
+  background:linear-gradient(160deg,var(--bone) 30%,rgba(244,241,236,.66));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.cred .l{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--bone-faint);line-height:1.5}
+
+/* steps */
+.steps{display:grid;gap:2px;background:var(--rule);border:1px solid var(--rule)}
+.step{background:var(--void);padding:26px 28px;display:flex;gap:22px;align-items:flex-start;transition:background .3s}
+.step:hover{background:rgba(31,33,40,.5)}
+.step .k{font-family:var(--serif);font-size:13px;color:var(--ember);flex:none;padding-top:4px;letter-spacing:.05em;width:104px;line-height:1.4}
+.step h4{margin:0 0 7px;font-size:17.5px;font-weight:800;letter-spacing:-.022em}
+.step p{margin:0;font-size:14.5px;color:var(--bone-mute);line-height:1.6;max-width:56ch}
+@media (max-width:620px){.step{display:block}.step .k{width:auto;margin-bottom:10px;display:block}}
+
+/* close */
+.close{position:relative;overflow:hidden;border-top:1px solid var(--rule);background:linear-gradient(150deg,rgba(24,114,176,.15),rgba(10,10,12,0) 60%),var(--ink-deep)}
+.close-inner{padding-block:clamp(64px,9vw,104px);display:grid;grid-template-columns:1fr auto;gap:38px;align-items:center}
+@media (max-width:860px){.close-inner{grid-template-columns:1fr}}
+.close h2{margin:14px 0;font-size:clamp(28px,4vw,44px);font-weight:900;letter-spacing:-.038em;line-height:1.04;max-width:16ch;text-wrap:balance}
+.close h2 .em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--ember);letter-spacing:-.02em}
+.close p{margin:0 0 26px;color:var(--bone-soft);font-size:16px;max-width:44ch}
+.close .eyebrow{font-size:10px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--bone-faint)}
+.tel{display:inline-block;font-size:clamp(24px,3.4vw,34px);font-weight:900;letter-spacing:-.03em;color:var(--bone);border-bottom:2px solid var(--ox);padding-bottom:3px}
+.tel:hover{color:var(--ember);border-bottom-color:var(--ember)}
+
+/* footer */
+footer{background:var(--void);border-top:1px solid var(--rule);padding-block:44px 40px;position:relative;z-index:2}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;padding-bottom:32px;border-bottom:1px solid var(--rule)}
+@media (max-width:800px){.foot-top{grid-template-columns:1fr;gap:28px}}
+.foot-blurb{margin:16px 0 0;font-size:13.5px;line-height:1.65;color:var(--bone-mute);max-width:42ch}
+.foot-col h5{margin:0 0 14px;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--bone-faint)}
+.foot-col a{display:block;font-size:14px;color:var(--bone-mute);padding:5px 0;transition:color .25s}
+.foot-col a:hover{color:var(--bone)}
+.foot-bot{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--bone-faint)}
+.foot-bot .tagline{color:var(--ember);font-family:var(--serif);font-style:italic;font-size:14px}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="mark" href="https://ironmind-elite.com" aria-label="IronMind Elite home">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="2" stroke="#f4f1ec" stroke-opacity=".28"/>
+        <path d="M9.5 28.5V11.5h3.2v17H9.5z" fill="#f4f1ec"/>
+        <path d="M15.6 28.5V11.5h4.1l3.7 10.9 3.7-10.9h4.1v17h-3V17.6l-3.5 10.9h-2.6l-3.5-10.9v10.9h-3z" fill="#f4f1ec"/>
+        <path d="M9.5 32.6h21" stroke="#1872b0" stroke-width="1.7"/>
+      </svg>
+      <span><span class="wordmark">IRONMIND</span><span class="sub">ELITE</span></span>
+    </a>
+    <nav class="nav-actions">
+      <a class="nav-link hide-sm" href="#included">What's included</a>
+      <a class="nav-link hide-sm" href="#start">How it starts</a>
+      <a class="btn btn-solid btn-sm" href="sms:+14048311961?&amp;body=Let's%20get%20started">Let's get started <span class="arw">→</span></a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-bg" aria-hidden="true"><div class="grid"></div><div class="floor"></div></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="tag"><span class="dot"></span><span>Membership · Young professionals · Class of 2026</span></div>
+      <h1>You're now a member of IronMind Elite.<span class="em">Let's get started.</span></h1>
+      <p class="lede">Membership is <b>$250 a month</b>. Everything on this page is included from the day you walk in — nothing here is a tier, an add-on, or an upgrade.</p>
+      <p class="sub-lede">What it asks of you is Friday mornings — 8:00 a.m. Eastern, every week.</p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="sms:+14048311961?&amp;body=Let's%20get%20started">Text “Let's get started” <span class="arw">→</span></a>
+        <a class="btn btn-ghost" href="tel:+14048311961">Or call <span class="arw">→</span></a>
+      </div>
+      <div class="hero-note"><span class="rule"></span><span>404-831-1961 · goes straight to Kenny</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section>
+  <div class="sec-head">
+    <div><span class="eyebrow">01 — Standing</span><h2>What membership means</h2></div>
+    <p>Not a subscription. A standing commitment, with a room attached.</p>
+  </div>
+  <div class="prose">
+    <p>You're in. Not on a waitlist, not in a trial, not still deciding whether this is for you — a <strong>member of IronMind Elite</strong>, with everything that carries, starting the day you walk in.</p>
+    <p>Membership isn't something you forget you're paying for. It's a standing commitment: to a Friday morning, to a roadmap you actually work, and to a small group of people doing the same thing alongside you.</p>
+    <p class="pull">The part that isn't optional is showing up on Friday morning and telling the truth about how it's actually going.</p>
+  </div>
+
+  <div class="price">
+    <div class="price-top">
+      <div class="price-now"><span class="price-fig">$250</span><span class="price-per">/ month</span></div>
+      <p class="price-cap">Full membership, month to month. Cancel by text — no retention call, no exit survey, no discount offer to keep you on the roster. If you stay, it's because it's working.</p>
+    </div>
+    <div class="price-bot">
+      <span class="what">Your standing</span>
+      <span class="badge">
+        <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 0l1.6 3.7L11.6 4 8.6 6.7l.9 4L6 8.7 2.5 10.7l.9-4L.4 4l4-.3z" fill="#3f95d4"/></svg>
+        Member · IronMind Elite
+      </span>
+    </div>
+  </div>
+</section>
+
+<section id="included">
+  <div class="sec-head">
+    <div><span class="eyebrow">02 — Included</span><h2>What $250 a month gets you</h2></div>
+    <p>All of it, from day one. There is no higher tier to be sold later.</p>
+  </div>
+  <div class="incl">
+
+    <div class="inc">
+      <span class="k">Direct access</span>
+      <div>
+        <h3>Kenny's cell number</h3>
+        <p>Not a portal. Not a ticketing queue. Not a coach you get assigned to. You text the founder, and the founder texts back.</p>
+      </div>
+    </div>
+
+    <div class="inc">
+      <span class="k">Fridays · 8:00 AM ET</span>
+      <div>
+        <h3>The Friday morning session</h3>
+        <p>Every Friday at 8:00 a.m. Eastern. Live coaching with the group — what happened this week, what you avoided, and what you're doing about it.</p>
+      </div>
+    </div>
+
+    <div class="inc">
+      <span class="k">Introductions</span>
+      <div>
+        <h3>27 years of executive relationships</h3>
+        <p>Warm introductions into rooms you can't cold-email your way into. Kenny makes the call first. You show up already vouched for.</p>
+      </div>
+    </div>
+
+    <div class="inc">
+      <span class="k">Baseline</span>
+      <div>
+        <h3>An honest assessment</h3>
+        <p>Where you actually are — not where your résumé says you are. It's uncomfortable once and useful for years.</p>
+      </div>
+    </div>
+
+    <div class="inc">
+      <span class="k">Transition Readiness Score™</span>
+      <div>
+        <h3>A number you can move</h3>
+        <p>Forty questions across three pillars and eight domains, scored out of 1,000. Progress stops being a feeling and starts being something you can point at.</p>
+      </div>
+    </div>
+
+    <div class="inc">
+      <span class="k">90 days</span>
+      <div>
+        <h3>A customized roadmap</h3>
+        <p>Built off your baseline, sized to your actual week, revisited as you move. Not a worksheet you fill in once and never open again.</p>
+      </div>
+    </div>
+
+    <div class="inc">
+      <span class="k">The room</span>
+      <div>
+        <h3>Peers who are also not fine</h3>
+        <p>Other young professionals doing the same work. The value of the room is that nobody in it is performing.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <div><span class="eyebrow">03 — The standard</span><h2>The five pillars</h2></div>
+    <p>Everything in the program trains one of five things. Nothing gets added because it sounds good.</p>
+  </div>
+  <div class="pillars">
+    <div class="pil"><span class="n">i.</span><h3>Discipline</h3><p>Doing it on the days you don't feel like it. That's the whole definition.</p></div>
+    <div class="pil"><span class="n">ii.</span><h3>Resilience</h3><p>Recovering fast enough that one bad week doesn't become one bad quarter.</p></div>
+    <div class="pil"><span class="n">iii.</span><h3>Consistency</h3><p>Boring, repeatable reps. What separates a good month from a career.</p></div>
+    <div class="pil"><span class="n">iv.</span><h3>Accountability</h3><p>Someone who knows what you said you'd do, and asks about it on Friday.</p></div>
+    <div class="pil"><span class="n">v.</span><h3>Community</h3><p>A room where the honest answer is the expected one.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <div><span class="eyebrow">04 — Your side</span><h2>What it asks of you</h2></div>
+    <p>Beyond the $250, none of the rest of it is money.</p>
+  </div>
+  <div class="prose">
+    <p><strong>Friday at 8:00 a.m. Eastern.</strong> Weekly, on camera. Missing one is fine. Missing four means this isn't the season for it, and we'd rather say that out loud than keep billing you.</p>
+    <p><strong>An honest baseline.</strong> The assessment only works if you answer it accurately instead of impressively. Most people need one run at it to stop performing.</p>
+    <p><strong>Answering the text.</strong> When Kenny checks in on the thing you committed to, the answer is either “done” or “not done, here's why.” Both are acceptable. Silence isn't.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <div><span class="eyebrow">05 — Fit</span><h2>Who this is for</h2></div>
+    <p>Membership is small on purpose. It works for some people and not others.</p>
+  </div>
+  <div class="fit">
+    <div class="yes">
+      <h3>This works if you're</h3>
+      <ul>
+        <li><b>Ambitious.</b> You want more than what's been handed to you, and you're willing to say so out loud.</li>
+        <li><b>Coachable.</b> You can take hard feedback without needing a week to recover from it.</li>
+        <li><b>Quietly struggling.</b> You look fine from the outside. Privately it's imposter syndrome, anxiety, and the early edge of burnout — at 23.</li>
+      </ul>
+    </div>
+    <div class="no">
+      <h3>This doesn't work if</h3>
+      <ul>
+        <li>You're here because somebody else wants you to be, and you've already decided it's a waste of a Friday.</li>
+        <li>You want tactics without the identity work underneath them.</li>
+        <li>You want a cheerleader. Kenny will be in your corner and he will still tell you the truth.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="kenny">
+  <div class="wrap">
+    <section>
+      <div class="sec-head">
+        <div><span class="eyebrow">Who's coaching you</span><h2>Kenny Stoddart</h2></div>
+        <p>He built this to reach people at 23 instead of at 40.</p>
+      </div>
+      <div class="prose">
+        <p>Citadel, 1997. Cybersecurity executive. A millionaire by 24 — and then burned out and unrecognizable to himself by the time it mattered, because nobody reached him early enough to explain the difference between a career and an identity.</p>
+        <p>Ten Ironman finishes. Stage 3 prostate cancer, survived. Now finishing a master's in clinical mental health counseling, for the specific purpose of doing this properly.</p>
+      </div>
+      <div class="creds-grid">
+        <div class="cred"><span class="n">10×</span><span class="l">Ironman finisher</span></div>
+        <div class="cred"><span class="n">27 yrs</span><span class="l">Executive leadership</span></div>
+        <div class="cred"><span class="n">Stage 3</span><span class="l">Cancer survivor</span></div>
+        <div class="cred"><span class="n">MA</span><span class="l">Clinical Mental Health Counseling · Liberty University 2026</span></div>
+        <div class="cred"><span class="n">Citadel</span><span class="l">BSBA ’97 · MBA ’24</span></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="wrap">
+  <section id="start">
+    <div class="sec-head">
+      <div><span class="eyebrow">Onboarding</span><h2>How it starts</h2></div>
+      <p>Three steps. The first one takes about four seconds.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="k">Step one — today</span>
+        <div>
+          <h4>You text.</h4>
+          <p>Three words: “Let's get started.” That's the entire application process. It goes to Kenny's phone, not an inbox somebody checks on Tuesdays.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="k">Step two — this week</span>
+        <div>
+          <h4>One conversation.</h4>
+          <p>Not a pitch. A real conversation about where you are and whether this is the right thing for you right now. If it isn't, he'll say so.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="k">Step three — that Friday, 8:00 AM</span>
+        <div>
+          <h4>You're in the room.</h4>
+          <p>Baseline done, roadmap drafted, first Friday on the calendar. Billing starts when you start — not before.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="close">
+  <div class="wrap close-inner">
+    <div>
+      <span class="eyebrow">Your move</span>
+      <h2>When you're ready, <span class="em">text me.</span></h2>
+      <p>You don't need a script and you don't need to have it figured out first. That's the point of the first conversation.</p>
+      <a class="tel" href="sms:+14048311961?&amp;body=Let's%20get%20started">404-831-1961</a>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-solid" href="sms:+14048311961?&amp;body=Let's%20get%20started">Text “Let's get started” <span class="arw">→</span></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="mark" href="https://ironmind-elite.com" aria-label="IronMind Elite home">
+          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="38" height="38" rx="2" stroke="#f4f1ec" stroke-opacity=".28"/>
+            <path d="M9.5 28.5V11.5h3.2v17H9.5z" fill="#f4f1ec"/>
+            <path d="M15.6 28.5V11.5h4.1l3.7 10.9 3.7-10.9h4.1v17h-3V17.6l-3.5 10.9h-2.6l-3.5-10.9v10.9h-3z" fill="#f4f1ec"/>
+            <path d="M9.5 32.6h21" stroke="#1872b0" stroke-width="1.7"/>
+          </svg>
+          <span><span class="wordmark">IRONMIND</span><span class="sub">ELITE</span></span>
+        </a>
+        <p class="foot-blurb">The identity that holds under pressure. Executive coaching, athlete readiness, and transition work from Kenny Stoddart. Jacksonville Beach, Florida.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Three doors</h5>
+        <a href="https://www.ironmindadvisors.com">IronMind Advisors</a>
+        <a href="https://www.theathletecheck.com">The Athlete Check</a>
+        <a href="https://www.ironmindadvisors.com/transition">Young Professionals</a>
+      </div>
+      <div class="foot-col">
+        <h5>More</h5>
+        <a href="https://www.ironmindadvisors.com/about">Meet Kenny</a>
+        <a href="https://www.ironmindadvisors.com/speaker">Speaking</a>
+        <a href="https://www.ironmindadvisors.com/identityscore">Identity Score™</a>
+        <a href="https://www.linkedin.com/in/kenstoddart">LinkedIn</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <small>© 2026 IronMind. An IronMind Company. All rights reserved.</small>
+      <span class="tagline">Sharp minds. Iron will.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
