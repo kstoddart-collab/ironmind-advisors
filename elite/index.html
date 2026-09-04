@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IronMind — Know exactly where you stand</title>
+<meta name="description" content="IronMind builds the identity that holds under pressure — for executives, for student athletes, for the ones just starting out. Three doors. One standard.">
+<meta name="theme-color" content="#0a0a0c">
+<link rel="canonical" href="https://ironmind-elite.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IronMind">
+<meta property="og:url" content="https://ironmind-elite.com/">
+<meta property="og:title" content="IronMind — Know exactly where you stand">
+<meta property="og:description" content="The identity that holds under pressure. For executives, student athletes, and new graduates. Three doors. One standard.">
+<meta property="og:image" content="https://ironmind-elite.com/assets/ironmind-raptor.jpg">
+<meta property="og:image:alt" content="The IronMind Elite Ford Raptor in the desert.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@kstoddart">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0c'/%3E%3Cpath d='M22 74V26h10v48H22zm22 0V26h9l15 26V26h10v48h-9L54 48v26h-10z' fill='%23f4f1ec'/%3E%3C/svg%3E">
+<style>
+:root{
+  --void:#0a0a0c; --ink-deep:#15161a; --ink-soft:#1f2128;
+  --bone:#f4f1ec; --paper:#fdfcf8;
+  --bone-soft:rgba(244,241,236,.80); --bone-mute:rgba(244,241,236,.62); --bone-faint:rgba(244,241,236,.30);
+  --rule:rgba(244,241,236,.10); --rule-soft:rgba(244,241,236,.055); --rule-strong:rgba(244,241,236,.22);
+  --ox:#1872b0; --ox-deep:#0e4f7a; --ember:#3f95d4; --gold:#d8a050; --cyan:#22a3ef;
+  --sans:'Inter',-apple-system,system-ui,sans-serif;
+  --serif:'Fraunces',Georgia,serif;
+  --pad:clamp(20px,5vw,64px);
+  --maxw:1280px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+body{
+  margin:0; background:var(--void); color:var(--bone);
+  font-family:var(--sans); font-size:17px; line-height:1.6;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+a{color:inherit; text-decoration:none}
+img{max-width:100%; display:block}
+::selection{background:var(--ox); color:var(--paper)}
+
+.wrap{width:100%; max-width:var(--maxw); margin:0 auto; padding-inline:var(--pad)}
+.eyebrow{
+  font-size:11px; font-weight:700; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--bone-faint);
+}
+
+/* ── grain + vignette overlay ─────────────────────────── */
+.grain{
+  position:fixed; inset:-50%; z-index:1; pointer-events:none; opacity:.16;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  animation:grain 8s steps(6) infinite; mix-blend-mode:overlay;
+}
+@keyframes grain{
+  0%,100%{transform:translate(0,0)} 16%{transform:translate(-4%,-3%)} 33%{transform:translate(3%,-5%)}
+  50%{transform:translate(-2%,4%)} 66%{transform:translate(4%,2%)} 83%{transform:translate(-3%,-2%)}
+}
+
+/* ── nav ──────────────────────────────────────────────── */
+header{
+  position:fixed; top:0; left:0; right:0; z-index:60;
+  transition:background .4s ease, border-color .4s ease, backdrop-filter .4s ease;
+  border-bottom:1px solid transparent;
+}
+header.stuck{
+  background:rgba(10,10,12,.86); backdrop-filter:saturate(160%) blur(14px);
+  -webkit-backdrop-filter:saturate(160%) blur(14px); border-bottom-color:var(--rule);
+}
+.nav{display:flex; align-items:center; justify-content:space-between; gap:24px; height:70px}
+.mark{display:flex; align-items:center; gap:11px}
+.mark svg{width:30px; height:30px; flex:none}
+.mark .wordmark{
+  font-weight:900; font-size:16px; letter-spacing:-.02em; line-height:1;
+}
+.mark .sub{
+  display:block; font-size:8.5px; font-weight:700; letter-spacing:.24em;
+  color:var(--bone-faint); margin-top:4px;
+}
+.nav-actions{display:flex; align-items:center; gap:8px}
+.nav-link{
+  font-size:12.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--bone-mute); padding:9px 14px; border-radius:2px; transition:color .25s;
+}
+.nav-link:hover{color:var(--bone)}
+@media (max-width:640px){ .nav-link.hide-sm{display:none} }
+
+.btn{
+  display:inline-flex; align-items:center; gap:10px; cursor:pointer;
+  font-size:12.5px; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
+  padding:13px 22px; border-radius:2px; border:1px solid transparent;
+  transition:transform .25s cubic-bezier(.2,.7,.3,1), background .25s, border-color .25s, color .25s, box-shadow .25s;
+}
+.btn .arw{transition:transform .3s cubic-bezier(.2,.7,.3,1)}
+.btn:hover .arw{transform:translateX(4px)}
+.btn-solid{background:var(--ox); color:var(--paper); box-shadow:0 0 0 0 rgba(24,114,176,.5)}
+.btn-solid:hover{background:var(--ember); box-shadow:0 10px 34px -10px rgba(63,149,212,.7)}
+.btn-ghost{border-color:var(--rule-strong); color:var(--bone)}
+.btn-ghost:hover{border-color:var(--bone); background:rgba(244,241,236,.05)}
+.btn-sm{padding:10px 16px; font-size:11.5px; white-space:nowrap}
+.lbl-sm{display:none}
+@media (max-width:560px){
+  .nav .btn-sm{padding:9px 13px; font-size:10.5px}
+  .lbl-lg{display:none} .lbl-sm{display:inline}
+}
+
+/* ── hero ─────────────────────────────────────────────── */
+.hero{
+  position:relative; z-index:2; display:flex; align-items:center;
+  padding-block:clamp(92px,8.6vw,108px) clamp(56px,7vw,84px); overflow:hidden;
+}
+.hero > .wrap{display:grid; gap:clamp(26px,3.4vw,40px)}
+
+/* hero photo panel */
+.hero-photo{
+  position:relative; border:1px solid var(--rule); border-radius:3px; overflow:hidden;
+  background:var(--ink-deep); box-shadow:0 40px 90px -50px rgba(24,114,176,.55);
+  animation:plate 1.1s cubic-bezier(.2,.7,.3,1) both;
+}
+@keyframes plate{from{opacity:0; transform:translateY(16px) scale(.994)} to{opacity:1; transform:none}}
+.hero-photo img{
+  display:block; width:100%; height:auto; aspect-ratio:2.9/1;
+  object-fit:cover; object-position:center 46%;
+}
+@media (max-width:700px){ .hero-photo img{aspect-ratio:16/10; object-position:34% center} }
+.hero-bg{position:absolute; inset:0; z-index:-1; pointer-events:none}
+.hero-bg .glow{
+  position:absolute; border-radius:50%; filter:blur(90px); will-change:opacity;
+}
+.g1{width:min(78vw,900px); aspect-ratio:1; left:-14%; top:-24%;
+    background:radial-gradient(circle,rgba(24,114,176,.42),transparent 66%); animation:breathe 11s ease-in-out infinite}
+.g2{width:min(60vw,680px); aspect-ratio:1; right:-12%; bottom:-22%;
+    background:radial-gradient(circle,rgba(216,160,80,.20),transparent 66%); animation:breathe 14s ease-in-out infinite reverse}
+.g3{width:min(50vw,520px); aspect-ratio:1; left:44%; top:34%;
+    background:radial-gradient(circle,rgba(63,149,212,.14),transparent 70%); animation:breathe 17s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.55; transform:scale(1)} 50%{opacity:1; transform:scale(1.12)}}
+.hero-bg .grid{
+  position:absolute; inset:0;
+  background-image:linear-gradient(var(--rule-soft) 1px,transparent 1px),linear-gradient(90deg,var(--rule-soft) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 90% 70% at 50% 40%,#000 20%,transparent 78%);
+  -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 40%,#000 20%,transparent 78%);
+}
+.hero-bg .floor{
+  position:absolute; left:0; right:0; bottom:0; height:38%;
+  background:linear-gradient(to top,var(--void) 12%,transparent);
+}
+
+.hero-inner{max-width:960px}
+.tag{
+  display:inline-flex; align-items:center; gap:10px; margin-bottom:30px;
+  border:1px solid var(--rule); border-radius:100px; padding:7px 16px 7px 13px;
+  background:rgba(244,241,236,.035); backdrop-filter:blur(6px);
+}
+.tag .dot{width:6px; height:6px; border-radius:50%; background:var(--ember); box-shadow:0 0 0 0 rgba(63,149,212,.6); animation:pulse 2.6s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(63,149,212,.55)} 70%{box-shadow:0 0 0 9px rgba(63,149,212,0)} 100%{box-shadow:0 0 0 0 rgba(63,149,212,0)}}
+.tag span{font-size:10.5px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--bone-soft)}
+
+h1{
+  margin:0 0 26px; font-weight:900; letter-spacing:-.045em; line-height:.94;
+  font-size:clamp(44px,7.2vw,88px);
+}
+h1 .em{
+  display:block; font-family:var(--serif); font-style:italic; font-weight:400;
+  letter-spacing:-.025em;
+  background:linear-gradient(100deg,var(--ember) 0%,#7dc0ea 42%,var(--gold) 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.lede{
+  max-width:640px; margin:0 0 38px; font-size:clamp(16.5px,1.9vw,20px);
+  line-height:1.62; color:var(--bone-soft);
+}
+.lede b{color:var(--bone); font-weight:600}
+.hero-cta{display:flex; flex-wrap:wrap; gap:12px; align-items:center}
+.hero-note{
+  margin-top:26px; display:flex; align-items:center; gap:12px;
+  font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--bone-faint);
+}
+.hero-note .rule{width:34px; height:1px; background:var(--rule-strong)}
+
+/* ── section furniture ────────────────────────────────── */
+section{position:relative; z-index:2}
+.sec-head{
+  display:flex; align-items:flex-end; justify-content:space-between; gap:28px;
+  padding-bottom:26px; margin-bottom:44px; border-bottom:1px solid var(--rule);
+}
+.sec-head h2{
+  margin:10px 0 0; font-size:clamp(26px,3.6vw,42px); font-weight:900;
+  letter-spacing:-.035em; line-height:1.04;
+}
+.sec-head p{margin:0; max-width:340px; font-size:14.5px; color:var(--bone-mute); text-align:right}
+@media (max-width:760px){.sec-head{display:block} .sec-head p{text-align:left; margin-top:14px; max-width:none}}
+
+/* ── the three doors ──────────────────────────────────── */
+.doors-sec{padding-block:clamp(72px,10vw,132px)}
+.doors{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+@media (max-width:980px){.doors{grid-template-columns:1fr; gap:16px} .door{min-height:0} .door h3{min-height:0} .door-aud{min-height:0}}
+
+.door{
+  --accent:var(--ox);
+  position:relative; display:flex; flex-direction:column; overflow:hidden;
+  padding:34px 30px 30px; border:1px solid var(--rule); border-radius:3px;
+  background:linear-gradient(168deg,rgba(31,33,40,.62),rgba(21,22,26,.28));
+  transition:transform .45s cubic-bezier(.2,.7,.3,1), border-color .4s, box-shadow .45s;
+  isolation:isolate; min-height:520px;
+}
+.door::before{
+  content:''; position:absolute; inset:0; z-index:-1; opacity:0; transition:opacity .5s;
+  background:radial-gradient(120% 78% at 50% 0%,color-mix(in srgb,var(--accent) 26%,transparent),transparent 62%);
+}
+.door::after{
+  content:''; position:absolute; left:0; right:0; top:0; height:2px;
+  background:var(--accent); transform:scaleX(0); transform-origin:left;
+  transition:transform .55s cubic-bezier(.2,.7,.3,1);
+}
+.door:hover, .door:focus-within{
+  transform:translateY(-7px); border-color:color-mix(in srgb,var(--accent) 46%,transparent);
+  box-shadow:0 30px 70px -30px color-mix(in srgb,var(--accent) 68%,transparent);
+}
+.door:hover::before, .door:focus-within::before{opacity:1}
+.door:hover::after, .door:focus-within::after{transform:scaleX(1)}
+
+.door-stage{
+  display:flex; align-items:center; gap:11px; margin-bottom:22px;
+  font-size:10px; font-weight:800; letter-spacing:.2em; text-transform:uppercase; color:var(--accent);
+}
+.door-stage i{flex:1; height:1px; background:linear-gradient(to right,color-mix(in srgb,var(--accent) 55%,transparent),transparent)}
+.door-aud{
+  font-size:10.5px; font-weight:800; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--bone-faint); margin-bottom:12px; min-height:2.9em; line-height:1.45;
+}
+.door h3{
+  margin:0 0 14px; font-size:clamp(24px,2.5vw,30px); font-weight:900;
+  letter-spacing:-.035em; line-height:1.06; min-height:2.12em; text-wrap:balance;
+}
+.door .motto{
+  font-family:var(--serif); font-style:italic; font-size:16px; color:var(--accent);
+  margin:0 0 18px; letter-spacing:-.01em;
+}
+.door .body{margin:0 0 24px; font-size:15px; line-height:1.62; color:var(--bone-mute)}
+.door ul{list-style:none; margin:0 0 26px; padding:0; display:grid; gap:10px}
+.door li{
+  position:relative; padding-left:20px; font-size:13.5px; line-height:1.5; color:var(--bone-soft);
+}
+.door li::before{
+  content:''; position:absolute; left:0; top:8px; width:7px; height:7px; border-radius:1px;
+  background:var(--accent); opacity:.85; transform:rotate(45deg);
+}
+.door .spacer{flex:1}
+.door .tool{
+  display:grid; gap:6px; padding:13px 0 15px; margin-bottom:16px;
+  border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+}
+.door .tool span{font-size:9.5px; font-weight:800; letter-spacing:.2em; text-transform:uppercase; color:var(--bone-faint)}
+.door .tool b{font-size:13px; color:var(--bone); font-weight:800; letter-spacing:-.005em}
+.door .go{
+  display:inline-flex; align-items:center; justify-content:space-between; gap:14px; width:100%;
+  padding:15px 18px; border-radius:2px; border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);
+  background:color-mix(in srgb,var(--accent) 12%,transparent); color:var(--bone);
+  font-size:12.5px; font-weight:800; letter-spacing:.11em; text-transform:uppercase;
+  transition:background .3s, border-color .3s, color .3s;
+}
+.door:hover .go{background:var(--accent); border-color:var(--accent); color:#fff}
+.door .go svg{flex:none; transition:transform .35s cubic-bezier(.2,.7,.3,1)}
+.door:hover .go svg{transform:translateX(5px)}
+.door .stretch{position:absolute; inset:0; z-index:5}
+.door .stretch:focus-visible{outline:2px solid var(--accent); outline-offset:-3px}
+.door .go, .door .tool{position:relative}
+
+/* ── credibility strip ────────────────────────────────── */
+.creds{border-block:1px solid var(--rule); background:rgba(21,22,26,.5); overflow:hidden}
+.creds-inner{padding-block:clamp(44px,6vw,64px)}
+.creds-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:var(--rule); border:1px solid var(--rule)}
+@media (max-width:820px){.creds-grid{grid-template-columns:repeat(2,1fr)}}
+.cred{background:var(--void); padding:26px 22px; text-align:center}
+.cred .n{
+  display:block; font-size:clamp(26px,3.4vw,38px); font-weight:900; letter-spacing:-.045em;
+  line-height:1; margin-bottom:9px;
+  background:linear-gradient(160deg,var(--bone) 30%,rgba(244,241,236,.66));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.cred .l{font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--bone-faint); line-height:1.45}
+.press{
+  margin-top:34px; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px 28px;
+}
+.press .lbl{font-size:10px; font-weight:800; letter-spacing:.24em; text-transform:uppercase; color:var(--bone-faint)}
+.press .name{
+  font-family:var(--serif); font-size:17px; color:var(--bone-mute); letter-spacing:.01em;
+}
+
+/* ── standard / method band ───────────────────────────── */
+.standard{padding-block:clamp(72px,10vw,124px)}
+.std-grid{display:grid; grid-template-columns:1.05fr 1fr; gap:clamp(34px,6vw,80px); align-items:center}
+@media (max-width:900px){.std-grid{grid-template-columns:1fr}}
+.std-grid h2{margin:16px 0 20px; font-size:clamp(30px,4.6vw,52px); font-weight:900; letter-spacing:-.04em; line-height:1.02}
+.std-grid h2 .em{font-family:var(--serif); font-style:italic; font-weight:400; color:var(--gold); letter-spacing:-.02em}
+.std-grid p{margin:0 0 18px; color:var(--bone-soft); font-size:16.5px; line-height:1.68; max-width:520px}
+.steps{display:grid; gap:2px; background:var(--rule); border:1px solid var(--rule)}
+.step{background:var(--void); padding:24px 26px; display:flex; gap:20px; align-items:flex-start; transition:background .3s}
+.step:hover{background:rgba(31,33,40,.5)}
+.step .k{
+  font-family:var(--serif); font-size:13px; color:var(--ember); flex:none; padding-top:3px; letter-spacing:.05em;
+}
+.step h4{margin:0 0 6px; font-size:16.5px; font-weight:800; letter-spacing:-.02em}
+.step p{margin:0; font-size:14px; color:var(--bone-mute); line-height:1.58; max-width:none}
+
+/* ── closing call ─────────────────────────────────────── */
+.close{
+  position:relative; overflow:hidden; border-top:1px solid var(--rule);
+  background:linear-gradient(150deg,rgba(24,114,176,.15),rgba(10,10,12,0) 60%),var(--ink-deep);
+}
+.close-inner{
+  padding-block:clamp(64px,9vw,104px);
+  display:grid; grid-template-columns:1fr auto; gap:38px; align-items:center;
+}
+@media (max-width:860px){.close-inner{grid-template-columns:1fr}}
+.close h2{margin:14px 0 14px; font-size:clamp(28px,4vw,44px); font-weight:900; letter-spacing:-.038em; line-height:1.04}
+.close h2 .em{font-family:var(--serif); font-style:italic; font-weight:400; color:var(--ember); letter-spacing:-.02em}
+.close p{margin:0; color:var(--bone-mute); font-size:16.5px; max-width:540px; line-height:1.64}
+.close-cta{display:flex; flex-direction:column; gap:12px; align-items:stretch}
+.close-cta .btn{justify-content:center}
+
+/* ── footer ───────────────────────────────────────────── */
+footer{border-top:1px solid var(--rule); padding-block:52px 40px; background:var(--void)}
+.foot-top{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:36px; padding-bottom:38px; border-bottom:1px solid var(--rule)}
+@media (max-width:760px){.foot-top{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.foot-top{grid-template-columns:1fr}}
+.foot-blurb{margin:16px 0 0; font-size:14px; color:var(--bone-mute); max-width:330px; line-height:1.62}
+.foot-col h5{margin:0 0 16px; font-size:10.5px; font-weight:800; letter-spacing:.2em; text-transform:uppercase; color:var(--bone-faint)}
+.foot-col a{display:block; padding:6px 0; font-size:14px; color:var(--bone-mute); transition:color .25s, transform .25s}
+.foot-col a:hover{color:var(--bone); transform:translateX(3px)}
+.foot-bot{padding-top:26px; display:flex; flex-wrap:wrap; gap:14px 26px; align-items:center; justify-content:space-between}
+.foot-bot small{font-size:12.5px; color:var(--bone-faint)}
+.foot-legal{display:flex; gap:20px}
+.foot-legal a{font-size:12.5px; color:var(--bone-faint); transition:color .25s}
+.foot-legal a:hover{color:var(--bone-soft)}
+
+/* ── reveal on scroll ─────────────────────────────────── */
+.rv{opacity:0; transform:translateY(22px); transition:opacity .8s cubic-bezier(.2,.7,.3,1), transform .8s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1; transform:none}}
+
+:focus-visible{outline:2px solid var(--ember); outline-offset:3px; border-radius:2px}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="mark" href="#top" aria-label="IronMind home">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="2" stroke="#f4f1ec" stroke-opacity=".28"/>
+        <path d="M9.5 28.5V11.5h3.2v17H9.5z" fill="#f4f1ec"/>
+        <path d="M15.6 28.5V11.5h4.1l3.7 10.9 3.7-10.9h4.1v17h-3V17.6l-3.5 10.9h-2.6l-3.5-10.9v10.9h-3z" fill="#f4f1ec"/>
+        <path d="M9.5 32.6h21" stroke="#1872b0" stroke-width="1.7"/>
+      </svg>
+      <span>
+        <span class="wordmark">IRONMIND</span>
+        <span class="sub">ELITE</span>
+      </span>
+    </a>
+    <nav class="nav-actions">
+      <a class="nav-link hide-sm" href="#doors">Choose your path</a>
+      <a class="nav-link hide-sm" href="#start">Not sure?</a>
+      <a class="btn btn-solid btn-sm" href="https://www.ironmindadvisors.com/#contact">
+        <span class="lbl-lg">Request an Iron Audit</span><span class="lbl-sm">Iron Audit</span> <span class="arw">→</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ══ HERO ══════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
+      <div class="grid"></div><div class="floor"></div>
+    </div>
+    <div class="wrap">
+    <figure class="hero-photo">
+      <img src="assets/ironmind-raptor.jpg" width="1030" height="427" fetchpriority="high"
+           alt="The IronMind Elite Ford Raptor, wrapped in blue and silver, parked on desert terrain against a mountain range.">
+    </figure>
+    <div class="hero-inner">
+      <div class="tag"><i class="dot" aria-hidden="true"></i><span>An IronMind Company · Jacksonville Beach</span></div>
+      <h1>Know exactly<span class="em">where you stand.</span></h1>
+      <p class="lede">
+        IronMind builds the identity that holds when the pressure arrives — for the <b>executive</b> whose
+        title stopped being the answer, the <b>student athlete</b> facing the next level, and the
+        <b>new graduate</b> nobody ever graded on how to live. Three doors. One standard.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="#doors">Choose your path <span class="arw">→</span></a>
+        <a class="btn btn-ghost" href="https://www.ironmindadvisors.com/#contact">Request an Iron Audit</a>
+      </div>
+      <div class="hero-note"><i class="rule" aria-hidden="true"></i>No sales call · Reply in 48 hours · Fully confidential</div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ══ THREE DOORS ═══════════════════════════════════ -->
+  <section class="doors-sec" id="doors">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <div class="eyebrow">Three doors</div>
+          <h2>Where do you actually stand?</h2>
+        </div>
+        <p>Every path starts the same way — an honest diagnostic, then a 90-day plan built off the truth it tells you.</p>
+      </div>
+
+      <div class="doors">
+
+        <!-- 01 EXECUTIVES -->
+        <article class="door rv" style="--accent:var(--ox)">
+          <div class="door-stage">Already carrying it<i></i></div>
+          <div class="door-aud">Executives · Founders · Elite performers</div>
+          <h3>IronMind Advisors</h3>
+          <p class="motto">Sharp minds. Iron will.</p>
+          <p class="body">
+            Confidential coaching for leaders rebuilding the identity that holds when the title no longer does.
+            Not therapy — strategic reconstruction, done quietly.
+          </p>
+          <ul>
+            <li>The Iron Audit — 45 minutes, no cost, no sales call</li>
+            <li>The Forge Plan — a custom 90-day engagement</li>
+            <li>Weekly 1:1s with real-time access between sessions</li>
+            <li>Nothing about working together leaves the room</li>
+          </ul>
+          <div class="spacer"></div>
+          <div class="tool"><span>Diagnostic</span><b>Identity Score™</b></div>
+          <a class="go" href="https://www.ironmindadvisors.com">
+            Enter IronMind Advisors
+            <svg width="17" height="12" viewBox="0 0 17 12" fill="none" aria-hidden="true"><path d="M1 6h14M10.5 1L15.5 6l-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="stretch" href="https://www.ironmindadvisors.com" aria-label="Enter IronMind Advisors — coaching for executives and founders"></a>
+        </article>
+
+        <!-- 02 ATHLETES -->
+        <article class="door rv" style="--accent:var(--cyan)">
+          <div class="door-stage">About to carry it<i></i></div>
+          <div class="door-aud">Student athletes · Collegiate &amp; D1</div>
+          <h3>The Athlete Check</h3>
+          <p class="motto">Test. Train. Transform.</p>
+          <p class="body">
+            Built by student athletes, backed by IronMind. A readiness profile across mind, body and
+            professional preparation — so you know your edge before the next level tests it.
+          </p>
+          <ul>
+            <li>Full mental, physical and professional readiness scan</li>
+            <li>The IronMind Mentality resilience training</li>
+            <li>Life-after-sport transition planning</li>
+            <li>Coach &amp; athletic-director reporting available</li>
+          </ul>
+          <div class="spacer"></div>
+          <div class="tool"><span>Diagnostic</span><b>The Athlete Check</b></div>
+          <a class="go" href="https://www.theathletecheck.com">
+            Enter The Athlete Check
+            <svg width="17" height="12" viewBox="0 0 17 12" fill="none" aria-hidden="true"><path d="M1 6h14M10.5 1L15.5 6l-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="stretch" href="https://www.theathletecheck.com" aria-label="Enter The Athlete Check — readiness platform for student athletes"></a>
+        </article>
+
+        <!-- 03 YOUNG PROFESSIONALS -->
+        <article class="door rv" style="--accent:var(--gold)">
+          <div class="door-stage">Just picked it up<i></i></div>
+          <div class="door-aud">New graduates · Young professionals · 22–27</div>
+          <h3>Young Professionals</h3>
+          <p class="motto">College graded what you knew.</p>
+          <p class="body">
+            Nobody grades how you live. The Transition Readiness Score™ measures whether you're actually
+            built to run your own life — then hands you the 90 days that close the gap.
+          </p>
+          <ul>
+            <li>40 questions · 3 pillars · 8 domains · scored out of 1,000</li>
+            <li>Launch Readiness, Signal &amp; Clarity, Durability</li>
+            <li>Placement on the Apprentice → Author ladder</li>
+            <li>Free, 10–15 minutes, results emailed straight to you</li>
+          </ul>
+          <div class="spacer"></div>
+          <div class="tool"><span>Diagnostic</span><b>Transition Readiness Score™</b></div>
+          <a class="go" href="https://www.ironmindadvisors.com/transition">
+            Enter Young Professionals
+            <svg width="17" height="12" viewBox="0 0 17 12" fill="none" aria-hidden="true"><path d="M1 6h14M10.5 1L15.5 6l-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="stretch" href="https://www.ironmindadvisors.com/transition" aria-label="Enter IronMind for Young Professionals — the Transition Readiness Score"></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CREDIBILITY ═══════════════════════════════════ -->
+  <section class="creds">
+    <div class="wrap creds-inner">
+      <div class="creds-grid rv">
+        <div class="cred"><span class="n">27</span><span class="l">Years in<br>cybersecurity</span></div>
+        <div class="cred"><span class="n">10×</span><span class="l">Ironman<br>finisher</span></div>
+        <div class="cred"><span class="n">2B</span><span class="l">Cancer survivor<br>stage 2B</span></div>
+        <div class="cred"><span class="n">48h</span><span class="l">Reply to every<br>Iron Audit request</span></div>
+      </div>
+      <div class="press rv">
+        <span class="lbl">Kenny Stoddart in</span>
+        <span class="name">Forbes</span>
+        <span class="name">Psychology Today</span>
+        <span class="name">Men's Health Australia</span>
+        <span class="name">Modern Luxury</span>
+        <span class="name">Jon Gordon Certified</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ THE STANDARD ══════════════════════════════════ -->
+  <section class="standard">
+    <div class="wrap std-grid">
+      <div class="rv">
+        <div class="eyebrow">One standard</div>
+        <h2>Different rooms.<br><span class="em">Same method.</span></h2>
+        <p>
+          A CEO, a Division I athlete and a 23-year-old two months out of school don't look alike.
+          Under pressure they break the same way — the identity was never built to carry the load.
+        </p>
+        <p>
+          IronMind doesn't start with advice. It starts with a measurement, because you can't rebuild
+          what you refuse to look at.
+        </p>
+        <a class="btn btn-ghost" href="https://www.ironmindadvisors.com/about" style="margin-top:10px">Meet Kenny <span class="arw">→</span></a>
+      </div>
+      <div class="steps rv">
+        <div class="step">
+          <div class="k">01</div>
+          <div><h4>Measure</h4><p>A scored diagnostic across every domain that actually predicts how you hold up. No vibes, no personality quiz.</p></div>
+        </div>
+        <div class="step">
+          <div class="k">02</div>
+          <div><h4>Confront</h4><p>You see the strengths and the growth edges in plain language — including the ones nobody in your life will say out loud.</p></div>
+        </div>
+        <div class="step">
+          <div class="k">03</div>
+          <div><h4>Forge</h4><p>A 90-day protocol aimed at the areas that move fastest, so the change is architectural rather than motivational.</p></div>
+        </div>
+        <div class="step">
+          <div class="k">04</div>
+          <div><h4>Hold</h4><p>Ongoing pressure-testing. The point isn't a better week — it's an identity that still stands when the title, the sport or the plan changes.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CLOSING CALL ══════════════════════════════════ -->
+  <section class="close" id="start">
+    <div class="wrap close-inner">
+      <div class="rv">
+        <div class="eyebrow">Still deciding</div>
+        <h2>Not sure which door<br><span class="em">is yours?</span></h2>
+        <p>Start with the Iron Audit. Forty-five minutes, no cost, no sales call — we work out where you actually stand and which path is worth your time. If none of them are, I'll tell you that too.</p>
+      </div>
+      <div class="rv close-cta">
+        <a class="btn btn-solid" href="https://www.ironmindadvisors.com/#contact">Request an Iron Audit <span class="arw">→</span></a>
+        <a class="btn btn-ghost" href="#doors">Back to the three doors</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="mark" href="#top" aria-label="IronMind home">
+          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="38" height="38" rx="2" stroke="#f4f1ec" stroke-opacity=".28"/>
+            <path d="M9.5 28.5V11.5h3.2v17H9.5z" fill="#f4f1ec"/>
+            <path d="M15.6 28.5V11.5h4.1l3.7 10.9 3.7-10.9h4.1v17h-3V17.6l-3.5 10.9h-2.6l-3.5-10.9v10.9h-3z" fill="#f4f1ec"/>
+            <path d="M9.5 32.6h21" stroke="#1872b0" stroke-width="1.7"/>
+          </svg>
+          <span><span class="wordmark">IRONMIND</span><span class="sub">ELITE</span></span>
+        </a>
+        <p class="foot-blurb">The identity that holds under pressure. Executive coaching, athlete readiness, and transition work from Kenny Stoddart. Jacksonville Beach, Florida.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Three doors</h5>
+        <a href="https://www.ironmindadvisors.com">IronMind Advisors</a>
+        <a href="https://www.theathletecheck.com">The Athlete Check</a>
+        <a href="https://www.ironmindadvisors.com/transition">Young Professionals</a>
+        <a href="#start">Not sure which one?</a>
+      </div>
+      <div class="foot-col">
+        <h5>More</h5>
+        <a href="https://www.ironmindadvisors.com/about">Meet Kenny</a>
+        <a href="https://www.ironmindadvisors.com/speaker">Speaking</a>
+        <a href="https://www.ironmindadvisors.com/identityscore">Identity Score™</a>
+        <a href="https://www.linkedin.com/in/kenstoddart">LinkedIn</a>
+        <a href="https://x.com/kstoddart">X / Twitter</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <small>© <span id="yr">2026</span> IronMind. An IronMind Company. All rights reserved.</small>
+      <div class="foot-legal">
+        <a href="https://www.ironmindadvisors.com/terms">Terms</a>
+        <a href="https://www.ironmindadvisors.com/privacy">Privacy</a>
+        <a href="https://www.ironmindadvisors.com/#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+var hdr = document.getElementById('hdr');
+var onScroll = function(){ hdr.classList.toggle('stuck', window.scrollY > 24); };
+onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+var items = document.querySelectorAll('.rv');
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e, i){
+      if (e.isIntersecting) {
+        var idx = [].indexOf.call(e.target.parentNode.children, e.target);
+        e.target.style.transitionDelay = Math.min(idx, 3) * 90 + 'ms';
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+  items.forEach(function(el){ io.observe(el); });
+} else {
+  items.forEach(function(el){ el.classList.add('in'); });
+}
+</script>
+</body>
+</html>
