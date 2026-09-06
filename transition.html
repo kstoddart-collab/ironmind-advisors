@@ -299,6 +299,30 @@
   .lede{font-size:19px;line-height:1.58;color:var(--ink-2);margin:26px 0 0;max-width:56ch}
   .lede b{color:var(--ink);font-weight:600}
 
+  /* Hero right column. Fills the empty space beside the headline on wide
+     screens and points at the three steps in #how. Its content is fully
+     duplicated by that section, so it drops out below 1000px rather than
+     stacking and repeating itself on phones. */
+  .hero-next{display:none}
+  @media(min-width:1000px){
+    .hero-top{display:grid;grid-template-columns:minmax(0,1fr) 272px;gap:44px;align-items:end}
+    .hero-next{
+      display:block;background:var(--panel-2);border:1px solid var(--hair-soft);
+      border-radius:8px;padding:22px;
+    }
+    .hero-next ol{list-style:none;margin:14px 0 0;padding:0}
+    .hero-next li{
+      display:flex;gap:11px;align-items:baseline;padding:9px 0;
+      border-top:1px solid var(--hair-soft);font-size:14px;line-height:1.45;color:var(--ink-2);
+    }
+    .hero-next li:first-child{border-top:0;padding-top:0}
+    .hero-next li b{
+      font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:500;
+      font-size:11px;letter-spacing:.06em;color:var(--steel-lt);
+    }
+    .hero-next .btn{display:block;margin:18px 0 0;padding:11px 16px;font-size:13.5px;text-align:center}
+  }
+
   /* the scale — hero thesis graphic */
   .scale{margin:52px 0 0}
   .scale-bar{display:grid;grid-template-columns:3fr 2fr 1.5fr 1fr 1fr;gap:3px;height:44px}
@@ -621,13 +645,27 @@
       <span class="label">Ages 22–27</span>
     </div>
 
-    <h1>College graded what you knew. <span class="dim">Nobody grades how you live.</span></h1>
+    <div class="hero-top">
+      <div class="hero-copy">
+        <h1>College graded what you knew. <span class="dim">Nobody grades how you live.</span></h1>
 
-    <p class="lede">
-      The Transition Readiness Score is a 40-question diagnostic that measures how prepared you
-      actually are to run your own life after college — scored across <b>three pillars</b>,
-      <b>eight domains</b>, and one composite number out of <b>1,000</b>.
-    </p>
+        <p class="lede">
+          The Transition Readiness Score is a 40-question diagnostic that measures how prepared you
+          actually are to run your own life after college — scored across <b>three pillars</b>,
+          <b>eight domains</b>, and one composite number out of <b>1,000</b>.
+        </p>
+      </div>
+
+      <aside class="hero-next">
+        <span class="label">What happens next</span>
+        <ol>
+          <li><b>01</b> <span>Take the assessment</span></li>
+          <li><b>02</b> <span>Get your score</span></li>
+          <li><b>03</b> <span>Get the protocol</span></li>
+        </ol>
+        <a class="btn btn-ghost" href="#how">See the three steps &rarr;</a>
+      </aside>
+    </div>
 
     <div class="scale" role="img" aria-label="The Transition Readiness scale, from Apprentice at the low end through Builder, Operator, Architect, and Author at 950 and above.">
       <div class="scale-bar">
