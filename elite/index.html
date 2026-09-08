@@ -12,9 +12,7 @@
 <meta property="og:url" content="https://ironmindelite.com/">
 <meta property="og:title" content="IronMind — Know exactly where you stand">
 <meta property="og:description" content="The identity that holds under pressure. For executives, student athletes, and new graduates. Three doors. One standard.">
-<meta property="og:image" content="https://ironmindelite.com/assets/ironmind-raptor.jpg">
-<meta property="og:image:alt" content="The IronMind Elite Ford Raptor in the desert.">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@kstoddart">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,17 +114,6 @@ header.stuck{
 .hero > .wrap{display:grid; gap:clamp(26px,3.4vw,40px)}
 
 /* hero photo panel */
-.hero-photo{
-  position:relative; border:1px solid var(--rule); border-radius:3px; overflow:hidden;
-  background:var(--ink-deep); box-shadow:0 40px 90px -50px rgba(24,114,176,.55);
-  animation:plate 1.1s cubic-bezier(.2,.7,.3,1) both;
-}
-@keyframes plate{from{opacity:0; transform:translateY(16px) scale(.994)} to{opacity:1; transform:none}}
-.hero-photo img{
-  display:block; width:100%; height:auto; aspect-ratio:2.9/1;
-  object-fit:cover; object-position:center 46%;
-}
-@media (max-width:700px){ .hero-photo img{aspect-ratio:16/10; object-position:34% center} }
 .hero-bg{position:absolute; inset:0; z-index:-1; pointer-events:none}
 .hero-bg .glow{
   position:absolute; border-radius:50%; filter:blur(90px); will-change:opacity;
@@ -383,10 +370,6 @@ footer{border-top:1px solid var(--rule); padding-block:52px 40px; background:var
       <div class="grid"></div><div class="floor"></div>
     </div>
     <div class="wrap">
-    <figure class="hero-photo">
-      <img src="assets/ironmind-raptor.jpg" width="1030" height="427" fetchpriority="high"
-           alt="The IronMind Elite Ford Raptor, wrapped in blue and silver, parked on desert terrain against a mountain range.">
-    </figure>
     <div class="hero-inner">
       <div class="tag"><i class="dot" aria-hidden="true"></i><span>An IronMind Company · Jacksonville Beach</span></div>
       <h1>Know exactly<span class="em">where you stand.</span></h1>
