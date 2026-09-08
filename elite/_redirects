@@ -1,0 +1,5 @@
+# Redirect the old hyphenated domain to the new primary domain (path preserved)
+https://ironmind-elite.com/*      https://ironmindelite.com/:splat  301!
+https://www.ironmind-elite.com/*  https://ironmindelite.com/:splat  301!
+http://ironmind-elite.com/*       https://ironmindelite.com/:splat  301!
+http://www.ironmind-elite.com/*   https://ironmindelite.com/:splat  301!
