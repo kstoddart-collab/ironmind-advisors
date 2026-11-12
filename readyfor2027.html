@@ -448,6 +448,7 @@
     letter-spacing:-.02em;color:var(--steel-lt);margin:6px 0 0;
   }
   @media(max-width:600px){.price{padding:26px 22px}}
+  .hero-video{display:block;width:100%;max-width:340px;aspect-ratio:9/16;height:auto;margin:0 0 28px;border-radius:12px;border:1px solid var(--hair-soft);background:#000}
   .tiers{display:grid;grid-template-columns:1fr;gap:22px;margin:36px 0 0}
   @media(min-width:820px){.tiers{grid-template-columns:1fr 1fr}}
   .tiers .price{margin:0;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:18px}
@@ -602,6 +603,9 @@
         <p class="cta-note">25 certificates. Order by December 20 for a printable certificate and the shirt at your door before Christmas.</p>
       </div>
       <div>
+        <video class="hero-video" controls playsinline preload="metadata" poster="/gift-video-poster.jpg" aria-label="Kenny Stoddart explains the Ready for 2027 gift">
+          <source src="/gift-video.mp4" type="video/mp4">
+        </video>
         <p class="lede">
           I&rsquo;m a mental performance coach for student athletes and young professionals. I help them
           handle the transition nobody prepares them for.
