@@ -457,7 +457,7 @@
   /* Jon Gordon certification badge — floats clear of Kenny's head, on his right */
   .hero-badge {
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     top: 19%;
     right: clamp(24px, 5vw, 78px);
     width: clamp(116px, 13vw, 190px);
@@ -1903,6 +1903,21 @@
     text-align: center;
     letter-spacing: 0.04em;
   }
+
+  .hero-holiday {
+    position: absolute;
+    top: calc(100% + 16px);
+    right: 0;
+    display: block;
+    width: clamp(260px, 27vw, 390px);
+    pointer-events: auto;
+    border-radius: 8px;
+  }
+  .hero-holiday img { border-radius: 8px; }
+  .hero-holiday:focus-visible { outline: 3px solid var(--ember); outline-offset: 4px; }
+  @media (max-width: 760px) {
+    .hero-holiday { top: calc(100% + 12px); width: clamp(220px, 62vw, 300px); }
+  }
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -2048,6 +2063,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            width="800" height="644"
            fetchpriority="low" decoding="async" />
     </picture>
+    <a class="hero-holiday" href="https://ironmindadvisors.com/gift">
+      <img src="/holiday-offer.jpg" width="1200" height="400"
+           alt="A Holiday Gift for Your Student Athlete. Click here for Holiday Offer.">
+    </a>
   </div>
 
   <div class="container hero-content">
@@ -2089,12 +2108,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </header>
 
-<a href="https://ironmindadvisors.com/gift"
-   style="display:block;max-width:720px;margin:24px auto;width:calc(100% - 32px);">
-  <img src="/holiday-offer.jpg" width="1200" height="400"
-       style="display:block;width:100%;height:auto;border-radius:8px;"
-       alt="A Holiday Gift for Your Student Athlete. Click here for Holiday Offer.">
-</a>
+
 
 
 <!-- ============ ANNIVERSARY VIDEO ============ -->
