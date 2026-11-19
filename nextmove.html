@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Next Move™ — A Couple's Next-Chapter Assessment | IronMind</title>
+<meta name="description" content="You've spent years building your life. Now decide how you actually want to live it. The Next Move™ is a short assessment for couples thinking about what's next — retirement, a new location, less work, more travel, or a completely different chapter.">
+<link rel="canonical" href="https://www.ironmindadvisors.com/nextmove">
+<meta property="og:title" content="The Next Move™ — A Couple's Next-Chapter Assessment">
+<meta property="og:description" content="You've spent years building your life. Now decide how you actually want to live it.">
+<meta property="og:url" content="https://www.ironmindadvisors.com/nextmove">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
+<style>
+  :root{
+    --navy:#14213a; --navy-deep:#0d1728; --navy-soft:#24344f;
+    --gold:#a6853c; --gold-deep:#8a6d2c; --gold-lt:#d9bf7c;
+    --cream:#f7f5f0; --paper:#fdfcfa; --line:#e4dfd3;
+    --ink:#1b2437; --ink-2:#48526a; --muted:#737b8c;
+    --serif:"Newsreader","Iowan Old Style","Palatino Linotype",Georgia,serif;
+    --sans:"Nunito Sans","Avenir Next",Avenir,"Segoe UI",Helvetica,Arial,sans-serif;
+    --script:"Caveat","Segoe Script","Bradley Hand",cursive;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink-2);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img,svg{max-width:100%}
+  a{color:var(--gold-deep)}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+  .narrow{max-width:820px}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--navy);margin:0;letter-spacing:-.01em;text-wrap:balance}
+  h2{font-size:clamp(30px,4vw,44px);line-height:1.12}
+  h3{font-size:23px;line-height:1.25}
+  p{margin:0 0 1em}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 16px}
+  .lede{font-size:19px;color:var(--ink-2);max-width:62ch}
+  section{padding:clamp(56px,8vw,96px) 0}
+  .tint{background:var(--cream)}
+  .dark{background:var(--navy);color:#cfd6e3}
+  .dark h2,.dark h3{color:#fff}
+  .dark .eyebrow{color:var(--gold-lt)}
+
+  .btn{display:inline-flex;align-items:center;gap:14px;font-family:var(--sans);font-size:13.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:17px 28px;border-radius:3px;border:1px solid transparent;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+  .btn svg{width:22px;height:12px;flex:none}
+  .btn-gold{background:var(--gold);color:#fff;border-color:var(--gold)}
+  .btn-gold:hover{background:var(--gold-deep);border-color:var(--gold-deep)}
+  .btn-ghost{background:rgba(13,23,40,.35);color:#fff;border-color:rgba(255,255,255,.85)}
+  .btn-ghost:hover{background:#fff;color:var(--navy)}
+  .btn-line{background:transparent;color:var(--navy);border-color:var(--navy)}
+  .btn-line:hover{background:var(--navy);color:#fff}
+  .btn[disabled]{opacity:.45;cursor:not-allowed}
+  .textlink{font-weight:600;color:var(--navy);text-underline-offset:4px}
+  :focus-visible{outline:3px solid var(--gold-lt);outline-offset:3px}
+
+  /* header */
+  .top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:64px}
+  .brand{text-decoration:none;text-align:center;line-height:1;color:var(--navy)}
+  .brand b{display:block;font-family:var(--sans);font-weight:600;font-size:25px;letter-spacing:.09em}
+  .brand span{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:5px;font-size:10px;font-weight:700;letter-spacing:.42em;color:var(--gold-deep);padding-left:.42em}
+  .brand span::before,.brand span::after{content:"";height:1px;width:22px;background:var(--gold)}
+  .nav{display:flex;align-items:center;gap:clamp(16px,2.6vw,36px)}
+  .nav a.l{font-size:15px;color:var(--ink);text-decoration:none}
+  .nav a.l:hover{color:var(--gold-deep)}
+  .nav .btn{padding:12px 22px;font-size:12.5px;letter-spacing:.1em}
+  @media(max-width:900px){.nav a.l{display:none}}
+
+  /* hero */
+  .hero{position:relative;padding:0;background:var(--navy-deep);color:#fff;overflow:hidden}
+  .hero .art{position:absolute;inset:0;width:100%;height:100%}
+  .hero .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,23,40,.94) 0%,rgba(13,23,40,.82) 32%,rgba(13,23,40,.25) 62%,rgba(13,23,40,0) 100%)}
+  .hero .wrap{position:relative;padding-top:clamp(44px,6vw,64px);padding-bottom:clamp(40px,5vw,56px);min-height:min(74vh,600px);display:flex;flex-direction:column;justify-content:center}
+  .hero .kicker{font-size:15px;letter-spacing:.5em;text-transform:uppercase;margin:0 0 22px;color:#fff}
+  .hero h1{color:#fff;font-size:clamp(42px,6.4vw,74px);line-height:1.02;max-width:11.5em}
+  .hero .sub{font-family:var(--serif);font-size:clamp(23px,2.9vw,34px);color:var(--gold-lt);margin:18px 0 22px;line-height:1.2}
+  .hero p.body{max-width:34em;font-size:18px;color:#f1f3f7;margin-bottom:30px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+  .hero .script{position:absolute;right:clamp(20px,4vw,48px);top:clamp(28px,6vw,60px);font-family:var(--script);font-size:clamp(26px,3vw,40px);line-height:1.15;color:var(--navy-deep);transform:rotate(-7deg);text-align:left}
+  .hero .script i{display:block;font-style:normal;padding-left:.8em}
+  .hero .pillars{position:absolute;right:clamp(20px,5vw,72px);bottom:38px;margin:0;padding:0;list-style:none;font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;line-height:2;color:#fff}
+  .hero .pillars::before{content:"";display:block;width:42px;height:2px;background:var(--gold-lt);margin-bottom:14px}
+  @media(max-width:960px){.hero .script,.hero .pillars{display:none}.hero .shade{background:linear-gradient(180deg,rgba(13,23,40,.9),rgba(13,23,40,.72))}}
+
+  /* benefits */
+  .benefits{padding:30px 0;background:var(--cream);border-bottom:1px solid var(--line)}
+  .benefits .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  .ben{display:flex;gap:20px;align-items:center}
+  .ben .ic{flex:none;width:64px;height:64px;border:2px solid var(--gold-deep);border-radius:50%;display:grid;place-items:center;color:var(--gold-deep)}
+  .ben .ic svg{width:32px;height:32px}
+  .ben h3{font-family:var(--sans);font-size:13.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--navy);margin-bottom:6px}
+  .ben p{margin:0;font-size:15.5px;line-height:1.4}
+  @media(max-width:1000px){.benefits .wrap{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.benefits .wrap{grid-template-columns:1fr}}
+
+  /* about */
+  .about .wrap{display:grid;grid-template-columns:minmax(0,404px) minmax(0,1fr) minmax(0,256px);gap:clamp(28px,4vw,54px);align-items:center}
+  .about .pic{border-radius:2px;overflow:hidden;line-height:0;aspect-ratio:404/296}
+  .about .pic svg{width:100%;height:100%}
+  .quote{background:var(--cream);padding:30px 24px;border-left:1px solid var(--gold);position:relative}
+  .quote .mk{font-family:var(--serif);font-size:64px;line-height:.6;color:var(--gold-deep);display:block;height:30px}
+  .quote q{display:block;font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.3;color:var(--navy);quotes:"\201C" "\201D"}
+  .quote cite{display:block;margin-top:22px;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2)}
+  @media(max-width:1040px){.about .wrap{grid-template-columns:1fr}.about .pic{max-width:520px}}
+
+  /* big idea */
+  .qcols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);margin-top:36px}
+  .qcol{border-top:2px solid var(--gold);padding-top:22px}
+  .qcol h3{margin-bottom:14px}
+  .qcol ul{list-style:none;margin:0;padding:0;font-family:var(--serif);font-size:20px;line-height:1.35;color:var(--ink)}
+  .qcol li{padding:7px 0;border-bottom:1px solid var(--line)}
+  .qcol.then ul{color:var(--muted)}
+  .bigq{margin:44px 0 0;font-family:var(--serif);font-size:clamp(24px,3vw,34px);line-height:1.22;color:var(--navy);max-width:26em}
+  @media(max-width:720px){.qcols{grid-template-columns:1fr}}
+
+  /* how + dims */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:40px 0 0;padding:0;list-style:none;counter-reset:s}
+  .steps li{counter-increment:s;background:#fff;border:1px solid var(--line);padding:28px 26px}
+  .steps li::before{content:counter(s);font-family:var(--serif);font-size:40px;color:var(--gold-deep);line-height:1;display:block;margin-bottom:14px}
+  .steps h3{margin-bottom:8px}
+  .steps p{margin:0;font-size:16px}
+  .dims{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.16);margin-top:40px}
+  .dim{background:var(--navy);padding:30px 24px}
+  .dim small{font-size:11px;font-weight:700;letter-spacing:.28em;color:var(--gold-lt)}
+  .dim h3{margin:10px 0 8px;font-size:27px}
+  .dim p{margin:0;font-size:16px;color:#cfd6e3}
+  @media(max-width:900px){.steps{grid-template-columns:1fr}.dims{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.dims{grid-template-columns:1fr}}
+
+  /* gap */
+  .gapgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:start;margin-top:36px}
+  table.gap{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);font-size:16px}
+  table.gap caption{caption-side:top;text-align:left;font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);padding-bottom:10px}
+  table.gap th,table.gap td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums}
+  table.gap th:first-child,table.gap td:first-child{text-align:left}
+  table.gap thead th{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;background:var(--cream)}
+  table.gap tbody th{font-family:var(--serif);font-weight:400;font-size:19px;color:var(--navy)}
+  .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:2px;white-space:nowrap}
+  .g0{background:#e7efe6;color:#2f5a35}.g1{background:#f3ecd6;color:#6f5a1c}.g2{background:#f6dfc7;color:#8a4b12}.g3{background:#f1d3cf;color:#8c2b20}
+  .voices{display:grid;gap:14px;margin:0 0 20px}
+  .voices blockquote{margin:0;padding:18px 22px;background:#fff;border-left:3px solid var(--gold);font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.3;color:var(--navy)}
+  .legend{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:10px;font-size:15.5px}
+  .legend li{display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:start}
+  @media(max-width:860px){.gapgrid{grid-template-columns:1fr}}
+  .gapgrid>*{min-width:0}
+  @media(max-width:560px){table.gap{font-size:14.5px}table.gap th,table.gap td{padding:11px 8px}table.gap tbody th{font-size:16.5px}table.gap thead th{letter-spacing:.04em;font-size:10.5px}.tag{white-space:normal;text-align:center}}
+  @media(max-width:480px){.legend li{grid-template-columns:1fr;gap:4px}}
+
+  /* outcome */
+  .out{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);margin-top:36px}
+  .checks{list-style:none;margin:0;padding:0;font-family:var(--serif);font-size:21px;color:var(--navy)}
+  .checks li{padding:11px 0 11px 34px;border-bottom:1px solid var(--line);position:relative}
+  .checks li::before{content:"";position:absolute;left:4px;top:19px;width:14px;height:7px;border-left:2px solid var(--gold-deep);border-bottom:2px solid var(--gold-deep);transform:rotate(-45deg)}
+  .notlist{font-size:16px;color:var(--muted)}
+  @media(max-width:760px){.out{grid-template-columns:1fr}}
+
+  /* assessment */
+  #assessment{background:var(--cream)}
+  .card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);padding:clamp(24px,4vw,48px);max-width:860px;margin:36px auto 0}
+  .card h3{font-size:28px;margin-bottom:10px}
+  .field{display:grid;gap:6px;margin-bottom:18px}
+  .field label{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+  .field input{font:inherit;padding:14px 14px;border:1px solid #bfc3cc;border-radius:3px;color:var(--ink);background:#fff;width:100%}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:600px){.two{grid-template-columns:1fr}}
+  .fine{font-size:13.5px;color:var(--muted);line-height:1.5}
+  .err{color:#8c2b20;font-size:15px;font-weight:600;min-height:1.4em;margin:8px 0}
+  .note{background:var(--cream);border-left:3px solid var(--gold);padding:14px 18px;font-size:16px;margin:0 0 22px}
+  .prog{height:4px;background:var(--line);margin:0 0 26px}
+  .prog i{display:block;height:100%;background:var(--gold);width:0;transition:width .3s}
+  .dhead small{font-size:11.5px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep)}
+  .dhead p{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ink-2);margin:2px 0 22px}
+  fieldset.q{border:0;border-top:1px solid var(--line);margin:0;padding:22px 0}
+  fieldset.q legend{font-family:var(--serif);font-size:21px;line-height:1.32;color:var(--navy);padding:0;margin-bottom:14px;float:left;width:100%}
+  .scale{clear:both;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+  .scale label{position:relative;display:block;text-align:center;cursor:pointer}
+  .scale input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+  .scale span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:62px;padding:8px 4px;border:1px solid #bfc3cc;border-radius:3px;font-size:12.5px;line-height:1.2;color:var(--ink-2);background:#fff}
+  .scale span b{font-family:var(--serif);font-weight:400;font-size:21px;color:var(--navy)}
+  .scale input:checked+span{background:var(--navy);border-color:var(--navy);color:#fff}
+  .scale input:checked+span b{color:var(--gold-lt)}
+  .scale input:focus-visible+span{outline:3px solid var(--gold-lt);outline-offset:2px}
+  .scale label:hover span{border-color:var(--navy)}
+  .navrow{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:22px}
+  [hidden]{display:none!important}
+
+  /* results */
+  .scorehead{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;margin-bottom:8px}
+  .scorenum{width:136px;height:136px;border-radius:50%;border:3px solid var(--gold);display:grid;place-items:center;text-align:center;font-family:var(--serif);color:var(--navy);line-height:1}
+  .scorenum b{font-weight:400;font-size:54px;display:block}
+  .scorenum small{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .yourq{font-family:var(--serif);font-size:24px;color:var(--navy);border-left:3px solid var(--gold);padding:6px 0 6px 18px;margin:20px 0}
+  .yourq small{display:block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .bars{display:grid;gap:14px;margin:26px 0}
+  .bar{display:grid;grid-template-columns:110px 1fr 44px;gap:14px;align-items:center;font-size:15px}
+  .bar b{font-family:var(--serif);font-weight:400;font-size:19px;color:var(--navy)}
+  .bar .tr{height:10px;background:var(--cream);border:1px solid var(--line)}
+  .bar .tr i{display:block;height:100%;background:var(--gold)}
+  .bar .tr i.two{background:var(--navy);margin-top:0}
+  .bar .pair{display:grid;gap:4px}
+  .bar em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums;color:var(--ink)}
+  .key{display:flex;gap:22px;font-size:13.5px;color:var(--ink-2);margin-top:-8px}
+  .key i{display:inline-block;width:12px;height:12px;margin-right:7px;vertical-align:-1px}
+  .rblock{border-top:1px solid var(--line);padding-top:28px;margin-top:30px}
+  .rblock h3{font-size:25px;margin-bottom:10px}
+  .plan{background:var(--cream);padding:20px 22px;margin-top:14px}
+  .plan h4{margin:0 0 6px;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep)}
+  .plan strong{font-family:var(--serif);font-weight:400;font-size:22px;color:var(--navy);display:block;margin-bottom:6px}
+  .plan p{margin:0;font-size:16px}
+  .share{background:var(--navy);color:#dfe4ee;padding:26px 26px;margin-top:30px}
+  .share h3{color:#fff}
+  .share .linkrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  .share input{flex:1 1 260px;font:inherit;font-size:14px;padding:13px 12px;border:0;border-radius:3px;min-width:0;color:var(--ink)}
+  .share .btn-ghost{background:transparent}
+  .share a.btn-ghost:hover,.share button.btn-ghost:hover{background:#fff;color:var(--navy)}
+  details{border-bottom:1px solid var(--line);padding:14px 0}
+  details summary{cursor:pointer;font-family:var(--serif);font-size:21px;color:var(--navy);list-style-position:outside}
+  details summary small{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);display:block}
+  details div{padding:12px 0 4px;font-size:16.5px}
+  details div p.ask{font-family:var(--serif);font-size:20px;color:var(--navy);line-height:1.3}
+  .exps{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+  .exps div{background:var(--cream);padding:16px 18px;font-size:15.5px}
+  .exps b{display:block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:4px}
+  @media(max-width:600px){.exps{grid-template-columns:1fr}.scorehead{grid-template-columns:1fr}.bar{grid-template-columns:86px 1fr 36px}}
+  .closing{text-align:center;padding:36px 0 6px}
+  .closing p{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);line-height:1.2;color:var(--navy);margin:0 0 10px}
+  .closing span{font-size:16px;color:var(--ink-2)}
+
+  /* final + footer */
+  .final{text-align:center}
+  .final h2{color:#fff;font-size:clamp(32px,5vw,56px);max-width:16em;margin:0 auto 18px}
+  .final p{max-width:40em;margin:0 auto 30px;font-size:19px}
+  footer{background:var(--navy-deep);color:#aab3c4;padding:40px 0;font-size:14px}
+  footer .wrap{display:grid;gap:18px}
+  footer .links{display:flex;flex-wrap:wrap;gap:8px 24px}
+  footer a{color:#dfe4ee;text-decoration:none}
+  footer a:hover{color:var(--gold-lt)}
+  footer p{margin:0;max-width:78ch;line-height:1.55}
+
+  @media print{
+    .top,.hero,.benefits,section:not(#assessment),footer,.navrow,.share,.noprint{display:none!important}
+    body,#assessment,.card,.plan,.exps div{background:#fff!important}
+    #assessment{padding:0}.card{border:0;padding:0;margin:0;max-width:none}
+    details div{display:block}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="IronMind Elite — home"><b>IRONMIND</b><span>ELITE</span></a>
+    <nav class="nav" aria-label="Page">
+      <a class="l" href="#about">About</a>
+      <a class="l" href="#how">How it works</a>
+      <a class="l" href="#gap">The Alignment Gap</a>
+      <a class="l" href="/about">Meet Kenny</a>
+      <a class="btn btn-gold" href="#assessment">Take the Assessment</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <svg class="art" viewBox="0 0 1600 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#3b4868"/><stop offset=".3" stop-color="#8a6f78"/>
+        <stop offset=".52" stop-color="#e59a55"/><stop offset=".66" stop-color="#f6c66f"/>
+      </linearGradient>
+      <radialGradient id="glow" cx="1150" cy="300" r="520" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#fff3c4" stop-opacity=".95"/><stop offset=".18" stop-color="#ffd27a" stop-opacity=".7"/>
+        <stop offset=".55" stop-color="#f29a4a" stop-opacity=".22"/><stop offset="1" stop-color="#f29a4a" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#e9a65c"/><stop offset=".35" stop-color="#8d6a66"/><stop offset="1" stop-color="#2a3550"/>
+      </linearGradient>
+      <linearGradient id="path" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fff0b8" stop-opacity=".95"/><stop offset="1" stop-color="#ffcf7a" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <rect width="1600" height="640" fill="url(#sky)"/>
+    <g fill="#f7c98a" opacity=".5">
+      <path d="M700 120c90-18 210-14 300 4-110 2-200 8-300-4z"/><path d="M1220 150c80-14 200-10 300 8-120 0-210 6-300-8z"/>
+      <path d="M880 205c70-10 150-8 220 4-80 2-150 4-220-4z" opacity=".7"/><path d="M1330 80c50-9 120-7 170 3-60 2-110 4-170-3z" opacity=".6"/>
+    </g>
+    <rect width="1600" height="640" fill="url(#glow)"/>
+    <circle cx="1150" cy="300" r="34" fill="#fff8dc"/>
+    <path d="M0 318c120-40 260-58 380-44 90 10 150 34 230 44H0z" fill="#3a4160" opacity=".85"/>
+    <path d="M1600 318c-70-30-150-44-230-36-60 6-100 22-150 36h380z" fill="#5a4c5c" opacity=".7"/>
+    <rect y="316" width="1600" height="324" fill="url(#sea)"/>
+    <path d="M1090 318h120l70 200H1020z" fill="url(#path)" opacity=".8"/>
+    <g stroke="#ffe6a8" stroke-linecap="round" opacity=".7">
+      <path d="M1040 336h220" stroke-width="2"/><path d="M1075 352h150" stroke-width="2"/><path d="M1020 372h260" stroke-width="3"/>
+      <path d="M1060 396h180" stroke-width="3"/><path d="M1000 424h300" stroke-width="4"/><path d="M1050 456h200" stroke-width="4" opacity=".7"/>
+      <path d="M700 344h120M1380 350h110M560 380h90M1420 402h130" stroke-width="2" opacity=".5"/>
+    </g>
+    <path d="M0 470c200-46 420-40 640-16 260 28 520 30 960-24v210H0z" fill="#1b2438"/>
+    <path d="M0 520c260-40 520-26 800 0 300 28 560 10 800-30v150H0z" fill="#0f1728"/>
+    <g fill="#141c2e">
+      <g transform="translate(905 360)">
+        <path d="M22 150 34 26c2-16 14-26 28-26h4v150zM72 150V0h28v150zM106 150V0h28v150zM140 150V0h4c14 0 26 10 28 26l12 124z"/>
+        <rect x="-18" y="118" width="244" height="18" rx="6"/><rect x="6" y="150" width="194" height="22" rx="4"/>
+        <path d="M4 136h22l-14 124H-8zM180 136h22l20 124h-20z"/>
+      </g>
+      <g transform="translate(1185 368)">
+        <path d="M22 150 34 26c2-16 14-26 28-26h4v150zM72 150V0h28v150zM106 150V0h28v150zM140 150V0h4c14 0 26 10 28 26l12 124z"/>
+        <rect x="-18" y="118" width="244" height="18" rx="6"/><rect x="6" y="150" width="194" height="22" rx="4"/>
+        <path d="M4 136h22l-14 124H-8zM180 136h22l20 124h-20z"/>
+      </g>
+    </g>
+    <g fill="none" stroke="#f3c57c" stroke-width="2" opacity=".55" stroke-linecap="round">
+      <path d="M1091 386c-2-14-12-24-24-25M1139 478h68M1373 394c-2-14-12-24-24-25M1167 486h58"/>
+    </g>
+    <g stroke="#0f1728" stroke-width="3" stroke-linecap="round" fill="none">
+      <path d="M780 560c4-30 2-50-6-70M792 560c0-24 6-44 16-58M1480 540c4-26 2-46-6-62M1494 540c2-20 8-36 18-48M1530 546c-2-22-10-38-20-50"/>
+    </g>
+  </svg>
+  <div class="shade"></div>
+  <p class="script" aria-hidden="true">Same journey.<i>A brighter next chapter.</i></p>
+  <ul class="pillars" aria-hidden="true"><li>Clarity.</li><li>Connection.</li><li>Purpose.</li><li>What's next.</li></ul>
+  <div class="wrap">
+    <p class="kicker">The Next Move™</p>
+    <h1>You've spent years building your life.</h1>
+    <p class="sub">Now decide how you actually want to live it.</p>
+    <p class="body">The Next Move™ is a short, powerful assessment for couples who are thinking about what's next — whether that's retirement, a new location, less work, more travel, or a completely different chapter.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="#assessment">Take the Assessment <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h20M15 1l5 5-5 5"/></svg></a>
+      <a class="btn btn-ghost" href="#about">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<div class="benefits">
+  <div class="wrap">
+    <div class="ben"><div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M26 6 6 14l8 3 3 8z"/><path d="M26 6 14 17"/></svg></div><div><h3>Gain clarity</h3><p>Understand what you really want.</p></div></div>
+    <div class="ben"><div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M16 26S6 19.5 6 12.5A5.5 5.5 0 0 1 16 9.4a5.5 5.5 0 0 1 10 3.1C26 19.500 16 26 16 26z"/></svg></div><div><h3>Strengthen connection</h3><p>Align on your shared vision — and differences.</p></div></div>
+    <div class="ben"><div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M4 24 12 10l5 8 3-4 8 10"/></svg></div><div><h3>Explore possibilities</h3><p>See what's possible before you make a move.</p></div></div>
+    <div class="ben"><div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M10 7 5 16h3l-4 7h12l-4-7h3zM10 23v3M22 10l-4 7h2.500L17 23h10l-3.500-6H26zM22 23v3"/></svg></div><div><h3>Design a meaningful next chapter</h3><p>Create a life that fits this season.</p></div></div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="pic">
+      <svg viewBox="0 0 404 296" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A wooden signpost by the sea reading More Time, New Places, Deeper Connection, Greater Purpose">
+        <defs>
+          <linearGradient id="s2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fa9c4"/><stop offset=".5" stop-color="#f0c79a"/><stop offset=".64" stop-color="#f7dba6"/></linearGradient>
+          <linearGradient id="w2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9b98c"/><stop offset="1" stop-color="#587489"/></linearGradient>
+          <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b5140"/><stop offset="1" stop-color="#3f2f25"/></linearGradient>
+          <radialGradient id="g2" cx="330" cy="176" r="170" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff6d0"/><stop offset="1" stop-color="#fff6d0" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="404" height="296" fill="url(#s2)"/><rect width="404" height="296" fill="url(#g2)"/>
+        <rect y="182" width="404" height="114" fill="url(#w2)"/>
+        <g stroke="#fff3d6" stroke-linecap="round" opacity=".6"><path d="M250 196h120M270 210h90M230 228h150M20 204h70M40 236h90" stroke-width="1.500"/></g>
+        <path d="M0 250c50-22 110-26 170-12 70 16 150 20 234 0v58H0z" fill="#4c5b3e"/>
+        <path d="M0 270c70-16 150-12 220 0 70 12 130 8 184-4v30H0z" fill="#33402c"/>
+        <rect x="190" y="18" width="24" height="270" fill="url(#wood)"/><path d="M190 18l12-10 12 10z" fill="#3f2f25"/>
+        <g font-family="'Nunito Sans','Avenir Next',Arial,sans-serif" font-weight="700" fill="#f3ead8" text-anchor="middle" letter-spacing="1.500">
+          <g transform="rotate(-3 202 78)"><path d="M70 58h250l16 20-16 20H70z" fill="url(#wood)"/><text x="196" y="86" font-size="21">MORE TIME</text></g>
+          <g transform="rotate(2 202 128)"><path d="M84 108h250v40H84l-16-20z" fill="url(#wood)"/><text x="206" y="136" font-size="21">NEW PLACES</text></g>
+          <g transform="rotate(-2 202 178)"><path d="M58 158h274l16 20-16 20H58z" fill="url(#wood)"/><text x="198" y="185" font-size="19">DEEPER CONNECTION</text></g>
+          <g transform="rotate(3 202 228)"><path d="M78 208h268v40H78l-16-20z" fill="url(#wood)"/><text x="208" y="235" font-size="19">GREATER PURPOSE</text></g>
+        </g>
+      </svg>
+    </div>
+    <div>
+      <p class="eyebrow">About The Next Move</p>
+      <h2>It's not just about retirement.<br>It's about what's next.</h2>
+      <p style="margin-top:22px">For many couples, the questions begin to change around midlife. Do we still want this house? How much is enough? Where do we want to live? What would we do with more freedom? The Next Move™ helps you have a better conversation — and gives you a clearer picture of where you are and what to consider next.</p>
+      <div class="cta-row" style="margin-top:26px">
+        <a class="btn btn-gold" href="#assessment">Take The Next Move Assessment <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h20M15 1l5 5-5 5"/></svg></a>
+        <a class="textlink" href="#how">How it works →</a>
+      </div>
+    </div>
+    <aside class="quote">
+      <span class="mk" aria-hidden="true">“</span>
+      <q>It's not about walking away from your past. It's about making sure your next chapter is one you actually want to live.</q>
+      <cite>— IronMind Elite</cite>
+    </aside>
+  </div>
+</section>
+
+<section class="tint" id="idea">
+  <div class="wrap">
+    <p class="eyebrow">The big idea</p>
+    <h2>Somewhere around 50, the questions begin to change.</h2>
+    <div class="qcols">
+      <div class="qcol then">
+        <h3>For decades, the questions were predictable.</h3>
+        <ul><li>Where will we work?</li><li>How much should we save?</li><li>Where will we raise our family?</li><li>How do we pay off the house?</li><li>How much do we need for retirement?</li></ul>
+      </div>
+      <div class="qcol">
+        <h3>What are we building toward now?</h3>
+        <ul><li>Do we still want to live here?</li><li>How much money is actually enough?</li><li>When does saving become living?</li><li>What happens if one of us keeps working and the other doesn't?</li><li>Who are we without our careers?</li></ul>
+      </div>
+    </div>
+    <p class="bigq">If we already have enough to begin living differently, what exactly are we waiting for?</p>
+    <p class="lede" style="margin-top:18px">The Next Move™ isn't a retirement calculator. It's a clarity assessment for couples approaching their next chapter — to help two people work out not simply whether they <em>can</em> make a change, but whether they understand the life they want to create together.</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>Two people. Sixteen statements. One honest comparison.</h2>
+    <ol class="steps">
+      <li><h3>Take it separately</h3><p>Each partner answers alone, based on what they believe today. That matters — one partner shouldn't shape the other's answers.</p></li>
+      <li><h3>Sixteen statements</h3><p>Rate each from 1 (strongly disagree) to 5 (strongly agree). It takes about five minutes and you get your Next Move Score right away.</p></li>
+      <li><h3>Compare the gaps</h3><p>Send your partner your private link. When they finish, you both see where you're aligned, where you differ, and which conversation comes first.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="dark" id="dimensions">
+  <div class="wrap">
+    <p class="eyebrow">What it measures</p>
+    <h2>Four dimensions of your next chapter.</h2>
+    <div class="dims">
+      <div class="dim"><small>01</small><h3>Clarity</h3><p>Do I actually know what I want?</p></div>
+      <div class="dim"><small>02</small><h3>Freedom</h3><p>Do I feel permitted to actually live it?</p></div>
+      <div class="dim"><small>03</small><h3>Alignment</h3><p>Are we building toward the same future?</p></div>
+      <div class="dim"><small>04</small><h3>Readiness</h3><p>Are we ready to make intentional choices?</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="tint" id="gap">
+  <div class="wrap">
+    <p class="eyebrow">The Couple Alignment Gap™</p>
+    <h2>The overall scores can look fine. The gaps tell the story.</h2>
+    <div class="gapgrid">
+      <div>
+        <table class="gap">
+          <caption>Example couple</caption>
+          <thead><tr><th scope="col">Dimension</th><th scope="col">Partner A</th><th scope="col">Partner B</th><th scope="col">Gap</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Clarity</th><td>85</td><td>70</td><td><span class="tag g1">15</span></td></tr>
+            <tr><th scope="row">Freedom</th><td>90</td><td>55</td><td><span class="tag g3">35</span></td></tr>
+            <tr><th scope="row">Alignment</th><td>75</td><td>75</td><td><span class="tag g0">0</span></td></tr>
+            <tr><th scope="row">Readiness</th><td>85</td><td>60</td><td><span class="tag g2">25</span></td></tr>
+          </tbody>
+        </table>
+        <ul class="legend">
+          <li><span><span class="tag g0">0–9 · Aligned</span></span><span>You appear to view this area similarly.</span></li>
+          <li><span><span class="tag g1">10–19 · Worth exploring</span></span><span>Talk about what is driving each answer.</span></li>
+          <li><span><span class="tag g2">20–29 · Important</span></span><span>Don't rush into compromise. First understand the difference.</span></li>
+          <li><span><span class="tag g3">30+ · Priority</span></span><span>You've discovered something important before making a major life decision.</span></li>
+        </ul>
+      </div>
+      <div>
+        <p>Maybe one partner is thinking:</p>
+        <div class="voices"><blockquote>“We've worked our whole lives for this. Let's start enjoying it.”</blockquote></div>
+        <p>And the other is quietly thinking:</p>
+        <div class="voices"><blockquote>“I'm terrified that what we've accumulated won't be enough.”</blockquote></div>
+        <p>That is not primarily a financial problem. <strong style="color:var(--navy)">It's a conversation the couple needs to have.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="result">
+  <div class="wrap">
+    <p class="eyebrow">What you walk away with</p>
+    <h2>Not “you should retire.” Your next move.</h2>
+    <div class="out">
+      <ul class="checks">
+        <li>What you already know</li><li>Where you're aligned</li><li>Where you're different</li><li>What is keeping you stuck</li>
+        <li>What questions still need answers</li><li>What conversation needs to happen</li><li>What experiment to run next</li>
+      </ul>
+      <div>
+        <p>You'll also get the five conversations that follow the assessment — starting with <em>the perfect ordinary Tuesday</em> — and a 30-day experiment you can run before making any permanent decision.</p>
+        <p class="notlist">The result is never “you should move to Florida” or “you have enough money.” Those decisions need information this assessment can't provide and, in financial matters, appropriate professional advice.</p>
+        <a class="btn btn-line" href="#assessment" style="margin-top:10px">Start now — about 5 minutes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="assessment">
+  <div class="wrap">
+    <div class="narrow" style="margin:0 auto;text-align:center">
+      <p class="eyebrow">The Next Move™ Assessment</p>
+      <h2 id="a-title">How do we actually want to live?</h2>
+    </div>
+
+    <div class="card" id="app" aria-live="polite">
+      <noscript><p>The assessment needs JavaScript turned on in your browser.</p></noscript>
+
+      <!-- gate -->
+      <form id="gate" novalidate>
+        <p class="note" id="invite" hidden></p>
+        <h3>Before you begin</h3>
+        <p>Answer on your own, based on what you believe today — not what you think your partner would want to hear. There are no right answers.</p>
+        <div class="two">
+          <div class="field"><label for="f-name">First name</label><input id="f-name" name="name" autocomplete="given-name" maxlength="40" required></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" maxlength="120" required></div>
+        </div>
+        <p class="fine">Your name, email and scores are sent to IronMind Advisors so we can follow up about your results. We don't share them. See our <a href="/privacy">privacy policy</a>.</p>
+        <p class="err" id="gate-err" role="alert"></p>
+        <button class="btn btn-gold" type="submit">Begin the assessment <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h20M15 1l5 5-5 5"/></svg></button>
+      </form>
+
+      <!-- questions -->
+      <form id="quiz" hidden novalidate>
+        <div class="prog" aria-hidden="true"><i id="prog"></i></div>
+        <div class="dhead"><small id="d-num"></small><h3 id="d-name" tabindex="-1"></h3><p id="d-q"></p></div>
+        <div id="qs"></div>
+        <p class="err" id="quiz-err" role="alert"></p>
+        <div class="navrow">
+          <button class="btn btn-line" type="button" id="back">Back</button>
+          <button class="btn btn-gold" type="submit" id="next">Next</button>
+        </div>
+      </form>
+
+      <!-- results -->
+      <div id="results" hidden></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark final">
+  <div class="wrap">
+    <h2>“How do we actually want to live?”</h2>
+    <p>You've spent decades asking what you need to do. Your next chapter deserves a different question — because accumulating resources was never supposed to be the destination. The life those resources make possible was.</p>
+    <a class="btn btn-gold" href="#assessment">Take the Assessment <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 6h20M15 1l5 5-5 5"/></svg></a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links"><a href="/">IronMind Advisors</a><a href="/about">Meet Kenny</a><a href="/speaker">Speaker</a><a href="/#contact">Contact</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a></div>
+    <p>The Next Move™ is an educational self-assessment designed to start a conversation. It is not financial, legal, tax or medical advice, and it is not counseling or therapy. Decisions about retirement, housing, investments or spending should be made with appropriately licensed professionals.</p>
+    <p>© 2026 IronMind Advisors, LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<form name="next-move-results" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text" name="bot-field"><input type="text" name="name"><input type="email" name="email">
+  <input type="text" name="score"><input type="text" name="profile">
+  <input type="text" name="clarity"><input type="text" name="freedom"><input type="text" name="alignment"><input type="text" name="readiness">
+  <input type="text" name="partner"><input type="text" name="partner-scores"><input type="text" name="largest-gap"><input type="text" name="answers">
+</form>
+
+<script>
+(function(){
+  "use strict";
+  var DIMS = [
+    {name:"Clarity", q:"Do I actually know what I want?", items:[
+      "I can clearly describe what I would like an ordinary week in our next chapter to look like.",
+      "I have a reasonably clear picture of where and how I would like us to live over the next phase of our lives.",
+      "I know which experiences, relationships, activities, or pursuits I want more room for in my life.",
+      "I am more focused on creating a life I want than simply escaping the parts of my current life I no longer enjoy."],
+     plan:["Don't make the move yet. Design the life first.","Spend 30 days describing what you want your next chapter to look like."]},
+    {name:"Freedom", q:"Do I feel permitted to actually live it?", items:[
+      "I believe money is a tool for creating a meaningful life, not simply something to accumulate indefinitely.",
+      "If our financial needs were reasonably secure, I would feel comfortable spending some of what we have built on experiences and priorities that matter to us now.",
+      "I can imagine reducing, changing, or eventually leaving my current professional role without feeling that I am losing my value or identity.",
+      "I feel comfortable making a different life choice even if friends, colleagues, or family members choose a more traditional path."],
+     plan:["Examine what is keeping you attached to the current chapter.","Is it financial reality? Identity? Fear? Expectation? Habit? Security? Find out before assuming the answer."]},
+    {name:"Alignment", q:"Are we building toward the same future?", items:[
+      "My partner and I have talked specifically about what we each want our next chapter to look like.",
+      "I believe my partner and I have similar expectations about how much we want to work, travel, relax, explore, and spend time together.",
+      "My partner and I can openly discuss money, lifestyle changes, retirement, location, family responsibilities, and future priorities.",
+      "I believe both of us have enough space in our future vision for individual interests as well as the life we want to build together."],
+     plan:["Stop planning and start talking.","No major move should be based on the assumption that you both want the same future."]},
+    {name:"Readiness", q:"Are we ready to make intentional choices?", items:[
+      "We have enough understanding of our financial position to begin evaluating realistic next-chapter options.",
+      "I understand which practical concerns, such as finances, health, housing, family, or work, genuinely require more planning before we make a significant change.",
+      "I can distinguish between a legitimate reason to wait and fear of making a change.",
+      "If we discovered that our preferred next chapter was reasonably achievable, I would be willing to begin making meaningful changes within the next 12 months."],
+     plan:["Turn uncertainty into facts.","Identify the unanswered questions — financial, housing, healthcare, career, family, location — then get the information needed to make an informed decision."]}
+  ];
+  var SCALE = ["Strongly disagree","Disagree","Unsure","Agree","Strongly agree"];
+  var PROFILES = [
+    {min:80, name:"Ready to Design", text:"You appear to have significant clarity about your next chapter and a willingness to begin shaping it intentionally. Your biggest risk may not be readiness. It may be continuing to postpone decisions simply because your current life is comfortable or familiar.", ask:"If not now, when?"},
+    {min:65, name:"Ready to Explore", text:"You appear ready for the conversation, but some important questions remain unanswered. You probably don't need an immediate dramatic change. You need experiments: visit the city, rent somewhere for a month, take the longer trip, talk with the financial professional, try working differently. Imagine the ordinary Tuesday, not just the vacation.", ask:"What could we test before deciding?"},
+    {min:50, name:"Clarity Before Change", text:"Something about your current life may be telling you that another chapter is approaching, but your destination isn't clear enough yet. Don't make a major move simply to get away from something. Get specific about what you want to move toward.", ask:"What do we actually want our life to look like?"},
+    {min:0, name:"Conversation Before Decision", text:"Your answers suggest there may be meaningful uncertainty around your next chapter. This isn't bad news. It means the next move isn't necessarily selling the house, retiring, moving, or spending differently. The next move is the conversation.", ask:"What haven't we talked about honestly enough yet?"}
+  ];
+  var GAPS = [
+    {min:30, cls:"g3", name:"Priority conversation", text:"There is a substantial difference in how each of you views this part of your next chapter. That doesn't mean one of you is wrong. It means you've discovered something important before making a major life decision."},
+    {min:20, cls:"g2", name:"Important difference", text:"You may be imagining this part of your future differently. Don't rush into compromise. First understand the difference."},
+    {min:10, cls:"g1", name:"Worth exploring", text:"Your perspectives are somewhat different. Talk about what is driving each answer."},
+    {min:0, cls:"g0", name:"Aligned", text:"You appear to view this area similarly."}
+  ];
+  var CONVOS = [
+    ["The perfect ordinary Tuesday","It's three years from now. You don't have to work today. There is nothing special happening. It's just Tuesday.","Separately, write down: where do you wake up? What happens that morning? Who do you see? What do you do in the afternoon — exercise, work, volunteer, travel, time alone, time together? What happens that evening? Describe the life, not the vacation. Then compare answers."],
+    ["How much is enough?","What would have to be true financially before you felt permission to begin living differently?","Not necessarily retiring — living differently. Then the harder question: if those conditions are already true, what are we waiting for? If neither of you knows whether they're true, that's an action item rather than a reason for anxiety: get the answer from an appropriate financial professional."],
+    ["Where do we want to live?","What do we want our environment to make possible?","Forget real estate prices for the first conversation and start with life. More community, walkability, nature, activity? Warmer weather, less maintenance, more travel? Closer to family, more privacy, a smaller home, multiple locations? Don't start with “Should we move?”"],
+    ["What are we afraid of losing?","What am I most afraid I would lose if we changed our life?","Major transitions involve loss as well as freedom: status, career identity, routine, predictability, income, professional relationships, a familiar home, a community, proximity to family. Answer individually. Then ask the second question, which matters just as much: what am I afraid we'll lose if we don't?"],
+    ["What are we saving for?","What is our money supposed to make possible?","Security, freedom, travel, family, generosity, experiences, time, health, a home, legacy, adventure, options? Then each finish this sentence separately and compare: “I will feel that the money we earned and saved served us well if…”"]
+  ];
+  var EXPS = [
+    ["Lifestyle","Live your imagined retirement schedule for a week."],
+    ["Location","Spend meaningful time in a place you're considering, living ordinary daily life rather than vacationing."],
+    ["Work","Explore what reducing professional responsibilities might look like."],
+    ["Money","Choose one experience you've repeatedly postponed despite being able to afford it, and intentionally enjoy it."],
+    ["Purpose","Spend time doing something completely unrelated to career achievement."],
+    ["Relationship","Each partner chooses something to pursue independently for a day or a weekend."]
+  ];
+
+  function $(id){return document.getElementById(id);}
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+  function enc(o){return btoa(unescape(encodeURIComponent(JSON.stringify(o)))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");}
+  function dec(s){
+    try{
+      s=s.replace(/-/g,"+").replace(/_/g,"/"); while(s.length%4) s+="=";
+      return JSON.parse(decodeURIComponent(escape(atob(s))));
+    }catch(e){return null;}
+  }
+  function person(o){
+    if(!o||typeof o.n!=="string"||!Array.isArray(o.s)||o.s.length!==4) return null;
+    var s=[];
+    for(var i=0;i<4;i++){var v=Number(o.s[i]); if(!(v>=20&&v<=100)) return null; s.push(Math.round(v));}
+    return {n:o.n.replace(/\s+/g," ").trim().slice(0,40)||"Your partner", s:s};
+  }
+  function total(s){return Math.round((s[0]+s[1]+s[2]+s[3])/4);}
+  function pick(list,v){for(var i=0;i<list.length;i++){if(v>=list[i].min) return list[i];}return list[list.length-1];}
+
+  var params = new URLSearchParams(location.search);
+  var partner = params.get("p") ? person(dec(params.get("p"))) : null;
+  var couple = null;
+  if(params.get("c")){var c=dec(params.get("c")); if(c){var a=person(c.a), b=person(c.b); if(a&&b) couple={a:a,b:b};}}
+
+  var user = {name:"",email:""}, answers = new Array(16).fill(0), page = 0, sent = false;
+
+  if(partner){
+    $("invite").hidden=false;
+    $("invite").textContent = partner.n + " has already taken The Next Move™ and invited you to compare. You'll both see how your answers line up once you finish — not before.";
+  }
+
+  $("gate").addEventListener("submit",function(e){
+    e.preventDefault();
+    var n=$("f-name").value.replace(/\s+/g," ").trim(), m=$("f-email").value.trim();
+    if(!n){$("gate-err").textContent="Please enter your first name.";$("f-name").focus();return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m)){$("gate-err").textContent="Please enter a valid email address.";$("f-email").focus();return;}
+    user.name=n.slice(0,40); user.email=m;
+    $("gate").hidden=true; $("quiz").hidden=false; show(0);
+  });
+
+  function show(p){
+    page=p; var d=DIMS[p], h="";
+    $("d-num").textContent="Dimension "+(p+1)+" of 4";
+    $("d-name").textContent=d.name; $("d-q").textContent=d.q;
+    for(var i=0;i<4;i++){
+      var qi=p*4+i;
+      h+='<fieldset class="q"><legend>'+(qi+1)+'. '+esc(d.items[i])+'</legend><div class="scale">';
+      for(var v=1;v<=5;v++){
+        h+='<label><input type="radio" name="q'+qi+'" value="'+v+'"'+(answers[qi]===v?" checked":"")+'><span><b>'+v+'</b>'+SCALE[v-1]+'</span></label>';
+      }
+      h+='</div></fieldset>';
+    }
+    $("qs").innerHTML=h;
+    $("quiz-err").textContent="";
+    $("back").textContent = p===0 ? "Edit details" : "Back";
+    $("next").textContent = p===3 ? "See my results" : "Next: "+DIMS[p+1].name;
+    progress(); top();
+  }
+  function progress(){var n=0;for(var i=0;i<16;i++){if(answers[i])n++;}$("prog").style.width=(n/16*100)+"%";}
+  function top(){var el=$("app"); if(el.scrollIntoView) el.scrollIntoView({block:"start"}); window.scrollBy(0,-90);}
+
+  $("qs").addEventListener("change",function(e){
+    var t=e.target; if(t&&t.name&&t.name.charAt(0)==="q"){answers[Number(t.name.slice(1))]=Number(t.value);progress();$("quiz-err").textContent="";}
+  });
+  $("back").addEventListener("click",function(){
+    if(page===0){$("quiz").hidden=true;$("gate").hidden=false;top();} else show(page-1);
+  });
+  $("quiz").addEventListener("submit",function(e){
+    e.preventDefault();
+    for(var i=page*4;i<page*4+4;i++){
+      if(!answers[i]){
+        $("quiz-err").textContent="Please answer statement "+(i+1)+" before continuing.";
+        var el=document.querySelector('input[name="q'+i+'"]'); if(el) el.focus();
+        return;
+      }
+    }
+    if(page<3) show(page+1); else finish();
+  });
+
+  function scores(){
+    var s=[];
+    for(var d=0;d<4;d++){var r=0;for(var i=0;i<4;i++){r+=answers[d*4+i];}s.push(Math.round(r/20*100));}
+    return s;
+  }
+  function finish(){
+    var me={n:user.name,s:scores()};
+    $("quiz").hidden=true;
+    render(me, partner, true);
+    submit(me);
+    top();
+  }
+
+  function bars(a,b){
+    var h='<div class="bars">';
+    for(var i=0;i<4;i++){
+      h+='<div class="bar"><b>'+DIMS[i].name+'</b><div class="pair"><div class="tr"><i style="width:'+a.s[i]+'%"></i></div>'+
+         (b?'<div class="tr"><i class="two" style="width:'+b.s[i]+'%"></i></div>':'')+
+         '</div><em>'+a.s[i]+(b?' / '+b.s[i]:'')+'</em></div>';
+    }
+    h+='</div>';
+    if(b) h+='<p class="key"><span><i style="background:var(--gold)"></i>'+esc(a.n)+'</span><span><i style="background:var(--navy)"></i>'+esc(b.n)+'</span></p>';
+    return h;
+  }
+  function lowest(s){var m=Math.min.apply(null,s),o=[];for(var i=0;i<4;i++){if(s[i]===m)o.push(i);}return o;}
+
+  function individual(p, label){
+    var t=total(p.s), pr=pick(PROFILES,t), low=lowest(p.s), h="";
+    h+='<div class="scorehead"><div class="scorenum"><div><b>'+t+'</b><small>out of 100</small></div></div><div>'+
+       '<p class="eyebrow" style="margin-bottom:8px">'+esc(label)+'</p><h3 style="font-size:34px">'+pr.name+'</h3></div></div>';
+    h+='<p>'+pr.text+'</p><p class="yourq"><small>Your question</small>'+pr.ask+'</p>';
+    h+=bars(p,null);
+    if(low.length<4){
+      for(var i=0;i<low.length;i++){
+        var d=DIMS[low[i]];
+        h+='<div class="plan"><h4>Your lowest dimension: '+d.name+'</h4><strong>'+d.plan[0]+'</strong><p>'+d.plan[1]+'</p></div>';
+      }
+    } else {
+      h+='<div class="plan"><h4>Your four dimensions are level</h4><strong>No single area is holding you back more than the others.</strong><p>Use your overall profile and the conversations below to choose where to start.</p></div>';
+    }
+    return h;
+  }
+
+  function coupleBlock(a,b){
+    var h='<div class="rblock"><p class="eyebrow">The Couple Alignment Gap™</p><h3>'+esc(a.n)+' &amp; '+esc(b.n)+': where you line up, and where you don\'t</h3>';
+    h+=bars(a,b);
+    h+='<table class="gap"><thead><tr><th scope="col">Dimension</th><th scope="col">'+esc(a.n)+'</th><th scope="col">'+esc(b.n)+'</th><th scope="col">Gap</th></tr></thead><tbody>';
+    var big=-1,bigI=0,notes="";
+    for(var i=0;i<4;i++){
+      var g=Math.abs(a.s[i]-b.s[i]), band=pick(GAPS,g);
+      if(g>big){big=g;bigI=i;}
+      h+='<tr><th scope="row">'+DIMS[i].name+'</th><td>'+a.s[i]+'</td><td>'+b.s[i]+'</td><td><span class="tag '+band.cls+'">'+g+' · '+band.name+'</span></td></tr>';
+    }
+    h+='<tr><th scope="row">Next Move Score</th><td>'+total(a.s)+'</td><td>'+total(b.s)+'</td><td></td></tr></tbody></table>';
+    var bb=pick(GAPS,big);
+    if(big>=10){
+      h+='<div class="plan"><h4>Start here: '+DIMS[bigI].name+' ('+big+'-point gap)</h4><strong>'+bb.name+'</strong><p>'+bb.text+' The question behind this dimension: <em>'+DIMS[bigI].q+'</em></p></div>';
+    } else {
+      h+='<div class="plan"><h4>No gap of 10 points or more</h4><strong>You appear to see all four areas similarly.</strong><p>Being aligned isn\'t the same as being ready. Look at the dimension where you both scored lowest and start there.</p></div>';
+    }
+    return h+'</div>';
+  }
+
+  function extras(){
+    var h='<div class="rblock"><p class="eyebrow">What comes next</p><h3>The five conversations</h3><p>Take them one at a time. Answer separately first, then compare.</p>';
+    for(var i=0;i<CONVOS.length;i++){
+      h+='<details'+(i===0?' open':'')+'><summary><small>Conversation '+(i+1)+'</small>'+CONVOS[i][0]+'</summary><div><p class="ask">'+CONVOS[i][1]+'</p><p>'+CONVOS[i][2]+'</p></div></details>';
+    }
+    h+='</div><div class="rblock"><h3>Your 30-day Next Move experiment</h3><p>Rather than making a permanent decision right away, choose one small experiment.</p><div class="exps">';
+    for(var j=0;j<EXPS.length;j++){h+='<div><b>'+EXPS[j][0]+'</b>'+EXPS[j][1]+'</div>';}
+    h+='</div><p style="margin-top:16px">Then ask: <strong style="color:var(--navy)">what did this teach us about the life we actually want?</strong></p></div>';
+    h+='<div class="closing"><p>What are you waiting for?</p><span>Not as pressure. As an honest question.</span></div>';
+    h+='<p class="fine">The Next Move™ is an educational self-assessment. It is not financial, legal, tax or medical advice, and it is not counseling or therapy. Decisions about retirement, housing, investments or spending should be made with appropriately licensed professionals.</p>';
+    h+='<div class="navrow noprint"><button class="btn btn-line" type="button" id="print">Print these results</button><a class="btn btn-gold" href="/#contact">Talk it through with Kenny</a></div>';
+    return h;
+  }
+
+  function shareBox(title, text, url, subject, body){
+    return '<div class="share noprint"><h3>'+title+'</h3><p style="margin:8px 0 0">'+text+'</p><div class="linkrow">'+
+      '<input type="text" readonly id="share-url" value="'+esc(url)+'" aria-label="Link to share">'+
+      '<button class="btn btn-gold" type="button" id="copy">Copy link</button>'+
+      '<a class="btn btn-ghost" href="mailto:?subject='+encodeURIComponent(subject)+'&amp;body='+encodeURIComponent(body+"\n\n"+url)+'">Email it</a></div></div>';
+  }
+
+  function render(me, other, fresh){
+    var base=location.origin+location.pathname, h="";
+    $("a-title").textContent = other ? "Your Next Move, together" : "Your Next Move";
+    if(fresh){
+      h+=individual(me, me.n+"'s Next Move Score");
+      if(other){
+        h+=coupleBlock(other, me);
+        h+=shareBox("Send the comparison back to "+esc(other.n),
+          "This link opens the side-by-side view for both of you.",
+          base+"?c="+enc({a:{n:other.n,s:other.s},b:{n:me.n,s:me.s}})+"#assessment",
+          "Our Next Move results", "I took The Next Move. Here's how our answers compare:");
+      } else {
+        h+=shareBox("Now invite your partner",
+          "The individual score is only half of it. Send this private link — your partner takes the same 16 statements on their own, and when they finish you both see the Couple Alignment Gap™. Your scores stay hidden from them until then.",
+          base+"?p="+enc({n:me.n,s:me.s})+"#assessment",
+          "Take The Next Move with me", "I just took The Next Move, a short assessment for couples thinking about what's next. It takes about five minutes. Take it on your own and then we'll compare:");
+      }
+    } else {
+      h+='<p class="eyebrow">'+esc(me.n)+' &amp; '+esc(other.n)+'</p>';
+      h+=coupleBlock(me, other).replace('<div class="rblock">','<div>');
+      h+='<div class="rblock"><h3>'+esc(me.n)+'</h3>'+individual(me,"Next Move Score")+'</div>';
+      h+='<div class="rblock"><h3>'+esc(other.n)+'</h3>'+individual(other,"Next Move Score")+'</div>';
+    }
+    h+=extras();
+    var r=$("results"); r.innerHTML=h; r.hidden=false;
+    var cp=$("copy");
+    if(cp) cp.addEventListener("click",function(){
+      var f=$("share-url"); f.select();
+      var done=function(){cp.textContent="Copied";setTimeout(function(){cp.textContent="Copy link";},2000);};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(f.value).then(done,function(){try{document.execCommand("copy");done();}catch(e){}});}
+      else{try{document.execCommand("copy");done();}catch(e){}}
+    });
+    $("print").addEventListener("click",function(){
+      var ds=r.querySelectorAll("details"); for(var i=0;i<ds.length;i++){ds[i].open=true;}
+      window.print();
+    });
+  }
+
+  function submit(me){
+    if(sent) return; sent=true;
+    var t=total(me.s), big="";
+    if(partner){var g=-1;for(var i=0;i<4;i++){var d=Math.abs(me.s[i]-partner.s[i]);if(d>g){g=d;big=DIMS[i].name+": "+d;}}}
+    var body={"form-name":"next-move-results","name":user.name,"email":user.email,"score":String(t),"profile":pick(PROFILES,t).name,
+      "clarity":String(me.s[0]),"freedom":String(me.s[1]),"alignment":String(me.s[2]),"readiness":String(me.s[3]),
+      "partner":partner?partner.n:"","partner-scores":partner?partner.s.join(" | "):"","largest-gap":big,"answers":answers.join(",")};
+    var out=[]; for(var k in body){if(Object.prototype.hasOwnProperty.call(body,k)) out.push(encodeURIComponent(k)+"="+encodeURIComponent(body[k]));}
+    try{fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:out.join("&")})["catch"](function(){});}catch(e){}
+  }
+
+  if(couple){
+    $("gate").hidden=true;
+    render(couple.a, couple.b, false);
+  }
+})();
+</script>
+</body>
+</html>

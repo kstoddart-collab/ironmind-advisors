@@ -46,4 +46,10 @@
   <url><loc>https://www.ironmindadvisors.com/transition</loc></url>
   <url><loc>https://www.ironmindadvisors.com/fees</loc></url>
   <url><loc>https://www.ironmindadvisors.com/readyfor2027</loc></url>
+  <url>
+    <loc>https://www.ironmindadvisors.com/nextmove</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
